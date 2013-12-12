@@ -45,9 +45,11 @@ appropriate option. E.g.:
 Translations:
 -------------
 All files can be translated. First extract translation template from po/tuncel.pot file:
+
     msginit -i po/tuncel.pot -o po/LANG_Code.po
-Then translate it. 
-Also you may translate *.desktop files. If you translate all of them open a bug report requesting merge
+    
+Then translate it. Also you may translate *.desktop files. 
+If you translate all of them open a bug report requesting merge
 with project.
 
 Bugs:
@@ -58,4 +60,5 @@ If you encounter any bugs please open an issue at projects' github page:
 Authors:
 -----------
 rpmxdgtool by Heinemann Jürgen http://gitweb.hjcms.de/cgi-bin/index.cgi/rpmxdgtool/
+
 tuncel by Atilla ÖNTAŞ (aka tarakbumba) https://github.com/tarakbumba/tuncel
