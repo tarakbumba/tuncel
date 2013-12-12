@@ -47,7 +47,7 @@ Summary:    Required files for Nautilus/Caja
 Requires:   %{name} = %{version}-%{release}
 Requires:   zenity
 
-%description -n %{name}-nautilus
+%description -n %{name}-nautilus-data
 This package includes shared desktop files
 needed for Nautilus and Caja file managers
 
