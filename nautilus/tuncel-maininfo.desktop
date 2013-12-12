@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Action
+Name=Show RPM General Info
+Name[tr]=RPM Bilgilerin Göster
+Icon=info
+ToolbarLabel=Show RPM General Info
+ToolbarLabel[tr]=RPM Bilgilerin Göster
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+Name=Default profile
+Name[tr]=Default profile
+Exec=/sur/bin/tuncel maininfo %u
+MimeTypes=application/x-source-rpm;application/x-rpm;

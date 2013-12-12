@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Action
+Icon=rpm
+ToolbarLabel=Test RPM Installation
+ToolbarLabel[tr]=RPM Kurulumu Sına
+Name=Test RPM Installation
+Name[tr]=RPM Kurulumu Sına
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=new-filter;application/x-source-rpm;
+Exec=/usr/bin/tuncel testinstall %u
+Name=Default profile
+Name[tr]=Default profile

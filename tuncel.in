@@ -1,0 +1,208 @@
+#!/bin/sh
+#
+#########################################################################
+# rpmxdgtool:
+# Copyright (C) 2007 2008 by Juergen Heinemann http://www.hjcms.de
+# tuncel:
+# Copyright (C) 2013 Atilla ÖNTAŞ https://github.com/tarakbumba/tuncel
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the
+# Free Software Foundation, Inc.,
+# 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#########################################################################
+
+. @GETTEXT@
+TEXTDOMAIN=@TEXTDOMAIN@
+set +x
+
+# Test and source configuration:
+RPM_XDG_CONFIG_TOOL_FILE=""
+
+for i in $HOME/.config/tuncel.conf /etc/tuncel.conf ; do
+  if test -f "$i" ; then
+    RPM_XDG_CONFIG_TOOL_FILE="$i"
+    break;
+  fi
+done
+
+test -f "$RPM_XDG_CONFIG_TOOL_FILE" || {
+  gettext "Error: Missing tuncel configuration file"
+  exit 1
+}
+
+. $RPM_XDG_CONFIG_TOOL_FILE
+
+#########################################################################################
+# Test binaries and display error message if not found:
+#########################################################################################
+critical()
+{
+  gettext "can not find executable" $1
+  exit 1
+}
+
+if 
+    test -x "$KDIALOG_BIN"
+then
+    DIALOG_BIN="$KDIALOG_BIN"
+elif
+    test -x "$ZENITY_BIN"
+then
+    DIALOG_BIN="$ZENITY_BIN"
+else
+    critical "kdialog|zenity"
+fi
+
+test -x "$MD5SUM_BIN" || critical "md5sum"
+test -x "$RPM2CPIO_BIN" || critical "rpm2cpio"
+test -n "$TERMINAL_APPLICATION" || critical "$TERMINAL_APPLICATION"
+
+TERMINAL_CMD="$TERMINAL_APPLICATION $TERMINAL_OPTS"
+
+if [ ! -d "$TMP_DIR" ] ; then
+  TMP_DIR=/tmp
+fi
+
+#########################################################################################
+# DIALOG BIN commands:
+#########################################################################################
+#Kdialog:
+if [[ $DIALOG_BIN = $KDIALOG_BIN ]]; then
+    DIALOG_ERROR="$KDIALOG_BIN --error"
+    DIALOG_POPUP="$KDIALOG_BIN --passivepopup"
+    DIALOG_INFOBOX="$KDIALOG_BIN --msgbox"
+    DIALOG_TEXTBOX="$KDIALOG_BIN --textbox"
+    DIALOG_GET_DIRECTORY="$KDIALOG_BIN --getexistingdirectory"
+    SIZE="450 450"    
+#Zenity:
+elif [[ $DIALOG_BIN = $ZENITY_BIN ]]; then
+    DIALOG_ERROR="$ZENITY_BIN --error --text"
+    DIALOG_POPUP="$ZENITY_BIN --progress --percentage=0 --text="
+    DIALOG_INFOBOX="$ZENITY_BIN --info --text"
+    DIALOG_TEXTBOX="$ZENITY_BIN --text-info --html --filename"
+    DIALOG_GET_DIRECTORY="zenity --file-selection --directory --filename"
+    SIZE="--width 450 --height 450"
+fi
+    
+#########################################################################################
+#Show options:
+#########################################################################################
+case "$1" in
+  *-help|-h) 
+    gettext "tuncel commands:"
+    echo -n " maininfo : "; gettext "Display Package Main Info";
+    echo -n " showcontents : "; gettext "Show Package Contents in Info Screen";
+    echo -n " unpack : "; gettext "Unpack package in current Directory";
+    echo -n " unpackto : "; gettext "Unpack Package to Directory";
+    echo -n " openHomepage : "; gettext "If %{url} exists open Package Homepage in Web Browser";
+    echo -n " testinstall : "; gettext "Installation Test (-iv)";
+    echo -n " forceinstalltest : "; gettext "Force Installation Test (-Uhv)";
+    echo -n " installsrc : "; gettext "Install RPM Source Package in to Build Enviroment";
+    gettext "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm";
+    exit 0
+  ;;
+esac
+
+#########################################################################################
+#make file tests
+#########################################################################################
+if [ ! -f "$2" ] ; then
+  $DIALOG_ERROR "$(gettext "no file") $2"
+  exit 1
+fi
+
+## @modified 2009/02/08
+## @short Make compatible with file >= 0.5.0
+test -n "$(file -iL "$2" | grep -e '\bapplication\/x\-rpm\b')" || {
+  $DIALOG_ERROR "$(gettext "no application/x-rpm file")"
+  exit 1
+}
+
+TMPF=$TMP_DIR/`$MD5SUM_BIN $2 | awk '{ print $1 }'`
+
+#########################################################################################
+# rpm unpacking function:
+#########################################################################################
+unpackrpmfile()
+{
+  cd $1
+    $RPM_BIN -qlp $2 > $(basename $2).log | $DIALOG_POPUP "$(gettext "please wait...")" 5
+        $RPM2CPIO_BIN $2 > ${TMPF}
+    $CPIO_BIN -idv < ${TMPF}
+    rm -f ${TMPF}
+  cd -
+}
+
+#########################################################################################
+# rpm options:
+#########################################################################################
+case "$1" in
+  maininfo)
+        $RPM_BIN -qp --queryformat '<strong>Name:</strong> %{Name}\n<br/><strong>Summary:</strong> %{Summary}\n<br/><strong>Homepage:</strong> %{URL}\n<br/><strong>License:</strong> %{License}\n<br/><strong>Version:</strong> %{Version}-%{Release}\n<br/>
+<strong>Description:</strong> %{Description}' $2 > ${TMPF} && $DIALOG_TEXTBOX ${TMPF} $SIZE && rm -r ${TMPF}
+  ;;
+  showcontents)
+    $RPM_BIN -qlp $2 > ${TMPF} && $DIALOG_TEXTBOX ${TMPF} $SIZE && rm -r ${TMPF}
+  ;;
+  unpack)
+    unpackrpmfile $(dirname $2) $2
+  ;;
+  unpackto)
+    TO_DIR="$($DIALOG_GET_DIRECTORY $(dirname $2))"
+    if [ -d "${TO_DIR}" ] ; then
+      unpackrpmfile ${TO_DIR} $2
+      xdg-open ${TO_DIR}
+    fi
+  ;;
+  openHomepage)
+    URI="$($RPM_BIN -qp --queryformat '%{url}' $2)"
+    if [ -n "$(echo $URI | grep 'p://')" ] ; then
+      xdg-open "$URI"
+    else
+      $DIALOG_INFOBOX "$(gettext "No URL in RPM Package found")"
+    fi
+  ;;
+  testinstall)
+    $RPM_BIN --test -Uhv $2 2> ${TMPF}
+    if  [ $? -eq 0 ] ; then
+      $DIALOG_INFOBOX "$($RPM_BIN --test -Uhv $2) $(gettext "No Errors")"
+    else
+      $DIALOG_INFOBOX "$(cat ${TMPF})"
+    fi
+  ;;
+  forceinstalltest)
+    $RPM_BIN --test --force -Uhv $2 2> ${TMPF}
+    if  [ $? -eq 1 ] ; then
+      $DIALOG_INFOBOX "$(cat ${TMPF})"
+    else
+      $DIALOG_INFOBOX "$($RPM_BIN --test -Uhv $2) $(gettext "No Errors")"
+    fi
+  ;;
+  installsrc)
+    if [ -n "$(echo $2 | grep -e '\.src\.rpm$')" ] ; then
+      $DIALOG_POPUP "$(gettext "Installing Source...")" 3
+      $RPM_BIN -iv $2 > /dev/null
+    else
+      $DIALOG_ERROR $(gettext "No Valid RPM Source Package"); 
+    fi
+  ;;
+  terminal)
+    if test -d "$1" ; then
+      $TERMINAL_CMD $1
+    fi
+  ;;
+  *)
+    exit 1
+  ;;
+esac

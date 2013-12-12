@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Action
+Icon=rpm
+ToolbarLabel=Force RPM Install Test
+ToolbarLabel[tr]=RPM Kurulum Sınamasına Zorla
+Name=Force RPM Install Test
+Name[tr]=RPM Kurulum Sınamasına Zorla
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=application/x-rpm;application/x-source-rpm;
+Exec=/usr/bin/tuncel forceinstalltest %u
+Name=Default profile
+Name[tr]=Default profile

@@ -1,0 +1,97 @@
+# translation of tuncel.pot to Italian
+# Copyright (C) YEAR GPLv2/LGPL
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Juergen Heinemann <nospam (AT) hjcms (DOT) de>, 2009.
+# Astragalo <slanislao (AT) tiscali (DOT) it>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: de\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-12 16:09+0200\n"
+"PO-Revision-Date: 2009-02-08 19:12+0100\n"
+"Last-Translator: Astragalo <slanislao (AT) tiscali (DOT) it>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../tuncel.in:40
+msgid "Error: Missing tuncel configuration file"
+msgstr "Errore: configurazione di tuncel non trovata."
+
+#: ../tuncel.in:51
+msgid "can not find executable"
+msgstr "Eseguibile non trovato"
+
+#: ../tuncel.in:103
+msgid "tuncel commands:"
+msgstr "Comandi tuncel:"
+
+#: ../tuncel.in:104
+msgid "Display Package Main Info"
+msgstr "Visualizza Info Pacchetto"
+
+#: ../tuncel.in:105
+msgid "Show Package Contents in Info Screen"
+msgstr "Visualizza il Contenuto del Pacchetto"
+
+#: ../tuncel.in:106
+msgid "Unpack package in current Directory"
+msgstr "Scompatta in questa Cartella"
+
+#: ../tuncel.in:107
+msgid "Unpack Package to Directory"
+msgstr "Scompatta in una Cartella.."
+
+#: ../tuncel.in:108
+msgid "If %{url} exists open Package Homepage in Web Browser"
+msgstr "Se %{url} esiste apri l'Homepage del Progetto"
+
+#: ../tuncel.in:109
+msgid "Installation Test (-iv)"
+msgstr "Test Installatione (-iv)"
+
+#: ../tuncel.in:110
+msgid "Force Installation Test (-Uhv)"
+msgstr "Forza Test Installatione (-Uhv)"
+
+#: ../tuncel.in:111
+msgid "Install RPM Source Package in to Build Enviroment"
+msgstr "Installa il Sorgente RPM nella Cartella di Sviluppo"
+
+#: ../tuncel.in:112
+msgid "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
+msgstr "Essempio: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
+
+#: ../tuncel.in:121
+msgid "no file"
+msgstr "File non trovato"
+
+#: ../tuncel.in:128
+msgid "no application/x-rpm file"
+msgstr "Non application/x-rpm file"
+
+#: ../tuncel.in:140
+msgid "please wait..."
+msgstr "Attendere..."
+
+#: ../tuncel.in:172
+msgid "No URL in RPM Package found"
+msgstr "URL non trovato in RPM Package."
+
+#: ../tuncel.in:178 ../tuncel.in:188
+msgid "No Errors"
+msgstr "Nessun Errore"
+
+#: ../tuncel.in:193
+msgid "Installing Source..."
+msgstr "Installazione Sorgente"
+
+#: ../tuncel.in:196
+msgid "No Valid RPM Source Package"
+msgstr "Sorgente RPM non valido"

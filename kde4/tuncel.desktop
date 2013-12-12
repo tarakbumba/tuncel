@@ -1,0 +1,83 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-rpm;
+Icon=application-x-rpm
+Name=RPM Tool
+Name[de]=RPM Werkzeug
+Name[it]=RPM Tools
+Comment=xdg rpm tools
+Comment[de]=xdg rpm werkzeug
+Comment[it]=xdg rpm utensile
+Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstalltest;install;admin;
+Author=http://www.kde-apps.org/usermanager/search.php?username=undefined
+X-KDE-Priority=TopLevel
+X-KDE-Submenu=RPM Tool...
+X-KDE-Submenu[de]=RPM Werkzeug...
+X-KDE-Submenu[it]=RPM utensile...
+X-KDE-Submenu-Icon=application-x-rpm
+
+[Desktop Action maininfo]
+Name=Show General Info
+Name[de]=Zeige Hauptinformationen
+Name[it]=Info Generali
+Icon=application-x-rpm
+Exec=tuncel maininfo %F
+
+[Desktop Action showcontents]
+Name=show package contents
+Name[de]=Zeige Paket Inhalt
+Name[it]=Visualizza il Contenuto del Pacchetto
+Icon=application-x-rpm
+Exec=tuncel showcontents %F
+
+[Desktop Action unpack]
+Name=unpack package in this directory
+Name[de]=Paket hier Entpacken
+Name[it]=Decomprimi in questa Cartella
+Icon=application-x-rpm
+Exec=tuncel unpack %F
+
+[Desktop Action unpackto]
+Name=unpack package to directory
+Name[de]=Paket in Verzeichnis Entpacken
+Name[it]=Decomprimi in una Cartella
+Icon=application-x-rpm
+Exec=tuncel unpackto %F
+
+[Desktop Action openurl]
+Name=Open Project Homepage
+Name[de]=Öffne Projekt Homepage
+Name[it]=Apri l'Homepage
+Icon=application-x-rpm
+Exec=tuncel openHomepage %F
+
+[Desktop Action testinstall]
+Name=Install Check
+Name[de]=Installation Testen
+Name[it]=Test Installazione
+Icon=application-x-rpm
+Exec=tuncel testinstall %F
+
+[Desktop Action forceinstalltest]
+Name=Install Force Overwrite Check
+Name[de]=Installation Überschreiben Testen
+Name[it]=Forza Test Installazione
+Icon=application-x-rpm
+Exec=tuncel forceinstalltest %F
+
+[Desktop Action install]
+Name=Install RPMS Sources to local
+Name[de]=RPM-Sourcen Lokal Installieren
+Name[it]=Installa il Sorgente RPM
+Icon=application-x-rpm
+Exec=tuncel installsrc %F
+
+[Desktop Action admin]
+Name=Open Administrator Shell
+Name[de]=Öffne Administrator Konsole
+Name[it]=Avvia una Shell Amministratore
+Icon=application-x-rpm
+Exec=tuncel rootterminal %d
+
+##eof

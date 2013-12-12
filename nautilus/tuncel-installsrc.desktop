@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Action
+Icon=rpm
+ToolbarLabel=Install Source RPM
+ToolbarLabel[tr]=Kaynak RPM Paketi Kur
+Name=Install Source RPM
+Name[tr]=Kaynak RPM Paketi Kur
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=application/x-source-rpm;
+Exec=/usr/bin/tuncel installsrc %u
+Name=Default profile
+Name[tr]=Default profile

@@ -1,0 +1,52 @@
+# /etc/zeynep.conf
+#
+#########################################################################
+# Copyright (C) 2007 2008 by Juergen Heinemann http://www.hjcms.de
+# Copyright (C) 2013 Atilla ÖNTAŞ https://github.com/tarakbumba/tuncel
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the
+# Free Software Foundation, Inc.,
+# 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+#########################################################################
+
+# rpm2cpio Binary Name
+RPM2CPIO_BIN=@RPM2CPIO_BIN@
+
+# rpm Binary Name
+RPM_BIN=@RPM_BIN@
+
+# cpio Binary Name
+CPIO_BIN=@CPIO_BIN@
+
+# md5sum Binary Name
+MD5SUM_BIN=@MD5SUM_BIN@
+
+# kdialog Binary Name
+KDIALOG_BIN=@KDIALOG_BIN@
+
+# zenity binary;
+ZENITY_BIN=@ZENITY_BIN@
+
+# Default Terminal Command
+# Usage: TERMINAL_CMD TERMINAL_OPTS
+## @example: "konsole --workdir"
+# Use terminal options here
+TERMINAL_APPLICATION="@TERMINAL@"
+TERMINAL_OPTS=" "
+
+# Temp Directory Default /tmp
+TMP_DIR=/tmp
+
+##eof
+

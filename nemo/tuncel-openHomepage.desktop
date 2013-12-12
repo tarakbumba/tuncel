@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Action
+Icon=web-browser
+Icon[tr]=web-browser
+ToolbarLabel=Open RPM Homepage
+ToolbarLabel[tr]=RPM Anasayfasını Aç
+Name=Open RPM Homepage
+Name[tr]=RPM Anasayfasını Aç
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=application/x-rpm;application/x-source-rpm;
+Exec=/usr/bin/tuncel openHomepage
+Name=Default profile
+Name[tr]=Default profile
