@@ -51,13 +51,14 @@ AC_PROG_AWK
 AC_PROG_SED
 AC_PROG_MAKE_SET
 AC_PROG_MKDIR_P
+AC_PROG_LN_S
 AC_PROG_INSTALL
 
 dnl -----------------------------------------------
 dnl KDE 4 Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([kde4],
-  [AS_HELP_STRING([--disable-kde4],[disable kde4 servicemenu support])],
+  [AS_HELP_STRING([--enable-kde4],[enable kde4 servicemenu support])],
   [ac_cv_with_kde4=yes],
   [ac_cv_with_kde4=no]
 )
@@ -68,7 +69,7 @@ AC_PATH_PROGS([KDEFOURCONFIG],
 )
 ac_cv_kde4_servicedir=
 if test -x "$KDEFOURCONFIG" ; then
-  ac_cv_kde4_servicedir=`$KDEFOURCONFIG --install services`/ServiceMenus
+  ac_cv_kde4_servicedir=`$KDEFOURCONFIG --install services`ServiceMenus
 fi
 AC_SUBST([KDE4_SERVICE_MENU_DIR],"$ac_cv_kde4_servicedir")
 AM_CONDITIONAL(KDE4_SERVICE_SUPPORT, test "x$ac_cv_with_kde4" = xyes)
@@ -78,12 +79,12 @@ dnl KDE 3 Support
 dnl -----------------------------------------------
 AC_ARG_WITH([kde3],
   [AS_HELP_STRING([--with-kde3],[enable kde3 servicemenu support])],
-  [ac_cv_with_kde3=no],
-  [ac_cv_with_kde3=yes]
+  [ac_cv_with_kde3=yes],
+  [ac_cv_with_kde3=no]
 )
 AC_PATH_PROGS([KDETHREECONFIG],
-  [kde-config kde3-config kde-config3],
-  [AC_MSG_WARN([kde-config not found skipping kde3 ServiceMenu Support])]
+  [kde3-config kde-config3],
+  [AC_MSG_WARN([kde3-config not found skipping kde3 ServiceMenu Support])]
 )
 ac_cv_kde3_servicedir=
 if test -x "$KDETHREECONFIG" ; then
@@ -95,38 +96,26 @@ AM_CONDITIONAL(KDE3_SERVICE_SUPPORT, test "x$ac_cv_with_kde3" = xyes)
 dnl -----------------------------------------------
 dnl Nautilus/Caja Support
 dnl -----------------------------------------------
-AC_ARG_ENABLE([nautilus-actions],
-  [AS_HELP_STRING([--disable-nautilus],[disable actions support])],
-  [ac_cv_with_nautilus=no],
-  [ac_cv_with_nautilus=yes]
+AC_ARG_ENABLE([nautilus],
+  [AS_HELP_STRING([--enable-nautilus],[enable actions support])],
+  [ac_cv_with_nautilus=yes],
+  [ac_cv_with_nautilus=no]
 )
-AC_PATH_PROGS([NAUTILUSBIN],
-  [nautilus-actions-config-tool caja-actions-config-tool],
-  [AC_MSG_WARN([nautilus-actions or caja-actions not found skipping Gnome/Mate support])]
-)
-ac_cv_nautilus_actionsdir=
-if test -x "$NAUTILUSBIN" ; then
-  ac_cv_nautilus_actionsdir=${datadir}/filemanager/actions/
-fi
+ac_cv_nautilus_actionsdir=${datadir}/file-manager/actions/
+
 AC_SUBST([NAUTILUS_ACTIONS_DIR],"$ac_cv_nautilus_actionsdir")
 AM_CONDITIONAL(NAUTILUS_ACTIONS_SUPPORT, test "x$ac_cv_with_nautilus" = xyes)
 
 dnl -----------------------------------------------
 dnl Nemo Support
 dnl -----------------------------------------------
-AC_ARG_ENABLE([nemo-actions],
-  [AS_HELP_STRING([--disable-nemo],[disable actions support])],
-  [ac_cv_with_nemo=no],
-  [ac_cv_with_nemo=yes]
+AC_ARG_ENABLE([nemo],
+  [AS_HELP_STRING([--enable-nemo],[enable nemo-actions support])],
+  [ac_cv_with_nemo=yes],
+  [ac_cv_with_nemo=no]
 )
-AC_PATH_PROGS([NEMOBIN],
-  [nemo-actions-config-tool],
-  [AC_MSG_WARN(["nemo-actions not found skipping Cinnamon support"])]
-)
-ac_cv_nemo_actionsdir=
-if test -x "$NEMOBIN" ; then
-  ac_cv_nemo_actionsdir=${datadir}/nemo/actions/
-fi
+ac_cv_nemo_actionsdir=${datadir}/nemo/actions/
+
 AC_SUBST([NEMO_ACTIONS_DIR],"$ac_cv_nemo_actionsdir")
 AM_CONDITIONAL(NEMO_ACTIONS_SUPPORT, test "x$ac_cv_with_nemo" = xyes)
 
