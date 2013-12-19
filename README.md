@@ -16,20 +16,16 @@ Also you should previously install these dependencies first:
 - coreutils
 - gettext-devel
 - rpm-devel
-- kdebase-devel (for kde4 support)
+- kdelibs (for kde4 support)
 - kdialog (for kde4 support)
 - zenity (for GNOME/MATE/NEMO support)
-- nautilus-libraries (for GNOME/Nautilus support)
-- nautilus-actions (for GNOME/Nautilus support)
-- caja-libraries (for MATE/Caja support)
-- caja-actions (for MATE/Caja support)
-- nemo-libraries (for Cinnamon/Nemo support)
-- nemo-actions (for Cinnamon/Nemo support)
+
 
 Basically you should first create configuration and make
 files by issuing:
 
     autoreconf
+    automake
 
 in tuncel's root directory.
 
@@ -41,6 +37,20 @@ If you do not want to install one of these features just supply configure script
 appropriate option. E.g.:
 
     ./configure --disable-kde4
+
+Runtime Dependencies
+--------------------
+Depending your compilation choice, these should be installed on your system before running tuncel.
+
+- nautilus-actions (for GNOME/Nautilus support)
+- caja-actions (for MATE/Caja support)
+- nemo-actions (for Cinnamon/Nemo support)
+- kdelibs (KDE4 support)
+- zenity (GNOME/MATE/CINNAMON support)
+- kdialog (KDE4 support)
+- rpm2cpio
+- gettext (i18n support)
+- rpm (of course!)
 
 Translations:
 -------------
