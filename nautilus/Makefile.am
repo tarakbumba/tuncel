@@ -26,6 +26,7 @@ nautilus_DATA = tuncel-forceinstalltest.desktop \
   tuncel-unpack.desktop \
   tuncel-maininfo.desktop \
   tuncel-unpackto.desktop \
+  tuncel-showcontents.desktop\
   tuncel-openHomepage.desktop
 
 endif

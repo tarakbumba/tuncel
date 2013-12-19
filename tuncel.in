@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 #########################################################################
 # rpmxdgtool:
@@ -23,8 +23,8 @@
 #########################################################################
 
 . @GETTEXT@
-TEXTDOMAIN=@TEXTDOMAIN@
-set +x
+export TEXTDOMAIN=@TEXTDOMAIN@
+export TEXTDOMAINDIR='@localedir@'
 
 # Test and source configuration:
 RPM_XDG_CONFIG_TOOL_FILE=""
@@ -48,7 +48,7 @@ test -f "$RPM_XDG_CONFIG_TOOL_FILE" || {
 #########################################################################################
 critical()
 {
-  gettext "can not find executable" $1
+  gettext "can not find executable: $1"
   exit 1
 }
 
@@ -66,9 +66,6 @@ fi
 
 test -x "$MD5SUM_BIN" || critical "md5sum"
 test -x "$RPM2CPIO_BIN" || critical "rpm2cpio"
-test -n "$TERMINAL_APPLICATION" || critical "$TERMINAL_APPLICATION"
-
-TERMINAL_CMD="$TERMINAL_APPLICATION $TERMINAL_OPTS"
 
 if [ ! -d "$TMP_DIR" ] ; then
   TMP_DIR=/tmp
@@ -99,20 +96,31 @@ fi
 #Show options:
 #########################################################################################
 case "$1" in
-  *-help|-h) 
-    gettext "tuncel commands:"
-    echo -n " maininfo : "; gettext "Display Package Main Info";
-    echo -n " showcontents : "; gettext "Show Package Contents in Info Screen";
-    echo -n " unpack : "; gettext "Unpack package in current Directory";
-    echo -n " unpackto : "; gettext "Unpack Package to Directory";
-    echo -n " openHomepage : "; gettext "If %{url} exists open Package Homepage in Web Browser";
-    echo -n " testinstall : "; gettext "Installation Test (-iv)";
-    echo -n " forceinstalltest : "; gettext "Force Installation Test (-Uhv)";
-    echo -n " installsrc : "; gettext "Install RPM Source Package in to Build Enviroment";
-    gettext "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm";
+  *--help|-h) 
+    gettext "tuncel commands:
+maininfo :  Display Package Main Info
+showcontents : Show Package Contents in Info Screen
+unpack : Unpack package in current Directory
+unpackto : Unpack Package to Directory
+openHomepage : If %{url} exists open Package Homepage in Web Browser
+testinstall : Installation Test (-iv)
+forceinstalltest : Force Installation Test (-Uhv)
+installsrc : Install RPM Source Package in to Build Enviroment
+Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm
+";
     exit 0
   ;;
 esac
+
+#########################################################################################
+# Make rpm querytags translatable:
+#########################################################################################
+NAME=$(gettext "Name")
+SUMMARY=$(gettext "Summary")
+VERSION=$(gettext "Version")
+DESCRIPTION=$(gettext "Description")
+HOMEPAGE=$(gettext "Homepage")
+LICENSE=$(gettext "License")
 
 #########################################################################################
 #make file tests
@@ -149,11 +157,11 @@ unpackrpmfile()
 #########################################################################################
 case "$1" in
   maininfo)
-        $RPM_BIN -qp --queryformat '<strong>Name:</strong> %{Name}\n<br/><strong>Summary:</strong> %{Summary}\n<br/><strong>Homepage:</strong> %{URL}\n<br/><strong>License:</strong> %{License}\n<br/><strong>Version:</strong> %{Version}-%{Release}\n<br/>
-<strong>Description:</strong> %{Description}' $2 > ${TMPF} && $DIALOG_TEXTBOX ${TMPF} $SIZE && rm -r ${TMPF}
+        $RPM_BIN -qp --queryformat "<strong>$NAME:</strong> %{Name}\n<br/><strong>$SUMMARY:</strong> %{Summary}\n<br/><strong>$HOMEPAGE:</strong> %{URL}\n<br/><strong>$LICENSE:</strong> %{License}\n<br/><strong>$VERSION:</strong> %{Version}-%{Release}\n<br/>
+<strong>$DESCRIPTION:</strong> %{Description}" $2 > ${TMPF} && $DIALOG_TEXTBOX ${TMPF} $SIZE && rm -fr ${TMPF}
   ;;
   showcontents)
-    $RPM_BIN -qlp $2 > ${TMPF} && $DIALOG_TEXTBOX ${TMPF} $SIZE && rm -r ${TMPF}
+    $RPM_BIN -qlp $2 > ${TMPF} && $DIALOG_TEXTBOX ${TMPF} $SIZE && rm -fr ${TMPF}
   ;;
   unpack)
     unpackrpmfile $(dirname $2) $2
@@ -198,7 +206,8 @@ case "$1" in
     fi
   ;;
   terminal)
-    if test -d "$1" ; then
+    if test -d "$1" && test -n "$TERMINAL_APPLICATION" || critical "$TERMINAL_APPLICATION"; then
+      TERMINAL_CMD="$TERMINAL_APPLICATION $TERMINAL_OPTS"        
       $TERMINAL_CMD $1
     fi
   ;;

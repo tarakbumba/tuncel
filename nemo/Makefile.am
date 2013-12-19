@@ -22,10 +22,11 @@ if NEMO_ACTIONS_SUPPORT
 nemodir = @NEMO_ACTIONS_DIR@
 nemo_DATA = tuncel-forceinstalltest.desktop \
   tuncel-testinstall.desktop \
-  tuncel-installsrc.desktop   \
+  tuncel-installsrc.desktop \
   tuncel-unpack.desktop \
   tuncel-maininfo.desktop \
   tuncel-unpackto.desktop \
+  tuncel-showcontents.desktop \
   tuncel-openHomepage.desktop
 
 endif

@@ -9,6 +9,6 @@ Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-rpm;application/x-source-rpm;
-Exec=/usr/bin/tuncel forceinstalltest %u
+Exec=/usr/bin/tuncel forceinstalltest %f
 Name=Default profile
 Name[tr]=Default profile

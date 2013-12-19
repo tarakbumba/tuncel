@@ -6,9 +6,11 @@ Icon=application-x-rpm
 Name=RPM Tool
 Name[de]=RPM Werkzeug
 Name[it]=RPM Tools
+Name[tr]=RPM Araçları
 Comment=xdg rpm tools
 Comment[de]=xdg rpm werkzeug
 Comment[it]=xdg rpm utensile
+Comment[tr]=xdg rpm araçları
 Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstalltest;install;admin;
 Author=http://www.kde-apps.org/usermanager/search.php?username=undefined
 X-KDE-Priority=TopLevel
@@ -21,27 +23,31 @@ X-KDE-Submenu-Icon=application-x-rpm
 Name=Show General Info
 Name[de]=Zeige Hauptinformationen
 Name[it]=Info Generali
+Name[tr]=Genel Bilgileri Göster
 Icon=application-x-rpm
 Exec=tuncel maininfo %F
 
 [Desktop Action showcontents]
-Name=show package contents
+Name=Show Package Contents
 Name[de]=Zeige Paket Inhalt
 Name[it]=Visualizza il Contenuto del Pacchetto
+Name[tr]=Paket İçeriğini Göster
 Icon=application-x-rpm
 Exec=tuncel showcontents %F
 
 [Desktop Action unpack]
-Name=unpack package in this directory
+Name=Unpack Package In This Directory
 Name[de]=Paket hier Entpacken
 Name[it]=Decomprimi in questa Cartella
+Name[tr]=Paketi Bu Dizine Aç
 Icon=application-x-rpm
 Exec=tuncel unpack %F
 
 [Desktop Action unpackto]
-Name=unpack package to directory
+Name=Unpack Package To Directory
 Name[de]=Paket in Verzeichnis Entpacken
 Name[it]=Decomprimi in una Cartella
+Name[tr]=Paketi Başka Dizine Aç
 Icon=application-x-rpm
 Exec=tuncel unpackto %F
 
@@ -49,6 +55,7 @@ Exec=tuncel unpackto %F
 Name=Open Project Homepage
 Name[de]=Öffne Projekt Homepage
 Name[it]=Apri l'Homepage
+Name[tr]=Proje Ana Sayfasını Aç
 Icon=application-x-rpm
 Exec=tuncel openHomepage %F
 
@@ -56,6 +63,7 @@ Exec=tuncel openHomepage %F
 Name=Install Check
 Name[de]=Installation Testen
 Name[it]=Test Installazione
+Name[tr]=Kurulumu Sına
 Icon=application-x-rpm
 Exec=tuncel testinstall %F
 
@@ -63,21 +71,24 @@ Exec=tuncel testinstall %F
 Name=Install Force Overwrite Check
 Name[de]=Installation Überschreiben Testen
 Name[it]=Forza Test Installazione
+Name[tr]=Kurulumda Üzerine Yazma Sınaması
 Icon=application-x-rpm
 Exec=tuncel forceinstalltest %F
 
 [Desktop Action install]
-Name=Install RPMS Sources to local
+Name=Install RPMS Sources To Local
 Name[de]=RPM-Sourcen Lokal Installieren
 Name[it]=Installa il Sorgente RPM
+Name[tr]=RPM Kaynak Paketini Yerele Kur
 Icon=application-x-rpm
 Exec=tuncel installsrc %F
 
 [Desktop Action admin]
-Name=Open Administrator Shell
-Name[de]=Öffne Administrator Konsole
-Name[it]=Avvia una Shell Amministratore
+Name=Open A Shell
+Name[de]=Öffne Konsole
+Name[it]=Avvia una Shell
+Name[tr]=Bir Kabuk Aç
 Icon=application-x-rpm
-Exec=tuncel rootterminal %d
+Exec=tuncel terminal %d
 
 ##eof

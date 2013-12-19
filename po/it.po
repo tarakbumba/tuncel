@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: de\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-12 16:09+0200\n"
+"POT-Creation-Date: 2013-12-19 02:49+0200\n"
 "PO-Revision-Date: 2009-02-08 19:12+0100\n"
 "Last-Translator: Astragalo <slanislao (AT) tiscali (DOT) it>\n"
 "Language-Team: German <de@li.org>\n"
@@ -20,78 +20,106 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../tuncel.in:40
+#: tuncel.in:41 tuncel.in:40
 msgid "Error: Missing tuncel configuration file"
 msgstr "Errore: configurazione di tuncel non trovata."
 
-#: ../tuncel.in:51
+#: tuncel.in:52
 msgid "can not find executable"
 msgstr "Eseguibile non trovato"
 
-#: ../tuncel.in:103
-msgid "tuncel commands:"
-msgstr "Comandi tuncel:"
+#: tuncel.in:100
+msgid ""
+"tuncel commands:\n"
+"maininfo :  Display Package Main Info\n"
+"showcontents : Show Package Contents in Info Screen\n"
+"unpack : Unpack package in current Directory\n"
+"unpackto : Unpack Package to Directory\n"
+"openHomepage : If %{url} exists open Package Homepage in Web Browser\n"
+"testinstall : Installation Test (-iv)\n"
+"forceinstalltest : Force Installation Test (-Uhv)\n"
+"installsrc : Install RPM Source Package in to Build Enviroment\n"
+"Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
+msgstr ""
 
-#: ../tuncel.in:104
-msgid "Display Package Main Info"
-msgstr "Visualizza Info Pacchetto"
+#: tuncel.in:118
+msgid "Name"
+msgstr ""
 
-#: ../tuncel.in:105
-msgid "Show Package Contents in Info Screen"
-msgstr "Visualizza il Contenuto del Pacchetto"
+#: tuncel.in:119
+msgid "Summary"
+msgstr ""
 
-#: ../tuncel.in:106
-msgid "Unpack package in current Directory"
-msgstr "Scompatta in questa Cartella"
+#: tuncel.in:120
+msgid "Version"
+msgstr ""
 
-#: ../tuncel.in:107
-msgid "Unpack Package to Directory"
-msgstr "Scompatta in una Cartella.."
+#: tuncel.in:121
+msgid "Description"
+msgstr ""
 
-#: ../tuncel.in:108
-msgid "If %{url} exists open Package Homepage in Web Browser"
-msgstr "Se %{url} esiste apri l'Homepage del Progetto"
+#: tuncel.in:122
+msgid "Homepage"
+msgstr ""
 
-#: ../tuncel.in:109
-msgid "Installation Test (-iv)"
-msgstr "Test Installatione (-iv)"
+#: tuncel.in:123
+msgid "License"
+msgstr ""
 
-#: ../tuncel.in:110
-msgid "Force Installation Test (-Uhv)"
-msgstr "Forza Test Installatione (-Uhv)"
-
-#: ../tuncel.in:111
-msgid "Install RPM Source Package in to Build Enviroment"
-msgstr "Installa il Sorgente RPM nella Cartella di Sviluppo"
-
-#: ../tuncel.in:112
-msgid "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
-msgstr "Essempio: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
-
-#: ../tuncel.in:121
+#: tuncel.in:129
 msgid "no file"
 msgstr "File non trovato"
 
-#: ../tuncel.in:128
+#: tuncel.in:136
 msgid "no application/x-rpm file"
 msgstr "Non application/x-rpm file"
 
-#: ../tuncel.in:140
+#: tuncel.in:148
 msgid "please wait..."
 msgstr "Attendere..."
 
-#: ../tuncel.in:172
+#: tuncel.in:181
 msgid "No URL in RPM Package found"
 msgstr "URL non trovato in RPM Package."
 
-#: ../tuncel.in:178 ../tuncel.in:188
+#: tuncel.in:187 tuncel.in:197
 msgid "No Errors"
 msgstr "Nessun Errore"
 
-#: ../tuncel.in:193
+#: tuncel.in:202
 msgid "Installing Source..."
 msgstr "Installazione Sorgente"
 
-#: ../tuncel.in:196
+#: tuncel.in:205
 msgid "No Valid RPM Source Package"
 msgstr "Sorgente RPM non valido"
+
+#~ msgid "tuncel commands:"
+#~ msgstr "Comandi tuncel:"
+
+#~ msgid "Display Package Main Info"
+#~ msgstr "Visualizza Info Pacchetto"
+
+#~ msgid "Show Package Contents in Info Screen"
+#~ msgstr "Visualizza il Contenuto del Pacchetto"
+
+#~ msgid "Unpack package in current Directory"
+#~ msgstr "Scompatta in questa Cartella"
+
+#~ msgid "Unpack Package to Directory"
+#~ msgstr "Scompatta in una Cartella.."
+
+#~ msgid "If %{url} exists open Package Homepage in Web Browser"
+#~ msgstr "Se %{url} esiste apri l'Homepage del Progetto"
+
+#~ msgid "Installation Test (-iv)"
+#~ msgstr "Test Installatione (-iv)"
+
+#~ msgid "Force Installation Test (-Uhv)"
+#~ msgstr "Forza Test Installatione (-Uhv)"
+
+#~ msgid "Install RPM Source Package in to Build Enviroment"
+#~ msgstr "Installa il Sorgente RPM nella Cartella di Sviluppo"
+
+#~ msgid "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
+#~ msgstr "Essempio: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"

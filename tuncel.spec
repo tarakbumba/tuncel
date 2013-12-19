@@ -1,5 +1,8 @@
+# Mageia Distribution does not have nemo-actions packaged in repositories;
+# then we should disable Cinnamon/Nemo support.
+
 Name:		tuncel
-Summary:	Servicemenu/Actions for various desktops
+Summary:	Servicemenu or Actions for various desktops
 Version:	1.0
 Release:	%mkrel 1
 
@@ -8,19 +11,13 @@ Group:		Development/Other
 Source0:	https://github.com/tarakbumba/%{name}/archive/%{name}-%{version}.tar.gz
 URL:		https://github.com/tarakbumba/tuncel
 
-BuildRequires:	kdebase4-devel
-BuildRequires:	kdebase4-workspace-devel
+BuildRequires:	kdelibs4-core
 BuildRequires:	gettext-devel
-BuildRequires:  pkgconfig(libcaja-extension)
-BuildRequires:  pkgconfig(libnemo-extension)
-BuildRequires:  pkgconfig(libnautilus-extension)
-BuildRequires:  caja-actions
-BuildRequires:  nemo-actions
-BuildRequires:  nautilus-actions
-BuildRequires:  gettext-devel
+BuildRequires:  kde4-macros
+BuildRequires:  zenity
+BuildRequires:  kdialog
 
-Requires:   coreutils
-Requires:   gettext
+BuildArch:      noarch
 
 %description
 KDE3/4, Nautilus, Caja and Nemo service menus for RPM
@@ -67,14 +64,14 @@ Requires:   caja-actions
 %description -n %{name}-caja
 Virtual package to satisfy dependencies for Caja.
 
-%package -n %{name}-nemo
-Summary:    Nemo action for RPM Packages
-Requires:   %{name} = %{version}-%{release}
-Requires:   zenity
-Requires:   nemo-actions
+#package -n {name}-nemo
+#Summary:    Nemo action for RPM Packages
+#Requires:   %{name} = %{version}-%{release}
+#Requires:   zenity
+#Requires:   nemo-actions
 
-%description -n %{name}-nemo
-Nemo-Actions actions for easy RPM package operations.
+#description -n {name}-nemo
+#Nemo-Actions actions for easy RPM package operations.
 
 
 %prep
@@ -82,12 +79,11 @@ Nemo-Actions actions for easy RPM package operations.
 
 %build
 
-autoreconf
+autoreconf -fi
 automake -a
 
 %configure  --enable-kde4 \
-            --enable-nautilus-actions \
-            --enable-nemo-actions \
+            --enable-nautilus \
             --sysconfdir=%{_sysconfdir}
 
 %make
@@ -95,12 +91,12 @@ automake -a
 %install
 
 %makeinstall_std
-%find_lang %{name}.lang
+
+%find_lang %{name}
 
 %files -f %{name}.lang
 %config %{_sysconfdir}/%{name}.conf
 %{_bindir}/%{name}
-%dir %{_datadir}/%{name}
 %{_datadir}/%{name}/
 
 %files -n %{name}-kde4
@@ -109,8 +105,8 @@ automake -a
 %files -n %{name}-nautilus-data
 %{_datadir}/file-manager/actions/*.desktop
 
-%files -n %{name}-nemo
-%{_datadir}/nemo/actions/*.desktop
+#files -n %{name}-nemo
+#{_datadir}/nemo/actions/*.desktop
 
 %files -n %{name}-nautilus
 

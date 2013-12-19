@@ -10,5 +10,5 @@ Profiles=profile-zero;
 [X-Action-Profile profile-zero]
 Name=Default profile
 Name[tr]=Default profile
-Exec=/usr/bin/tuncel showcontents %u
+Exec=/usr/bin/tuncel showcontents %f
 MimeTypes=application/x-rpm;application/x-source-rpm;

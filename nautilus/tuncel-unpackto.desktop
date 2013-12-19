@@ -9,6 +9,6 @@ Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-rpm;application/x-source-rpm;
-Exec=/usr/bin/tuncel unpackto %u
+Exec=/usr/bin/tuncel unpackto %f
 Name=Default profile
 Name[tr]=Default profile

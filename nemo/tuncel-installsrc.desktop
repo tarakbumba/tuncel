@@ -9,6 +9,6 @@ Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-source-rpm;
-Exec=/usr/bin/tuncel installsrc %u
+Exec=/usr/bin/tuncel installsrc %f
 Name=Default profile
 Name[tr]=Default profile

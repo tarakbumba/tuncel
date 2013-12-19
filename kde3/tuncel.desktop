@@ -23,6 +23,7 @@ X-KDE-Submenu[it]=RPM utensile...
 Name=Show General Info
 Name[de]=Zeige Hauptinformationen
 Name[it]=Info Generali
+Name[tr]=Genel Bilgileri Göster
 Icon=rpm
 Exec=tuncel maininfo %F
 
@@ -30,6 +31,7 @@ Exec=tuncel maininfo %F
 Name=show package contents
 Name[de]=Zeige Paket Inhalt
 Name[it]=Visualizza il Contenuto del Pacchetto
+Name[tr]=Paket İçeriğini Göster
 Icon=rpm
 Exec=tuncel showcontents %F
 
@@ -37,6 +39,7 @@ Exec=tuncel showcontents %F
 Name=unpack package in this directory
 Name[de]=Paket hier Entpacken
 Name[it]=Decomprimi in questa Cartella
+Name[tr]=Paketi Bu Dizine Aç
 Icon=rpm
 Exec=tuncel unpack %F
 
@@ -44,6 +47,7 @@ Exec=tuncel unpack %F
 Name=unpack package to directory
 Name[de]=Paket in Verzeichnis Entpacken
 Name[it]=Decomprimi in una Cartella
+Name[tr]=Paketi Başka Dizine Aç
 Icon=rpm
 Exec=tuncel unpackto %F
 
@@ -51,6 +55,7 @@ Exec=tuncel unpackto %F
 Name=Open Project Homepage
 Name[de]=Öffne Projekt Homepage
 Name[it]=Apri l'Homepage
+Name[tr]=Proje Ana Sayfasını Aç
 Icon=rpm
 Exec=tuncel openHomepage %F
 
@@ -58,6 +63,7 @@ Exec=tuncel openHomepage %F
 Name=Install Check
 Name[de]=Installation Testen
 Name[it]=Test Installazione
+Name[tr]=Kurulumu Sına
 Icon=rpm
 Exec=tuncel testinstall %F
 
@@ -65,6 +71,7 @@ Exec=tuncel testinstall %F
 Name=Install Force Overwrite Check
 Name[de]=Installation Überschreiben Testen
 Name[it]=Forza Test Installazione
+Name[tr]=Kurulumda Üzerine Yazma Sınaması
 Icon=rpm
 Exec=tuncel forceinstalltest %F
 
@@ -72,6 +79,7 @@ Exec=tuncel forceinstalltest %F
 Name=Install RPMS Sources to local
 Name[de]=RPM-Sourcen Lokal Installieren
 Name[it]=Installa il Sorgente RPM
+Name[tr]=RPM Kaynak Paketini Yerele Kur
 Icon=rpm
 Exec=tuncel installsrc %F
 
@@ -79,6 +87,7 @@ Exec=tuncel installsrc %F
 Name=Open Shell
 Name[de]=Öffne Konsole
 Name[it]=Avvia una Shell
+Name[tr]=Bir Kabuk Aç
 Icon=rpm
 Exec=tuncel terminal %d
 

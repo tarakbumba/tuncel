@@ -2,13 +2,13 @@
 # tuncel paketi için Türkçe çeviriler.
 # Copyright (C) 2013 THE tuncel'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the tuncel package.
-# Atilla ÖNTAŞ <admin@tarakbumba.com>, 2013.
+# Atilla ÖNTAŞ <tarakbumba@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: tuncel 1.0-1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-12 16:09+0200\n"
-"PO-Revision-Date: 2013-12-12 16:18+0300\n"
+"POT-Creation-Date: 2013-12-19 02:49+0200\n"
+"PO-Revision-Date: 2013-12-19 02:50+0300\n"
 "Last-Translator: Atilla ÖNTAŞ <tarakbumba@gmail.com>\n"
 "Language-Team: Mageia Turkish Translation Team <i18n-tr@ml.mageia.org>\n"
 "Language: tr\n"
@@ -18,78 +18,140 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Virtaal 0.7.1\n"
 
-#: ../tuncel.in:40
+#: tuncel.in:41 tuncel.in:40
 msgid "Error: Missing tuncel configuration file"
 msgstr "Hata: tuncel yapılandırma dosyası bulunamadı"
 
-#: ../tuncel.in:51
+#: tuncel.in:52
 msgid "can not find executable"
 msgstr "çalıştırılabilir dosya bulunamadı"
 
-#: ../tuncel.in:103
-msgid "tuncel commands:"
-msgstr "tuncel komutları:"
+#: tuncel.in:101
+msgid ""
+"tuncel commands:\n"
+"maininfo :  Display Package Main Info\n"
+"showcontents : Show Package Contents in Info Screen\n"
+"unpack : Unpack package in current Directory\n"
+"unpackto : Unpack Package to Directory\n"
+"openHomepage : If %{url} exists open Package Homepage in Web Browser\n"
+"testinstall : Installation Test (-iv)\n"
+"forceinstalltest : Force Installation Test (-Uhv)\n"
+"installsrc : Install RPM Source Package in to Build Enviroment\n"
+"Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
+msgstr ""
+"tuncel komutları:\n"
+"maininfo :  Paket ana bilgilerini görüntüle\n"
+"showcontents : Paket içeriği bilgi ekranında göster\n"
+"unpack : Paketi geçerli dizine aç\n"
+"unpackto : Paketi bir dizine aç\n"
+"openHomepage : %{url} mevcutsa paket ana sayfasını web tarayıcıda aç\n"
+"testinstall : Kurulum sınaması (-iv)\n"
+"forceinstalltest : Zorlanmış Kurulum Sınaması (-Uhv)\n"
+"installsrc : RPM kaynak paketini derleme ortamına kur\n"
+"Örnek: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
 
-#: ../tuncel.in:104
-msgid "Display Package Main Info"
-msgstr "Paket ana bilgilerini görüntüle"
+#: tuncel.in:118
+msgid "Name"
+msgstr "İsim"
 
-#: ../tuncel.in:105
-msgid "Show Package Contents in Info Screen"
-msgstr "Paket içeriği bilgi ekranında göster"
+#: tuncel.in:119
+msgid "Summary"
+msgstr "Özet"
 
-#: ../tuncel.in:106
-msgid "Unpack package in current Directory"
-msgstr "Paketi geçerli dizine aç"
+#: tuncel.in:120
+msgid "Version"
+msgstr "Sürüm"
 
-#: ../tuncel.in:107
-msgid "Unpack Package to Directory"
-msgstr "Paketi bir dizine aç"
+#: tuncel.in:121
+msgid "Description"
+msgstr "Açıklama"
 
-#: ../tuncel.in:108
-msgid "If %{url} exists open Package Homepage in Web Browser"
-msgstr "%{url} mevcutsa paket ana sayfasını web tarayıcıda aç"
+#: tuncel.in:122
+msgid "Homepage"
+msgstr "Ana sayfa"
 
-#: ../tuncel.in:109
-msgid "Installation Test (-iv)"
-msgstr "Kurulum sınaması (-iv)"
+#: tuncel.in:123
+msgid "License"
+msgstr "Lisans"
 
-#: ../tuncel.in:110
-msgid "Force Installation Test (-Uhv)"
-msgstr "Kurulum sınamasına zorla (-Uhv)"
-
-#: ../tuncel.in:111
-msgid "Install RPM Source Package in to Build Enviroment"
-msgstr "RPM kaynak paketini derleme ortamına kur"
-
-#: ../tuncel.in:112
-msgid "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
-msgstr "Örnek: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
-
-#: ../tuncel.in:121
+#: tuncel.in:129
 msgid "no file"
 msgstr "dosya yok"
 
-#: ../tuncel.in:128
+#: tuncel.in:136
 msgid "no application/x-rpm file"
 msgstr "application/x-rpm türünde bir dosya değil"
 
-#: ../tuncel.in:140
+#: tuncel.in:148
 msgid "please wait..."
 msgstr "lütfen bekleyiniz..."
 
-#: ../tuncel.in:172
+#: tuncel.in:181
 msgid "No URL in RPM Package found"
 msgstr "RPM paketinde URL bağlantısı bulunamadı"
 
-#: ../tuncel.in:178 ../tuncel.in:188
+#: tuncel.in:187 tuncel.in:197
 msgid "No Errors"
 msgstr "Hata Yok"
 
-#: ../tuncel.in:193
+#: tuncel.in:202
 msgid "Installing Source..."
 msgstr "Kaynak kuruluyor..."
 
-#: ../tuncel.in:196
+#: tuncel.in:205
 msgid "No Valid RPM Source Package"
 msgstr "Geçerli RPM kaynak paketi değil"
+
+#: tuncel.in:100
+msgid ""
+"tuncel commands:\n"
+"maininfo :  Display Package Main Info\n"
+"showcontents : Show Package Contents in Info Screen\n"
+"unpack : Unpack package in current Directory\n"
+"unpackto : Unpack Package to Directory\n"
+"openHomepage : If %{url} exists open Package Homepage in Web Browser\n"
+"testinstall : Installation Test (-iv)\n"
+"forceinstalltest : Force Installation Test (-Uhv)\n"
+"installsrc : Install RPM Source Package in to Build Enviroment\n"
+"Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
+msgstr ""
+"tuncel komutları:\n"
+"maininfo :  Paket ana bilgilerini görüntüle\n"
+"showcontents : Paket içeriği bilgi ekranında göster\n"
+"unpack : Paketi geçerli dizine aç\n"
+"unpackto : Paketi bir dizine aç\n"
+"openHomepage : %{url} mevcutsa paket ana sayfasını web tarayıcıda aç\n"
+"testinstall : Kurulum sınaması (-iv)\n"
+"forceinstalltest : Zorlanmış Kurulum Sınaması (-Uhv)\n"
+"installsrc : RPM kaynak paketini derleme ortamına kur\n"
+"Örnek: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
+
+#~ msgid "tuncel commands:"
+#~ msgstr "tuncel komutları:"
+
+#~ msgid "Display Package Main Info"
+#~ msgstr "Paket ana bilgilerini görüntüle"
+
+#~ msgid "Show Package Contents in Info Screen"
+#~ msgstr "Paket içeriği bilgi ekranında göster"
+
+#~ msgid "Unpack package in current Directory"
+#~ msgstr "Paketi geçerli dizine aç"
+
+#~ msgid "Unpack Package to Directory"
+#~ msgstr "Paketi bir dizine aç"
+
+#~ msgid "If %{url} exists open Package Homepage in Web Browser"
+#~ msgstr "%{url} mevcutsa paket ana sayfasını web tarayıcıda aç"
+
+#~ msgid "Installation Test (-iv)"
+#~ msgstr "Kurulum sınaması (-iv)"
+
+#~ msgid "Force Installation Test (-Uhv)"
+#~ msgstr "Kurulum sınamasına zorla (-Uhv)"
+
+#~ msgid "Install RPM Source Package in to Build Enviroment"
+#~ msgstr "RPM kaynak paketini derleme ortamına kur"
+
+#~ msgid "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
+#~ msgstr "Örnek: tuncel maininfo /tmp/foo-0.0.5.i586.rpm"
