@@ -58,9 +58,9 @@ dnl -----------------------------------------------
 dnl KDE 4 Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([kde4],
-  [AS_HELP_STRING([--enable-kde4],[enable kde4 servicemenu support])],
-  [ac_cv_with_kde4=yes],
-  [ac_cv_with_kde4=no]
+  [AS_HELP_STRING([--disable-kde4],[disable kde4 servicemenu support])],
+  [ac_cv_with_kde4=no],
+  [ac_cv_with_kde4=yes]
 )
 
 AC_PATH_PROGS([KDEFOURCONFIG],
@@ -97,9 +97,9 @@ dnl -----------------------------------------------
 dnl Nautilus/Caja Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([nautilus],
-  [AS_HELP_STRING([--enable-nautilus],[enable actions support])],
-  [ac_cv_with_nautilus=yes],
-  [ac_cv_with_nautilus=no]
+  [AS_HELP_STRING([--disable-nautilus],[disable actions support])],
+  [ac_cv_with_nautilus=no],
+  [ac_cv_with_nautilus=yes]
 )
 ac_cv_nautilus_actionsdir=${datadir}/file-manager/actions/
 
@@ -110,9 +110,9 @@ dnl -----------------------------------------------
 dnl Nemo Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([nemo],
-  [AS_HELP_STRING([--enable-nemo],[enable nemo-actions support])],
-  [ac_cv_with_nemo=yes],
-  [ac_cv_with_nemo=no]
+  [AS_HELP_STRING([--disable-nemo],[disable nemo-actions support])],
+  [ac_cv_with_nemo=no],
+  [ac_cv_with_nemo=yes]
 )
 ac_cv_nemo_actionsdir=${datadir}/nemo/actions/
 
