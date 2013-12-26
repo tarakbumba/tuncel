@@ -1,0 +1,30 @@
+[main]
+host = https://www.transifex.com
+
+[tuncel.tuncel_actions_desktoppot]
+file_filter = actions/po/<lang>.po
+source_file = actions/po/tuncel_actions_desktop.pot
+source_lang = en
+type = PO
+
+[tuncel.tuncel_kde_desktoppot]
+file_filter = kde/po/<lang>.po
+source_file = kde/po/tuncel_kde_desktop.pot
+source_lang = en
+trans.tr = kde/po/tr.po
+type = PO
+
+[tuncel.tuncelpot]
+file_filter = po/<lang>.po
+source_file = po/tuncel.pot
+source_lang = en
+trans.de = po/de.po
+trans.it = po/it.po
+trans.tr = po/tr.po
+type = PO
+
+[tuncel.tuncel]
+source_file = kde/po/tuncel_kde_desktop.pot
+source_lang = en
+trans.tr = kde/po/tr.po
+
