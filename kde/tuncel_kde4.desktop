@@ -1,0 +1,68 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-rpm;
+Icon=application-x-rpm
+Name=RPM Operations Tool
+Name[tr]=RPM İşlemleri Aracı
+Comment=Servicemenus for RPM Package operations
+Comment[tr]=RPM Paketi işlemleri için hizmet menüleri
+X-KDE-Priority=TopLevel
+X-KDE-Submenu-Icon=application-x-rpm
+X-KDE-Submenu[tr]=RPM İşlemleri
+Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstalltest;install;admin;
+
+[Desktop Action maininfo]
+Name=Show package information
+Name[tr]=Paket bilgilerini göster
+Icon=application-x-rpm
+Exec=tuncel maininfo %F
+
+[Desktop Action showcontents]
+Name=Show package contents
+Name[tr]=Paket içeriğini göster
+Icon=application-x-rpm
+Exec=tuncel showcontents %F
+
+[Desktop Action unpack]
+Name=Extract package here
+Name[tr]=Paketi buraya aç
+Icon=application-x-rpm
+Exec=tuncel unpack %F
+
+[Desktop Action unpackto]
+Name=Extract package to...
+Icon=application-x-rpm
+Exec=tuncel unpackto %F
+
+[Desktop Action openurl]
+Name=Open package source homepage
+Name[tr]=Paket kaynağı ana sayfasını aç
+Icon=application-x-rpm
+Exec=tuncel openHomepage %F
+
+[Desktop Action testinstall]
+Name=Test package installation
+Name[tr]=Paket kurulumunu sına
+Icon=application-x-rpm
+Exec=tuncel testinstall %F
+
+[Desktop Action forceinstalltest]
+Name=Test forcing package overwrite
+Name[tr]=Paket üzerine yazma zorlamasını sına
+Icon=application-x-rpm
+Exec=tuncel forceinstalltest %F
+
+[Desktop Action install]
+Name=Install Source RPM
+Name[tr]=Kaynak RPM Kurulumu
+Icon=application-x-rpm
+Exec=tuncel installsrc %F
+
+[Desktop Action admin]
+Name=Open a shell
+Name[tr]=Bir kabuk aç
+Icon=application-x-rpm
+Exec=tuncel terminal %d
+
+##eof

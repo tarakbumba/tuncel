@@ -1,0 +1,97 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Tuncel desktop files translation\n"
+"Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
+"POT-Creation-Date: 2013-12-26 05:40+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "Name"
+msgid "Show RPM General Info"
+msgstr ""
+
+#: ./tuncel-maininfo.desktop
+msgctxt "ToolbarLabel"
+msgid "Show RPM General Info"
+msgstr ""
+
+#: ./tuncel-maininfo.desktop
+msgctxt "Name"
+msgid "Default profile"
+msgstr ""
+
+#: ./tuncel-showcontents.desktop
+msgctxt "Name"
+msgid "Show RPM Contents"
+msgstr ""
+
+#: ./tuncel-showcontents.desktop
+msgctxt "ToolbarLabel"
+msgid "Show RPM Contents"
+msgstr ""
+
+#: ./tuncel-testinstall.desktop
+msgctxt "ToolbarLabel"
+msgid "Test RPM Installation"
+msgstr ""
+
+#: ./tuncel-testinstall.desktop
+msgctxt "Name"
+msgid "Test RPM Installation"
+msgstr ""
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "ToolbarLabel"
+msgid "Open RPM Homepage"
+msgstr ""
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "Name"
+msgid "Open RPM Homepage"
+msgstr ""
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "ToolbarLabel"
+msgid "Force RPM Install Test"
+msgstr ""
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "Name"
+msgid "Force RPM Install Test"
+msgstr ""
+
+#: ./tuncel-installsrc.desktop
+msgctxt "ToolbarLabel"
+msgid "Install Source RPM"
+msgstr ""
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Install Source RPM"
+msgstr ""
+
+#: ./tuncel-unpack.desktop
+msgctxt "ToolbarLabel"
+msgid "Unpack RPM Here"
+msgstr ""
+
+#: ./tuncel-unpack.desktop
+msgctxt "Name"
+msgid "Unpack RPM Here"
+msgstr ""
+
+#: ./tuncel-unpackto.desktop
+msgctxt "ToolbarLabel"
+msgid "Unpack RPM to folder..."
+msgstr ""
+
+#: ./tuncel-unpackto.desktop
+msgctxt "Name"
+msgid "Unpack RPM to folder..."
+msgstr ""

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Action
+Icon=tar
+ToolbarLabel=Unpack RPM to folder...
+ToolbarLabel[tr]=RPM Paketini Dizine Aç...
+Name=Unpack RPM to folder...
+Profiles=profile-zero;
+
+[X-Action-Profile profile-zero]
+MimeTypes=application/x-rpm;application/x-source-rpm;
+Exec=/usr/bin/tuncel unpackto %f
+Name=Default profile
