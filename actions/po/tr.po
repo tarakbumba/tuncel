@@ -1,0 +1,100 @@
+# Atilla ÖNTAŞ <tarakbumba@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: Tuncel desktop files translation\n"
+"Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
+"POT-Creation-Date: 2013-12-26 17:39+0200\n"
+"PO-Revision-Date: 2013-12-26 17:42+0300\n"
+"Last-Translator: Atilla ÖNTAŞ <tarakbumba@gmail.com>\n"
+"Language-Team: Mageia Turkish Translation Team <i18n-tr@ml.mageia.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "Name"
+msgid "Show package information"
+msgstr "Paket bilgilerini göster"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays useful information about package"
+msgstr "Paket hakkında yararlı bilgi görüntüler"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "Name"
+msgid "Default profile"
+msgstr "Varsayılan profil"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "Name"
+msgid "Show package contents"
+msgstr "Paket içeriğini göster"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays a list of package content"
+msgstr "Paket içeriğini listeler"
+
+#: ./tuncel-testinstall.desktop
+msgctxt "ToolbarLabel"
+msgid "Tests whether package installation is successful."
+msgstr "Paket kurulumunun başarılı olup olmadığını sınar."
+
+#: ./tuncel-testinstall.desktop
+msgctxt "Name"
+msgid "Test package installation"
+msgstr "Paket kurulumunu sına"
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "ToolbarLabel"
+msgid "Opens project page of application in a web browser"
+msgstr "Uygulama proje sayfasını bir web tarayıcısında açar"
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "Name"
+msgid "Open package source homepage"
+msgstr "Paket kaynağı ana sayfasını aç"
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "ToolbarLabel"
+msgid "Checks whether forced package overwrite is succesful"
+msgstr "Paket üzerine zorla yazma işleminin başarılı olup olmayacağını sınar"
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "Name"
+msgid "Test forcing package overwrite"
+msgstr "Paket üzerine yazma zorlamasını sına"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "ToolbarLabel"
+msgid "Installs Source RPM package into rpm/rpmbuild directory"
+msgstr "Kaynak RPM paketini rpm/rpmbuild dizinine kurar"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Install Source RPM"
+msgstr "Kaynak RPM Kur"
+
+#: ./tuncel-unpack.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package content into current directory"
+msgstr "Paket içeriğini geçerli dizine ayıklar"
+
+#: ./tuncel-unpack.desktop
+msgctxt "Name"
+msgid "Extract package here"
+msgstr "Paketi buraya aç"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package contents into user defined directory"
+msgstr "Paket içeriğini kullanıcı tanımlı dizine ayıklar"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "Name"
+msgid "Extract package to..."
+msgstr "Paketi başka dizine aç..."
