@@ -20,10 +20,8 @@
 AUTOMAKE_OPTIONS = foreign 1.4
 ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = po \
-	kde3 \
-	kde4 \
-    nautilus \
-    nemo
+	kde \
+    actions
 
 bin_SCRIPTS = tuncel
 
