@@ -58,7 +58,8 @@ dnl -----------------------------------------------
 dnl KDE 4 Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([kde4],
-  [AS_HELP_STRING([--disable-kde4],[disable kde4 servicemenu support])],
+  [AS_HELP_STRING([--enable-kde4=@<:@yes/no@:>@],
+  [Enable kde4 @<:@default=yes@:>@])],
   [ac_cv_with_kde4=no],
   [ac_cv_with_kde4=yes]
 )
@@ -78,7 +79,8 @@ dnl -----------------------------------------------
 dnl KDE 3 Support
 dnl -----------------------------------------------
 AC_ARG_WITH([kde3],
-  [AS_HELP_STRING([--with-kde3],[enable kde3 servicemenu support])],
+  [AS_HELP_STRING([--enable-kde3=@<:@yes/no@:>@],
+  [Enable kde3 @<:@default=no@:>@])],
   [ac_cv_with_kde3=yes],
   [ac_cv_with_kde3=no]
 )
@@ -97,7 +99,8 @@ dnl -----------------------------------------------
 dnl Nautilus/Caja Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([nautilus],
-  [AS_HELP_STRING([--disable-nautilus],[disable actions support])],
+  [AS_HELP_STRING([--enable-nautilus=@<:@yes/no@:>@],
+  [Enable nautilus @<:@default=yes@:>@])],
   [ac_cv_with_nautilus=no],
   [ac_cv_with_nautilus=yes]
 )
@@ -110,7 +113,8 @@ dnl -----------------------------------------------
 dnl Nemo Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([nemo],
-  [AS_HELP_STRING([--disable-nemo],[disable nemo-actions support])],
+  [AS_HELP_STRING([--enable-nemo=@<:@yes/no@:>@],
+  [Enable nemo @<:@default=yes@:>@])],
   [ac_cv_with_nemo=no],
   [ac_cv_with_nemo=yes]
 )
@@ -159,10 +163,8 @@ dnl -----------------------------------------------
 dnl Generates Makefile's, configuration files and scripts
 dnl -----------------------------------------------
 AC_CONFIG_FILES([Makefile])
-AC_CONFIG_FILES([kde3/Makefile])
-AC_CONFIG_FILES([kde4/Makefile])
-AC_CONFIG_FILES([nautilus/Makefile])
-AC_CONFIG_FILES([nemo/Makefile])
+AC_CONFIG_FILES([kde/Makefile])
+AC_CONFIG_FILES([actions/Makefile])
 AC_CONFIG_FILES([tuncel])
 AC_CONFIG_FILES([tuncel.conf])
 AC_CONFIG_FILES([po/Makefile],[AM_POSTPROCESS_PO_MAKEFILE])
