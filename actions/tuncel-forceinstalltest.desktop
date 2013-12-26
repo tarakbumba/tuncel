@@ -1,12 +1,14 @@
 [Desktop Entry]
 Type=Action
 Icon=rpm
-ToolbarLabel=Force RPM Install Test
-ToolbarLabel[tr]=RPM Kurulum Sınamasına Zorla
-Name=Force RPM Install Test
+ToolbarLabel=Checks whether forced package overwrite is succesful
+ToolbarLabel[tr]=Paket üzerine zorla yazma işleminin başarılı olup olmayacağını sınar
+Name=Test forcing package overwrite
+Name[tr]=Paket üzerine yazma zorlamasını sına
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-rpm;application/x-source-rpm;
 Exec=/usr/bin/tuncel forceinstalltest %f
 Name=Default profile
+Name[tr]=Varsayılan profil

@@ -1,12 +1,14 @@
 [Desktop Entry]
 Type=Action
-Name=Show RPM Contents
+Name=Show package contents
+Name[tr]=Paket içeriğini göster
 Icon=view-list-symbolic
-ToolbarLabel=Show RPM Contents
-ToolbarLabel[tr]=RPM İçeriğini Göster
+ToolbarLabel=Displays a list of package content
+ToolbarLabel[tr]=Paket içeriğini listeler
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 Name=Default profile
+Name[tr]=Varsayılan profil
 Exec=/usr/bin/tuncel showcontents %f
 MimeTypes=application/x-rpm;application/x-source-rpm;

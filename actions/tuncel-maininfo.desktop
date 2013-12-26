@@ -1,12 +1,14 @@
 [Desktop Entry]
 Type=Action
-Name=Show RPM General Info
+Name=Show package information
+Name[tr]=Paket bilgilerini göster
 Icon=info
-ToolbarLabel=Show RPM General Info
-ToolbarLabel[tr]=RPM Bilgilerini Göster
+ToolbarLabel=Displays useful information about package
+ToolbarLabel[tr]=Paket hakkında yararlı bilgi görüntüler
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 Name=Default profile
+Name[tr]=Varsayılan profil
 Exec=/usr/bin/tuncel maininfo %f
 MimeTypes=application/x-source-rpm;application/x-rpm;

@@ -1,12 +1,14 @@
 [Desktop Entry]
 Type=Action
 Icon=tar
-ToolbarLabel=Unpack RPM Here
-ToolbarLabel[tr]=RPM Paketini Buraya Aç
-Name=Unpack RPM Here
+ToolbarLabel=Extracts package content into current directory
+ToolbarLabel[tr]=Paket içeriğini geçerli dizine ayıklar
+Name=Extract package here
+Name[tr]=Paketi buraya aç
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-rpm;application/x-source-rpm;
 Exec=/usr/bin/tuncel unpack %f
 Name=Default profile
+Name[tr]=Varsayılan profil

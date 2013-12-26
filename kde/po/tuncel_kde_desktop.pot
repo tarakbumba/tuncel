@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuncel desktop files translation\n"
 "Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
-"POT-Creation-Date: 2013-12-26 05:40+0200\n"
+"POT-Creation-Date: 2013-12-26 17:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,11 +62,6 @@ msgid "Install Source RPM"
 msgstr ""
 
 #: ./tuncel_kde3.desktop
-msgctxt "Name"
-msgid "Open Shell"
-msgstr ""
-
-#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Open a shell"
 msgstr ""

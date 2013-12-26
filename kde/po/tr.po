@@ -66,13 +66,12 @@ msgstr "Kaynak RPM Kurulumu"
 
 #: ./tuncel_kde3.desktop
 msgctxt "Name"
-msgid "Open Shell"
-msgstr "Bir kabuk aç"
-
-#: ./tuncel_kde4.desktop
-msgctxt "Name"
 msgid "Open a shell"
 msgstr "Bir kabuk aç"
+
+#~ msgctxt "Name"
+#~ msgid "Open Shell"
+#~ msgstr "Bir kabuk aç"
 
 #~ msgctxt "X-KDE-Submenu"
 #~ msgid "RPM Operations"

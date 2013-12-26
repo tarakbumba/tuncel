@@ -62,7 +62,7 @@ Icon=rpm
 Exec=tuncel installsrc %F
 
 [Desktop Action admin]
-Name=Open Shell
+Name=Open a shell
 Name[tr]=Bir kabuk aç
 Icon=rpm
 Exec=tuncel terminal %d

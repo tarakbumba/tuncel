@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuncel desktop files translation\n"
 "Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
-"POT-Creation-Date: 2013-12-26 05:40+0200\n"
+"POT-Creation-Date: 2013-12-26 17:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,12 +13,12 @@ msgstr ""
 
 #: ./tuncel-maininfo.desktop
 msgctxt "Name"
-msgid "Show RPM General Info"
+msgid "Show package information"
 msgstr ""
 
 #: ./tuncel-maininfo.desktop
 msgctxt "ToolbarLabel"
-msgid "Show RPM General Info"
+msgid "Displays useful information about package"
 msgstr ""
 
 #: ./tuncel-maininfo.desktop
@@ -28,47 +28,47 @@ msgstr ""
 
 #: ./tuncel-showcontents.desktop
 msgctxt "Name"
-msgid "Show RPM Contents"
+msgid "Show package contents"
 msgstr ""
 
 #: ./tuncel-showcontents.desktop
 msgctxt "ToolbarLabel"
-msgid "Show RPM Contents"
+msgid "Displays a list of package content"
 msgstr ""
 
 #: ./tuncel-testinstall.desktop
 msgctxt "ToolbarLabel"
-msgid "Test RPM Installation"
+msgid "Tests whether package installation is successful."
 msgstr ""
 
 #: ./tuncel-testinstall.desktop
 msgctxt "Name"
-msgid "Test RPM Installation"
+msgid "Test package installation"
 msgstr ""
 
 #: ./tuncel-openHomepage.desktop
 msgctxt "ToolbarLabel"
-msgid "Open RPM Homepage"
+msgid "Opens project page of application in a web browser"
 msgstr ""
 
 #: ./tuncel-openHomepage.desktop
 msgctxt "Name"
-msgid "Open RPM Homepage"
+msgid "Open package source homepage"
 msgstr ""
 
 #: ./tuncel-forceinstalltest.desktop
 msgctxt "ToolbarLabel"
-msgid "Force RPM Install Test"
+msgid "Checks whether forced package overwrite is succesful"
 msgstr ""
 
 #: ./tuncel-forceinstalltest.desktop
 msgctxt "Name"
-msgid "Force RPM Install Test"
+msgid "Test forcing package overwrite"
 msgstr ""
 
 #: ./tuncel-installsrc.desktop
 msgctxt "ToolbarLabel"
-msgid "Install Source RPM"
+msgid "Installs Source RPM package into rpm/rpmbuild directory"
 msgstr ""
 
 #: ./tuncel-installsrc.desktop
@@ -78,20 +78,20 @@ msgstr ""
 
 #: ./tuncel-unpack.desktop
 msgctxt "ToolbarLabel"
-msgid "Unpack RPM Here"
+msgid "Extracts package content into current directory"
 msgstr ""
 
 #: ./tuncel-unpack.desktop
 msgctxt "Name"
-msgid "Unpack RPM Here"
+msgid "Extract package here"
 msgstr ""
 
 #: ./tuncel-unpackto.desktop
 msgctxt "ToolbarLabel"
-msgid "Unpack RPM to folder..."
+msgid "Extracts package contents into user defined directory"
 msgstr ""
 
 #: ./tuncel-unpackto.desktop
 msgctxt "Name"
-msgid "Unpack RPM to folder..."
+msgid "Extract package to..."
 msgstr ""
