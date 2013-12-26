@@ -22,7 +22,7 @@
 # 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #########################################################################
 
-. @GETTEXT@
+source @GETTEXT@
 export TEXTDOMAIN=@TEXTDOMAIN@
 export TEXTDOMAINDIR='@localedir@'
 
@@ -48,7 +48,7 @@ test -f "$RPM_XDG_CONFIG_TOOL_FILE" || {
 #########################################################################################
 critical()
 {
-  gettext "can not find executable: $1"
+  gettext "Executable file can not be found: " $1
   exit 1
 }
 
@@ -133,11 +133,11 @@ fi
 ## @modified 2009/02/08
 ## @short Make compatible with file >= 0.5.0
 test -n "$(file -iL "$2" | grep -e '\bapplication\/x\-rpm\b')" || {
-  $DIALOG_ERROR "$(gettext "no application/x-rpm file")"
+  $DIALOG_ERROR "$(gettext "This file is not an application/x-rpm file!")"
   exit 1
 }
 
-TMPF=$TMP_DIR/`$MD5SUM_BIN $2 | awk '{ print $1 }'`
+TMPF=$TMP_DIR/$($MD5SUM_BIN $2 | awk '{ print $1 }')
 
 #########################################################################################
 # rpm unpacking function:
@@ -145,7 +145,7 @@ TMPF=$TMP_DIR/`$MD5SUM_BIN $2 | awk '{ print $1 }'`
 unpackrpmfile()
 {
   cd $1
-    $RPM_BIN -qlp $2 > $(basename $2).log | $DIALOG_POPUP "$(gettext "please wait...")" 5
+    $RPM_BIN -qlp $2 > $(basename $2).log | $DIALOG_POPUP "$(gettext "Please wait...")" 5
         $RPM2CPIO_BIN $2 > ${TMPF}
     $CPIO_BIN -idv < ${TMPF}
     rm -f ${TMPF}
@@ -178,13 +178,13 @@ case "$1" in
     if [ -n "$(echo $URI | grep 'p://')" ] ; then
       xdg-open "$URI"
     else
-      $DIALOG_INFOBOX "$(gettext "No URL in RPM Package found")"
+      $DIALOG_INFOBOX "$(gettext "There was no valid URL in package!")"
     fi
   ;;
   testinstall)
     $RPM_BIN --test -Uhv $2 2> ${TMPF}
     if  [ $? -eq 0 ] ; then
-      $DIALOG_INFOBOX "$($RPM_BIN --test -Uhv $2) $(gettext "No Errors")"
+      $DIALOG_INFOBOX "$($RPM_BIN --test -Uhv $2) $(gettext "No errors have been reported. Test was successful!")"
     else
       $DIALOG_INFOBOX "$(cat ${TMPF})"
     fi
@@ -194,15 +194,15 @@ case "$1" in
     if  [ $? -eq 1 ] ; then
       $DIALOG_INFOBOX "$(cat ${TMPF})"
     else
-      $DIALOG_INFOBOX "$($RPM_BIN --test -Uhv $2) $(gettext "No Errors")"
+      $DIALOG_INFOBOX "$($RPM_BIN --test -Uhv $2) $(gettext "No errors have been reported. Test was successful!")"
     fi
   ;;
   installsrc)
     if [ -n "$(echo $2 | grep -e '\.src\.rpm$')" ] ; then
-      $DIALOG_POPUP "$(gettext "Installing Source...")" 3
+      $DIALOG_POPUP "$(gettext "Source RPM package is being installed...")" 3
       $RPM_BIN -iv $2 > /dev/null
     else
-      $DIALOG_ERROR $(gettext "No Valid RPM Source Package"); 
+      $DIALOG_ERROR "$(gettext "This package isn't a valid Source RPM package !")"; 
     fi
   ;;
   terminal)
