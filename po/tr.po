@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-26 22:56+0200\n"
-"PO-Revision-Date: 2013-12-26 23:01+0300\n"
+"POT-Creation-Date: 2013-12-26 23:02+0200\n"
+"PO-Revision-Date: 2013-12-26 23:56+0300\n"
 "Last-Translator: Atilla ÖNTAŞ <tarakbumba@gmail.com>\n"
 "Language-Team: Mageia Turkish Translation Team <i18n-tr@ml.mageia.org>\n"
 "Language: tr\n"
@@ -91,7 +91,7 @@ msgid "There was no valid URL in package!"
 msgstr "Paket içinde geçerli bir URL bulunamadı!"
 
 #: ../tuncel.in:187 ../tuncel.in:197
-msgid "No errors have been reported. Test was succesful!"
+msgid "No errors have been reported. Test was successful!"
 msgstr "Herhangi bir hata rapor edilmemiştir. Sınama başarılı oldu!"
 
 #: ../tuncel.in:202

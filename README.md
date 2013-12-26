@@ -3,8 +3,13 @@ Tuncel
 
 Tuncel is a fork of GPL licensed Heinemann Jürgen's rpmxdgtool.
 (http://gitweb.hjcms.de/cgi-bin/index.cgi/rpmxdgtool/)
+
 It provides kde3/4 service menus, nautilus-actions actions for GNOME,
 caja-actions actions for MATE, nemo-actions actions for Cinnamon.
+
+Tuncel has full translations support. If someone who talks your native
+language translates related gettext po files then tuncel talks your 
+language.
 
 Installation:
 -------------
@@ -24,7 +29,7 @@ Also you should previously install these dependencies first:
 Basically you should first create configuration and make
 files by issuing:
 
-    autoreconf
+    ./autogen.sh or autoreconf
     automake
 
 in tuncel's root directory.
@@ -54,13 +59,18 @@ Depending your compilation choice, these should be installed on your system befo
 
 Translations:
 -------------
-All files can be translated. First extract translation template from po/tuncel.pot file:
+Main tuncel script and related .desktop files could be 
+translated using Gettext po format. 
+First extract translation template from *.pot file:
 
-    msginit -i po/tuncel.pot -o po/LANG_Code.po
+    msginit -i po/*.pot -o po/LANG_Code.po
     
-Then translate it. Also you may translate *.desktop files. 
-If you translate all of them open a bug report requesting merge
-with project.
+Then translate it. 
+
+Also you can use Transifex web instance for translation workflow:
+
+https://www.transifex.com/projects/p/tuncel/
+
 
 Bugs:
 ------------
