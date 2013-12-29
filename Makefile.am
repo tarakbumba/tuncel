@@ -29,7 +29,7 @@ cfgdir = $(sysconfdir)
 cfg_DATA = tuncel.conf
 
 pkgdir = $(datadir)/tuncel
-pkg_DATA = COPYING INSTALL
+pkg_DATA = COPYING INSTALL ChangeLog
 
 all:
 	$(MAKE) -C po update-gmo

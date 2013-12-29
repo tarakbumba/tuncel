@@ -1,0 +1,103 @@
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-27
+
+    - Re-add Italian and German translations (Both are partial): Actually no
+    desktop translation is included.
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-27
+
+    - Add updated Turkish kde translation
+    - Update Readme
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Update tuncel.pot due to previous commit
+    - Remove Italian and German translations which are no longer valid.
+    - Add actions Turkish translation
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    Update translatable strings for more understandable form.
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Update .desktop file strings and create new po files from them
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Delete old backup file from .tx
+    
+    Signed-off-by: tarakbumba <tarakbumba@gmail.com>
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Add Transifex client configuration directory
+    
+    Signed-off-by: tarakbumba <tarakbumba@gmail.com>
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Modify Makefile.am due to directory structure changes
+    - Add autogen.sh script
+    
+    Signed-off-by: tarakbumba <tarakbumba@gmail.com>
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Merge nautilus and nemo directories into one "actions" directory
+    - Merge kde3 and kde4 directories into one "kde" directory
+    - Add gettext po translation files for both kde and actions .desktop files.
+    These po files created using tuncel_desktop2po.py (requires python-polib)
+    - Maintainers directory: useful for me :)
+    Signed-off-by: tarakbumba <tarakbumba@gmail.com>
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Reduce source directories: both kde3 and kde4; nautilus and nemo directories holds alike files. We do not need those.
+    - Add gettext po translations in kde and actions desktop files using tuncel_desktop2po.py script
+    - Add maintaniers directory; useful for myself.
+    
+    Signed-off-by: tarakbumba <tarakbumba@gmail.com>
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-26
+
+    - Fixed again configure.ac: Default behaviour is enabling feature when requirements met.
+    - Prepare configure.ac for directory changes in source
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-23
+
+    Make configure.ac builds all without --enable-future flag
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-19
+
+    - Update README for latest commits
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-19
+
+    - Fix actions desktop files: use %f not %u
+    - Add Turkish translation to kde desktop files
+    - Update translation catalogs
+    - Fix textdomaindirs
+    - Add translatable rpm querytags
+    - Update rpm specfile
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-19
+
+    Update configure.ac script
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-12
+
+    Fix spec file
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-12
+
+    Commit tuncel files
+
+Atilla ÖNTAŞ <tarakbumba@gmail.com>Date:   2013-12-12
+
+    Update README.md
+    
+    Some cosmetic changes to readme.
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-12
+
+    first tuncel commit
