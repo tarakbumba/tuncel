@@ -1,0 +1,16 @@
+#!/bin/bash
+version="$(git describe --abbrev=0 --tags)"
+pushd ../
+xgettext    --language=Shell \
+            --from-code="UTF-8" \
+            --keyword=$ \
+            --copyright-holder="Atilla ÖNTAŞ <tarakbumba@tarakbumba.com>" \
+            --package-name="Tuncel" \
+            --package-version="$version" \
+            --msgid-bugs-address="tarakbumba@tarakbumba.com" \
+            --sort-by-file \
+            --join-existing \
+            --output=po/tuncel.pot \
+tuncel.in
+popd
+
