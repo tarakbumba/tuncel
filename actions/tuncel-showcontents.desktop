@@ -1,14 +1,32 @@
 [Desktop Entry]
 Type=Action
 Name=Show package contents
+Name[fr]=Montrer le contenu du paquet
+Name[pl]=Pokaż zawartość pakietu
+Name[pt_PT]=Mostrar os conteúdos do pacote
 Name[tr]=Paket içeriğini göster
+Name[uk]=Показати вміст пакунка
 Icon=view-list-symbolic
 ToolbarLabel=Displays a list of package content
+ToolbarLabel[fr]=Affiche une liste du contenu du paquet
+ToolbarLabel[pl]=Pkazuje listę z zawartością pakietu
+ToolbarLabel[pt_PT]=Exibe a lista do conteúdo do pacote
+ToolbarLabel[tr]=Paket içeriğini listeler
+ToolbarLabel[uk]=Показати список вмісту пакунка
+ToolbarLabel[fr]=Affiche une liste du contenu du paquet
+ToolbarLabel[pl]=Pkazuje listę z zawartością pakietu
+ToolbarLabel[pt_PT]=Exibe a lista do conteúdo do pacote
+ToolbarLabel[tr]=Paket içeriğini listeler
+ToolbarLabel[uk]=Показати список вмісту пакунка
 ToolbarLabel[tr]=Paket içeriğini listeler
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 Name=Default profile
+Name[fr]=Profil par défaut
+Name[pl]=Domyślny profil
+Name[pt_PT]=Perfil Predefinido
 Name[tr]=Varsayılan profil
+Name[uk]=Типовий профіль
 Exec=/usr/bin/tuncel showcontents %f
 MimeTypes=application/x-rpm;application/x-source-rpm;

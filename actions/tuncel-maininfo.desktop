@@ -1,14 +1,32 @@
 [Desktop Entry]
 Type=Action
 Name=Show package information
+Name[fr]=Montrer les informations sur le paquet
+Name[pl]=Pokaż informacje o pakiecie
+Name[pt_PT]=Mostrar informação do pacote
 Name[tr]=Paket bilgilerini göster
+Name[uk]=Показати дані щодо пакунка
 Icon=info
 ToolbarLabel=Displays useful information about package
+ToolbarLabel[fr]=Affiche les informations utiles sur le paquet
+ToolbarLabel[pl]=Pokazuje użyteczne informacje o pakiecie
+ToolbarLabel[pt_PT]=Exibe a informação útil sobre o pacote
+ToolbarLabel[tr]=Paket hakkında yararlı bilgi görüntüler
+ToolbarLabel[uk]=Показати корисну інформацію щодо пакунка
+ToolbarLabel[fr]=Affiche les informations utiles sur le paquet
+ToolbarLabel[pl]=Pokazuje użyteczne informacje o pakiecie
+ToolbarLabel[pt_PT]=Exibe a informação útil sobre o pacote
+ToolbarLabel[tr]=Paket hakkında yararlı bilgi görüntüler
+ToolbarLabel[uk]=Показати корисну інформацію щодо пакунка
 ToolbarLabel[tr]=Paket hakkında yararlı bilgi görüntüler
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 Name=Default profile
+Name[fr]=Profil par défaut
+Name[pl]=Domyślny profil
+Name[pt_PT]=Perfil Predefinido
 Name[tr]=Varsayılan profil
+Name[uk]=Типовий профіль
 Exec=/usr/bin/tuncel maininfo %f
 MimeTypes=application/x-source-rpm;application/x-rpm;

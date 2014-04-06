@@ -1,14 +1,27 @@
 [Desktop Entry]
 Type=Action
 Icon=rpm
-ToolbarLabel=Checks whether forced package overwrite is succesful
+ToolbarLabel=Checks whether forced package overwrite is successful
+ToolbarLabel[fr]=Vérifie si l'écrasement de force du paquet est un succès
+ToolbarLabel[pl]=Sprawdza czy wymuszenie nadpisania pakietu zakończy się powodzeniem
+ToolbarLabel[pt_PT]=Verifica se a substituição do pacote forçado é bem sucedida
+ToolbarLabel[tr]=Paket üzerine zorla yazma işleminin başarılı olup olmayacağını sınar
+ToolbarLabel[uk]=Перевірити, чи можна успішно встановити пакунок у примусовому режимі
 ToolbarLabel[tr]=Paket üzerine zorla yazma işleminin başarılı olup olmayacağını sınar
 Name=Test forcing package overwrite
+Name[fr]=Test l'écrasement de force du paquet
+Name[pl]=Testuj wymuszenie nadpisania pakietu
+Name[pt_PT]=Testar o forçar a substituição do pacote
 Name[tr]=Paket üzerine yazma zorlamasını sına
+Name[uk]=Перевірити можливість примусового встановлення пакунка
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-rpm;application/x-source-rpm;
 Exec=/usr/bin/tuncel forceinstalltest %f
 Name=Default profile
+Name[fr]=Profil par défaut
+Name[pl]=Domyślny profil
+Name[pt_PT]=Perfil Predefinido
 Name[tr]=Varsayılan profil
+Name[uk]=Типовий профіль

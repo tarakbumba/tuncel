@@ -2,13 +2,31 @@
 Type=Action
 Icon=rpm
 ToolbarLabel=Tests whether package installation is successful.
+ToolbarLabel[fr]=Test si l'installation du paquet est un succès
+ToolbarLabel[pl]=Testuje czy instalacja pakietu zakończy się powodzeniem
+ToolbarLabel[pt_PT]=Testa para saber se a instalação do pacote foi bem sucedida.
+ToolbarLabel[tr]=Paket kurulumunun başarılı olup olmadığını sınar.
+ToolbarLabel[uk]=Перевірити, чи можна успішно встановити пакунок.
+ToolbarLabel[fr]=Test si l'installation du paquet est un succès
+ToolbarLabel[pl]=Testuje czy instalacja pakietu zakończy się powodzeniem
+ToolbarLabel[pt_PT]=Testa para saber se a instalação do pacote foi bem sucedida.
+ToolbarLabel[tr]=Paket kurulumunun başarılı olup olmadığını sınar.
+ToolbarLabel[uk]=Перевірити, чи можна успішно встановити пакунок.
 ToolbarLabel[tr]=Paket kurulumunun başarılı olup olmadığını sınar.
 Name=Test package installation
+Name[fr]=Tester l'installation du paquet
+Name[pl]=Testuj instalację pakietu
+Name[pt_PT]=Testar instalação do pacote
 Name[tr]=Paket kurulumunu sına
+Name[uk]=Перевірити можливість встановлення пакунка
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=new-filter;application/x-source-rpm;
 Exec=/usr/bin/tuncel testinstall %f
 Name=Default profile
+Name[fr]=Profil par défaut
+Name[pl]=Domyślny profil
+Name[pt_PT]=Perfil Predefinido
 Name[tr]=Varsayılan profil
+Name[uk]=Типовий профіль

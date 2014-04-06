@@ -2,13 +2,31 @@
 Type=Action
 Icon=tar
 ToolbarLabel=Extracts package content into current directory
+ToolbarLabel[fr]=Extraire le contenu du paquet dans le répertoire courant
+ToolbarLabel[pl]=Wypakowuje zawartość pakietu do katalogu bieżącego
+ToolbarLabel[pt_PT]=Extrai o conteúdo do pacote na diretoria atual
+ToolbarLabel[tr]=Paket içeriğini geçerli dizine ayıklar
+ToolbarLabel[uk]=Видобути вміст пакунка до поточного каталогу
+ToolbarLabel[fr]=Extraire le contenu du paquet dans le répertoire courant
+ToolbarLabel[pl]=Wypakowuje zawartość pakietu do katalogu bieżącego
+ToolbarLabel[pt_PT]=Extrai o conteúdo do pacote na diretoria atual
+ToolbarLabel[tr]=Paket içeriğini geçerli dizine ayıklar
+ToolbarLabel[uk]=Видобути вміст пакунка до поточного каталогу
 ToolbarLabel[tr]=Paket içeriğini geçerli dizine ayıklar
 Name=Extract package here
+Name[fr]=Extraire le paquet ici
+Name[pl]=Wypakuj pakiet tutaj
+Name[pt_PT]=Extrair aqui o pacote
 Name[tr]=Paketi buraya aç
+Name[uk]=Видобути пакунок сюди
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-rpm;application/x-source-rpm;
 Exec=/usr/bin/tuncel unpack %f
 Name=Default profile
+Name[fr]=Profil par défaut
+Name[pl]=Domyślny profil
+Name[pt_PT]=Perfil Predefinido
 Name[tr]=Varsayılan profil
+Name[uk]=Типовий профіль

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuncel desktop files translation\n"
 "Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
-"POT-Creation-Date: 2013-12-26 17:43+0200\n"
+"POT-Creation-Date: 2014-04-06 23:30+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,39 +11,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ./tuncel-maininfo.desktop
-msgctxt "Name"
-msgid "Show package information"
-msgstr ""
-
-#: ./tuncel-maininfo.desktop
+#: ./tuncel-installsrc.desktop
 msgctxt "ToolbarLabel"
-msgid "Displays useful information about package"
+msgid "Installs Source RPM package into rpm/rpmbuild directory"
 msgstr ""
 
-#: ./tuncel-maininfo.desktop
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Install Source RPM"
+msgstr ""
+
+#: ./tuncel-installsrc.desktop
 msgctxt "Name"
 msgid "Default profile"
-msgstr ""
-
-#: ./tuncel-showcontents.desktop
-msgctxt "Name"
-msgid "Show package contents"
-msgstr ""
-
-#: ./tuncel-showcontents.desktop
-msgctxt "ToolbarLabel"
-msgid "Displays a list of package content"
-msgstr ""
-
-#: ./tuncel-testinstall.desktop
-msgctxt "ToolbarLabel"
-msgid "Tests whether package installation is successful."
-msgstr ""
-
-#: ./tuncel-testinstall.desktop
-msgctxt "Name"
-msgid "Test package installation"
 msgstr ""
 
 #: ./tuncel-openHomepage.desktop
@@ -56,24 +36,34 @@ msgctxt "Name"
 msgid "Open package source homepage"
 msgstr ""
 
-#: ./tuncel-forceinstalltest.desktop
-msgctxt "ToolbarLabel"
-msgid "Checks whether forced package overwrite is succesful"
-msgstr ""
-
-#: ./tuncel-forceinstalltest.desktop
+#: ./tuncel-showcontents.desktop
 msgctxt "Name"
-msgid "Test forcing package overwrite"
+msgid "Show package contents"
 msgstr ""
 
-#: ./tuncel-installsrc.desktop
+#: ./tuncel-showcontents.desktop
 msgctxt "ToolbarLabel"
-msgid "Installs Source RPM package into rpm/rpmbuild directory"
+msgid "Displays a list of package content"
 msgstr ""
 
-#: ./tuncel-installsrc.desktop
+#: ./tuncel-maininfo.desktop
 msgctxt "Name"
-msgid "Install Source RPM"
+msgid "Show package information"
+msgstr ""
+
+#: ./tuncel-maininfo.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays useful information about package"
+msgstr ""
+
+#: ./tuncel-testinstall.desktop
+msgctxt "ToolbarLabel"
+msgid "Tests whether package installation is successful."
+msgstr ""
+
+#: ./tuncel-testinstall.desktop
+msgctxt "Name"
+msgid "Test package installation"
 msgstr ""
 
 #: ./tuncel-unpack.desktop
@@ -94,4 +84,14 @@ msgstr ""
 #: ./tuncel-unpackto.desktop
 msgctxt "Name"
 msgid "Extract package to..."
+msgstr ""
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "ToolbarLabel"
+msgid "Checks whether forced package overwrite is successful"
+msgstr ""
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "Name"
+msgid "Test forcing package overwrite"
 msgstr ""

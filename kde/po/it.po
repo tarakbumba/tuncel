@@ -1,4 +1,4 @@
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: Tuncel desktop files translation\n"
@@ -13,57 +13,57 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "RPM Operations Tool"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Comment"
 msgid "Servicemenus for RPM Package operations"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Show package information"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Show package contents"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Extract package here"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Extract package to..."
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Open package source homepage"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Test package installation"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Install Source RPM"
 msgstr ""
 
-#: tuncel_kde3.desktop
+#: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Open a shell"
 msgstr ""
