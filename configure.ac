@@ -25,7 +25,7 @@ dnl Release Versioning
 dnl -----------------------------------------------
 m4_define(PKG_NAME, [tuncel])
 m4_define(PKG_MAJOR, [1])
-m4_define(PKG_MINOR, [0])
+m4_define(PKG_MINOR, [3])
 
 dnl -----------------------------------------------
 dnl Package name and version number (user defined)

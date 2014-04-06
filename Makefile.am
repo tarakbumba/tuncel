@@ -18,7 +18,7 @@
 ##   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ##
 AUTOMAKE_OPTIONS = foreign 1.4
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 SUBDIRS = po \
 	kde \
     actions
@@ -28,11 +28,47 @@ bin_SCRIPTS = tuncel
 cfgdir = $(sysconfdir)
 cfg_DATA = tuncel.conf
 
-pkgdir = $(datadir)/tuncel
-pkg_DATA = COPYING INSTALL ChangeLog
+docdir = $(datadir)/doc/tuncel
+EXTRA_DIST = 			\
+	COPYING \
+	INSTALL \
+	ChangeLog
+
+MAINTAINERCLEANFILES = \
+	aclocal.m4 \
+	config.guess \
+	config.sub \
+	depcomp \
+	configure \
+	INSTALL \
+	install-sh \
+	ltmain.sh \
+	missing \
+	m4/libtool.m4 \
+	m4/ltoptions.m4 \
+	m4/ltsugar.m4 \
+	m4/ltversion.m4 \
+	m4/lt~obsolete.m4 \
+	`find "$(srcdir)" -type f -name Makefile.in -print`
+
+dist-hook:
+	@if test -d "$(srcdir)/.git"; \
+	then \
+		echo Creating ChangeLog && \
+		(GIT_DIR=$(top_srcdir)/.git \
+		  ./missing --run git log --stat -M -C --name-status  --date=short --no-color) | \
+		  fmt --split-only > ChangeLog.tmp \
+		&& mv -f ChangeLog.tmp $(top_distdir)/ChangeLog \
+		|| ( rm -f ChangeLog.tmp ; \
+		  echo Failed to generate ChangeLog >&2 ); \
+	else \
+		echo A git clone is required to generate a ChangeLog >&2; \
+	fi
 
 all:
 	$(MAKE) -C po update-gmo
+
+-include $(top_srcdir)/git.mk
 
 ##eof
 
