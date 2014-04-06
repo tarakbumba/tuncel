@@ -1,3 +1,34 @@
+tarakbumba <tarakbumba@gmail.com>Date:   2014-04-07
+
+    - Translations from tx
+
+tarakbumba <tarakbumba@gmail.com>Date:   2014-04-07
+
+    - Update LINGUAS
+
+tarakbumba <tarakbumba@gmail.com>Date:   2014-04-07
+
+    - Remove executable bits
+
+tarakbumba <tarakbumba@gmail.com>Date:   2014-04-06
+
+    - Add new translations from tx
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-30
+
+    - Add changelog generation script to maintainers : gitlog-to-changelog.sh
+    - Add automatic generation of tuncel.pot script: makepot
+    - Combine git-to-changelog script and desktop_translations script into
+    one script : maintain_jobs.sh
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-30
+
+    - Add git generated ChangeLog
+
+tarakbumba <tarakbumba@gmail.com>Date:   2013-12-30
+
+    - fix typo in po/LINGUAS file which broke package.
+
 tarakbumba <tarakbumba@gmail.com>Date:   2013-12-27
 
     - Re-add Italian and German translations (Both are partial): Actually no
