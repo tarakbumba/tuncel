@@ -1,0 +1,102 @@
+# 
+# Translators:
+# tarakbumba . <tarakbumba@gmail.com>, 2014
+# Yuri Chornoivan <yurchor@ukr.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tuncel\n"
+"Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
+"POT-Creation-Date: 2014-04-06 23:30+0300\n"
+"PO-Revision-Date: 2014-04-06 20:35+0000\n"
+"Last-Translator: tarakbumba . <tarakbumba@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/tuncel/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "ToolbarLabel"
+msgid "Installs Source RPM package into rpm/rpmbuild directory"
+msgstr "Встановити пакунок RPM з початковими кодами до каталогу rpm/rpmbuild"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Install Source RPM"
+msgstr "Встановити RPM з початковим кодом"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Default profile"
+msgstr "Типовий профіль"
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "ToolbarLabel"
+msgid "Opens project page of application in a web browser"
+msgstr "Відкрити сторінку проекту програми у програмі для перегляду інтернету"
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "Name"
+msgid "Open package source homepage"
+msgstr "Відкрити домашню сторінку пакунка"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "Name"
+msgid "Show package contents"
+msgstr "Показати вміст пакунка"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays a list of package content"
+msgstr "Показати список вмісту пакунка"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "Name"
+msgid "Show package information"
+msgstr "Показати дані щодо пакунка"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays useful information about package"
+msgstr "Показати корисну інформацію щодо пакунка"
+
+#: ./tuncel-testinstall.desktop
+msgctxt "ToolbarLabel"
+msgid "Tests whether package installation is successful."
+msgstr "Перевірити, чи можна успішно встановити пакунок."
+
+#: ./tuncel-testinstall.desktop
+msgctxt "Name"
+msgid "Test package installation"
+msgstr "Перевірити можливість встановлення пакунка"
+
+#: ./tuncel-unpack.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package content into current directory"
+msgstr "Видобути вміст пакунка до поточного каталогу"
+
+#: ./tuncel-unpack.desktop
+msgctxt "Name"
+msgid "Extract package here"
+msgstr "Видобути пакунок сюди"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package contents into user defined directory"
+msgstr "Видобути вміст пакунка до вказаного користувачем каталогу"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "Name"
+msgid "Extract package to..."
+msgstr "Видобути пакунок до…"
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "ToolbarLabel"
+msgid "Checks whether forced package overwrite is successful"
+msgstr "Перевірити, чи можна успішно встановити пакунок у примусовому режимі"
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "Name"
+msgid "Test forcing package overwrite"
+msgstr "Перевірити можливість примусового встановлення пакунка"

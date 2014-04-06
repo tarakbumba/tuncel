@@ -1,0 +1,102 @@
+# 
+# Translators:
+# tarakbumba . <tarakbumba@gmail.com>, 2014
+# Daniel Napora <napcok@gmail.com>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tuncel\n"
+"Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
+"POT-Creation-Date: 2014-04-06 23:30+0300\n"
+"PO-Revision-Date: 2014-04-06 20:34+0000\n"
+"Last-Translator: tarakbumba . <tarakbumba@gmail.com>\n"
+"Language-Team: Polish (http://www.transifex.com/projects/p/tuncel/language/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "ToolbarLabel"
+msgid "Installs Source RPM package into rpm/rpmbuild directory"
+msgstr "Instaluje źródłowy RPM do katalogu rpm/rpmbuild"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Install Source RPM"
+msgstr "Instaluj źródłowy RPM"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Default profile"
+msgstr "Domyślny profil"
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "ToolbarLabel"
+msgid "Opens project page of application in a web browser"
+msgstr "Otwiera stronę domową aplikacji w przeglądarce www"
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "Name"
+msgid "Open package source homepage"
+msgstr "Otwórz stronę domową pakietu"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "Name"
+msgid "Show package contents"
+msgstr "Pokaż zawartość pakietu"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays a list of package content"
+msgstr "Pkazuje listę z zawartością pakietu"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "Name"
+msgid "Show package information"
+msgstr "Pokaż informacje o pakiecie"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays useful information about package"
+msgstr "Pokazuje użyteczne informacje o pakiecie"
+
+#: ./tuncel-testinstall.desktop
+msgctxt "ToolbarLabel"
+msgid "Tests whether package installation is successful."
+msgstr "Testuje czy instalacja pakietu zakończy się powodzeniem"
+
+#: ./tuncel-testinstall.desktop
+msgctxt "Name"
+msgid "Test package installation"
+msgstr "Testuj instalację pakietu"
+
+#: ./tuncel-unpack.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package content into current directory"
+msgstr "Wypakowuje zawartość pakietu do katalogu bieżącego"
+
+#: ./tuncel-unpack.desktop
+msgctxt "Name"
+msgid "Extract package here"
+msgstr "Wypakuj pakiet tutaj"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package contents into user defined directory"
+msgstr "Wypakowuje zawartośc pakietu do miejsca podanego przez użytkownika"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "Name"
+msgid "Extract package to..."
+msgstr "Wypakuj pakiet do..."
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "ToolbarLabel"
+msgid "Checks whether forced package overwrite is successful"
+msgstr "Sprawdza czy wymuszenie nadpisania pakietu zakończy się powodzeniem"
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "Name"
+msgid "Test forcing package overwrite"
+msgstr "Testuj wymuszenie nadpisania pakietu"

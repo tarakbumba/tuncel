@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Yuri Chornoivan <yurchor@ukr.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tuncel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-26 23:02+0200\n"
+"PO-Revision-Date: 2014-04-06 14:57+0000\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/projects/p/tuncel/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../tuncel.in:40
+msgid "Error: Missing tuncel configuration file"
+msgstr "Помилка: не вистачає файла налаштувань tuncel"
+
+#: ../tuncel.in:51
+msgid "Executable file can not be found: "
+msgstr "Не вдалося знайти виконуваний файл: "
+
+#: ../tuncel.in:100
+msgid ""
+"tuncel commands:\n"
+"maininfo :  Display Package Main Info\n"
+"showcontents : Show Package Contents in Info Screen\n"
+"unpack : Unpack package in current Directory\n"
+"unpackto : Unpack Package to Directory\n"
+"openHomepage : If %{url} exists open Package Homepage in Web Browser\n"
+"testinstall : Installation Test (-iv)\n"
+"forceinstalltest : Force Installation Test (-Uhv)\n"
+"installsrc : Install RPM Source Package in to Build Enviroment\n"
+"Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
+msgstr "Команди tuncel:\nmaininfo :  показати основні дані щодо пакунка\nshowcontents : показати вміст пакунка у вікні інформації\nunpack : розпакувати пакунок до поточного каталогу\nunpackto : розпакувати пакунок до вказаного каталогу\nopenHomepage : якщо існує запис %{url}, відкрити домашню сторінку пакунка\ntestinstall : перевірити можливість встановлення (-iv)\nforceinstalltest : перевірити можливість встановлення у примусовому режимі (-Uhv)\ninstallsrc : встановити пакунок RPM з початковими кодами до середовища збирання\nПриклад: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
+
+#: ../tuncel.in:118
+msgid "Name"
+msgstr "Назва"
+
+#: ../tuncel.in:119
+msgid "Summary"
+msgstr "Резюме"
+
+#: ../tuncel.in:120
+msgid "Version"
+msgstr "Версія"
+
+#: ../tuncel.in:121
+msgid "Description"
+msgstr "Опис"
+
+#: ../tuncel.in:122
+msgid "Homepage"
+msgstr "Домашня сторінка"
+
+#: ../tuncel.in:123
+msgid "License"
+msgstr "Умови ліцензування"
+
+#: ../tuncel.in:129
+msgid "no file"
+msgstr "немає файла"
+
+#: ../tuncel.in:136
+msgid "This file is not an application/x-rpm file!"
+msgstr "Цей файл не належить до типу application/x-rpm!"
+
+#: ../tuncel.in:148
+msgid "Please wait..."
+msgstr "Зачекайте…"
+
+#: ../tuncel.in:181
+msgid "There was no valid URL in package!"
+msgstr "У пакунку немає коректної адреси!"
+
+#: ../tuncel.in:187 ../tuncel.in:197
+msgid "No errors have been reported. Test was successful!"
+msgstr "Помилок не виявлено. Перевірку успішно пройдено!"
+
+#: ../tuncel.in:202
+msgid "Source RPM package is being installed..."
+msgstr "Встановлюємо пакунок RPM з початковими кодами…"
+
+#: ../tuncel.in:205
+msgid "This package isn't a valid Source RPM package !"
+msgstr "Цей пакунок не є коректним пакунком RPM з початковими кодами!"
