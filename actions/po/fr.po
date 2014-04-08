@@ -2,13 +2,14 @@
 # Translators:
 # tarakbumba . <tarakbumba@gmail.com>, 2014
 # filorin <guillaume.ber17@laposte.net>, 2014
+# Akien <akien@mageia.org>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: tuncel\n"
 "Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
 "POT-Creation-Date: 2014-04-06 23:30+0300\n"
-"PO-Revision-Date: 2014-04-06 20:36+0000\n"
-"Last-Translator: tarakbumba . <tarakbumba@gmail.com>\n"
+"PO-Revision-Date: 2014-04-06 22:30+0000\n"
+"Last-Translator: Akien <akien@mageia.org>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/tuncel/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,7 +65,7 @@ msgstr "Affiche les informations utiles sur le paquet"
 #: ./tuncel-testinstall.desktop
 msgctxt "ToolbarLabel"
 msgid "Tests whether package installation is successful."
-msgstr "Test si l'installation du paquet est un succès"
+msgstr "Teste si l'installation du paquet est un succès."
 
 #: ./tuncel-testinstall.desktop
 msgctxt "Name"
@@ -74,7 +75,7 @@ msgstr "Tester l'installation du paquet"
 #: ./tuncel-unpack.desktop
 msgctxt "ToolbarLabel"
 msgid "Extracts package content into current directory"
-msgstr "Extraire le contenu du paquet dans le répertoire courant"
+msgstr "Extrait le contenu du paquet dans le répertoire courant"
 
 #: ./tuncel-unpack.desktop
 msgctxt "Name"
@@ -84,12 +85,12 @@ msgstr "Extraire le paquet ici"
 #: ./tuncel-unpackto.desktop
 msgctxt "ToolbarLabel"
 msgid "Extracts package contents into user defined directory"
-msgstr "Extraire le contenu du paquet dans un répertoire défini"
+msgstr "Extrait le contenu du paquet dans le répertoire spécifié"
 
 #: ./tuncel-unpackto.desktop
 msgctxt "Name"
 msgid "Extract package to..."
-msgstr "Extraire le paquet vers ..."
+msgstr "Extraire le paquet vers..."
 
 #: ./tuncel-forceinstalltest.desktop
 msgctxt "ToolbarLabel"
@@ -99,4 +100,4 @@ msgstr "Vérifie si l'écrasement de force du paquet est un succès"
 #: ./tuncel-forceinstalltest.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
-msgstr "Test l'écrasement de force du paquet"
+msgstr "Tester l'écrasement de force du paquet"
