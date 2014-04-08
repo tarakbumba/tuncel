@@ -1,0 +1,101 @@
+# 
+# Translators:
+# Dimitrios Glentadakis <dglent@free.fr>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tuncel\n"
+"Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
+"POT-Creation-Date: 2014-04-06 23:30+0300\n"
+"PO-Revision-Date: 2014-04-08 03:56+0000\n"
+"Last-Translator: Dimitrios Glentadakis <dglent@free.fr>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/tuncel/language/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "ToolbarLabel"
+msgid "Installs Source RPM package into rpm/rpmbuild directory"
+msgstr "Εγκατάσταση του πηγαίου RPM στον κατάλογο rpm/rpmbuild"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Install Source RPM"
+msgstr "Εγκατάσταση του πηγαίου RPM"
+
+#: ./tuncel-installsrc.desktop
+msgctxt "Name"
+msgid "Default profile"
+msgstr "Προκαθορισμένο προφίλ"
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "ToolbarLabel"
+msgid "Opens project page of application in a web browser"
+msgstr "Άνοιγμα της ιστοσελίδας έργου της εφαρμογής στον περιηγητή ιστού "
+
+#: ./tuncel-openHomepage.desktop
+msgctxt "Name"
+msgid "Open package source homepage"
+msgstr "Άνοιγμα της ιστοσελίδας του πακέτου"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "Name"
+msgid "Show package contents"
+msgstr "Εμφάνιση περιεχομένων του πακέτου"
+
+#: ./tuncel-showcontents.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays a list of package content"
+msgstr "Εμφάνιση μιας λίστας με τα περιεχόμενα του πακέτου"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "Name"
+msgid "Show package information"
+msgstr "Εμφάνιση πληροφοριών του πακέτου"
+
+#: ./tuncel-maininfo.desktop
+msgctxt "ToolbarLabel"
+msgid "Displays useful information about package"
+msgstr "Εμφάνιση χρήσιμων πληροφοριών του πακέτου"
+
+#: ./tuncel-testinstall.desktop
+msgctxt "ToolbarLabel"
+msgid "Tests whether package installation is successful."
+msgstr "Δοκιμή αν η εγκατάσταση του πακέτου είναι επιτυχής."
+
+#: ./tuncel-testinstall.desktop
+msgctxt "Name"
+msgid "Test package installation"
+msgstr "Δοκιμή εγκατάστασης του πακέτου"
+
+#: ./tuncel-unpack.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package content into current directory"
+msgstr "Εξαγωγή των περιεχομένων του πακέτου στον τρέχων κατάλογο"
+
+#: ./tuncel-unpack.desktop
+msgctxt "Name"
+msgid "Extract package here"
+msgstr "Εξαγωγή του πακέτου εδώ"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "ToolbarLabel"
+msgid "Extracts package contents into user defined directory"
+msgstr "Εξαγωγή των περιεχομένων του πακέτου σε έναν προσαρμοσμένο κατάλογο"
+
+#: ./tuncel-unpackto.desktop
+msgctxt "Name"
+msgid "Extract package to..."
+msgstr "Εξαγωγή του πακέτου σε..."
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "ToolbarLabel"
+msgid "Checks whether forced package overwrite is successful"
+msgstr "Έλεγχος αν η εξαναγκασμένη αντικατάσταση του πακέτου είναι επιτυχής"
+
+#: ./tuncel-forceinstalltest.desktop
+msgctxt "Name"
+msgid "Test forcing package overwrite"
+msgstr "Δοκιμή εξαναγκαστικής εγκατάστασης του πακέτου"

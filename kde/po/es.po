@@ -1,0 +1,70 @@
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: tuncel\n"
+"Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
+"POT-Creation-Date: 2014-04-06 23:30+0300\n"
+"PO-Revision-Date: 2014-04-08 21:25+0000\n"
+"Last-Translator: tarakbumba . <tarakbumba@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/projects/p/tuncel/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "RPM Operations Tool"
+msgstr "Herramienta de operaciones RPM"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Comment"
+msgid "Servicemenus for RPM Package operations"
+msgstr "Servicemenu para operaciones de paquetes RPM"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Show package information"
+msgstr "Mostrar información del paquete"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Show package contents"
+msgstr "Mostrar contenido del paquete"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Extract package here"
+msgstr "Extraer paquete aquí"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Extract package to..."
+msgstr "Extraer paquete en..."
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Open package source homepage"
+msgstr "Abrir la página web del paquete fuente"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Test package installation"
+msgstr "Test instalación del paquete"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Test forcing package overwrite"
+msgstr "Test la reescritura forzosa del paquete"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Install Source RPM"
+msgstr "Instalar RPM fuente"
+
+#: ./tuncel_kde4.desktop
+msgctxt "Name"
+msgid "Open a shell"
+msgstr "Abrir una consola"

@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Dimitrios Glentadakis <dglent@free.fr>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: tuncel\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-26 23:02+0200\n"
+"PO-Revision-Date: 2014-04-08 03:56+0000\n"
+"Last-Translator: Dimitrios Glentadakis <dglent@free.fr>\n"
+"Language-Team: Greek (http://www.transifex.com/projects/p/tuncel/language/el/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../tuncel.in:40
+msgid "Error: Missing tuncel configuration file"
+msgstr "Σφάλμα: Λείπει το αρχείο διαμόρφωσης tuncel"
+
+#: ../tuncel.in:51
+msgid "Executable file can not be found: "
+msgstr "Δεν βρέθηκε το εκτελέσιμο αρχείο: "
+
+#: ../tuncel.in:100
+msgid ""
+"tuncel commands:\n"
+"maininfo :  Display Package Main Info\n"
+"showcontents : Show Package Contents in Info Screen\n"
+"unpack : Unpack package in current Directory\n"
+"unpackto : Unpack Package to Directory\n"
+"openHomepage : If %{url} exists open Package Homepage in Web Browser\n"
+"testinstall : Installation Test (-iv)\n"
+"forceinstalltest : Force Installation Test (-Uhv)\n"
+"installsrc : Install RPM Source Package in to Build Enviroment\n"
+"Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
+msgstr "εντολές tuncel:\nmaininfo :  Εμφάνιση των κύριων πληροφοριών του πακέτου\nshowcontents : Εμφάνιση των περιεχομένων του πακέτου στην οθόνη πληροφοριών\nunpack : Εξαγωγή των περιεχομένων του πακέτου στον τρέχων κατάλογο\nunpackto : Εξαγωγή των περιεχομένων του πακέτου σε προσαρμοσμένο κατάλογο\nopenHomepage : Αν υπάρχει το %{url} άνοιγμα της ιστοσελίδας του πακέτου στον περιηγητή ιστού\ntestinstall : Δοκιμή εγκατάστασης (-iv)\nforceinstalltest : Δοκιμή εξαναγκαστικής εγκατάστασης (-Uhv)\ninstallsrc : Εγκατάσταση του πηγαίου RPM στο περιβάλλον δημιουργίας\nΠαράδειγμα: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
+
+#: ../tuncel.in:118
+msgid "Name"
+msgstr "Όνομα"
+
+#: ../tuncel.in:119
+msgid "Summary"
+msgstr "Περίληψη"
+
+#: ../tuncel.in:120
+msgid "Version"
+msgstr "Έκδοση"
+
+#: ../tuncel.in:121
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: ../tuncel.in:122
+msgid "Homepage"
+msgstr "Αρχική σελίδα"
+
+#: ../tuncel.in:123
+msgid "License"
+msgstr "Άδεια χρήσης"
+
+#: ../tuncel.in:129
+msgid "no file"
+msgstr "κανένα αρχείο"
+
+#: ../tuncel.in:136
+msgid "This file is not an application/x-rpm file!"
+msgstr "Αυτό το αρχείο δεν είναι του τύπου application/x-rpm!"
+
+#: ../tuncel.in:148
+msgid "Please wait..."
+msgstr "Παρακαλώ περιμένετε..."
+
+#: ../tuncel.in:181
+msgid "There was no valid URL in package!"
+msgstr "Δεν υπάρχει έγκυρο URL στο πακέτο!"
+
+#: ../tuncel.in:187 ../tuncel.in:197
+msgid "No errors have been reported. Test was successful!"
+msgstr "Δεν αναφέρθηκαν σφάλματα. Η δοκιμή ήταν επιτυχής!"
+
+#: ../tuncel.in:202
+msgid "Source RPM package is being installed..."
+msgstr "Γίνεται εγκατάσταση του πηγαίου RPM..."
+
+#: ../tuncel.in:205
+msgid "This package isn't a valid Source RPM package !"
+msgstr "Αυτό το πακέτο δεν είναι ένα έγκυρο πηγαίο RPM!"
