@@ -13,6 +13,7 @@ for i in $directories; do
 done
 
 }
+
 update_changelog() {
 pushd ../
 if test -d ".git"; then

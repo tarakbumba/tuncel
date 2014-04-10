@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Daniel Napora <napcok@gmail.com>, 2014
 msgid ""
@@ -15,57 +14,57 @@ msgstr ""
 "Language: pl\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "RPM Operations Tool"
 msgstr "Działania na RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Comment"
 msgid "Servicemenus for RPM Package operations"
 msgstr "Menu kontekstowe dla działań na pakietach RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package information"
 msgstr "Pokaż informacje o pakiecie"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package contents"
 msgstr "Pokaż zawartość pakietu"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package here"
 msgstr "Wypakuj pakiet tutaj"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package to..."
 msgstr "Wypakuj pakiet do..."
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open package source homepage"
 msgstr "Odwiedź stronę domową "
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test package installation"
 msgstr "Testuj instalację pakietu"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
 msgstr "Testuj nadpisanie pakietu"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Install Source RPM"
 msgstr "Instaluj źródłowy RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open a shell"
 msgstr "Otwórz terminal"

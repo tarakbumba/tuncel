@@ -1,4 +1,3 @@
-# 
 # Translators:
 # tarakbumba . <tarakbumba@gmail.com>, 2014
 # filorin <guillaume.ber17@laposte.net>, 2014
@@ -27,7 +26,7 @@ msgctxt "Name"
 msgid "Install Source RPM"
 msgstr "Installer le RPM source"
 
-#: ./tuncel-installsrc.desktop
+#: ./tuncel-forceinstalltest.desktop
 msgctxt "Name"
 msgid "Default profile"
 msgstr "Profil par défaut"

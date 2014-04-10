@@ -1,4 +1,3 @@
-# 
 # Translators:
 msgid ""
 msgstr ""
@@ -24,7 +23,7 @@ msgctxt "Name"
 msgid "Install Source RPM"
 msgstr "Instalar RPM fuente"
 
-#: ./tuncel-installsrc.desktop
+#: ./tuncel-forceinstalltest.desktop
 msgctxt "Name"
 msgid "Default profile"
 msgstr "Perfil por defecto"
@@ -82,7 +81,8 @@ msgstr "Extraer paquete aquí"
 #: ./tuncel-unpackto.desktop
 msgctxt "ToolbarLabel"
 msgid "Extracts package contents into user defined directory"
-msgstr "Extraer el contenido del paquete en un directorio definido por el usuario"
+msgstr ""
+"Extraer el contenido del paquete en un directorio definido por el usuario"
 
 #: ./tuncel-unpackto.desktop
 msgctxt "Name"

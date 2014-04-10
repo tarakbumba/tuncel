@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tuncel desktop files translation\n"
 "Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
-"POT-Creation-Date: 2014-04-06 23:30+0300\n"
+"POT-Creation-Date: 2014-04-09 00:35+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,57 +11,57 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "RPM Operations Tool"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Comment"
 msgid "Servicemenus for RPM Package operations"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package information"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package contents"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package here"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package to..."
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open package source homepage"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test package installation"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Install Source RPM"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open a shell"
 msgstr ""

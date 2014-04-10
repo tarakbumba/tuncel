@@ -1,4 +1,3 @@
-# 
 # Translators:
 msgid ""
 msgstr ""
@@ -24,7 +23,7 @@ msgctxt "Name"
 msgid "Install Source RPM"
 msgstr ""
 
-#: ./tuncel-installsrc.desktop
+#: ./tuncel-forceinstalltest.desktop
 msgctxt "Name"
 msgid "Default profile"
 msgstr ""

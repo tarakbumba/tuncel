@@ -1,4 +1,3 @@
-# 
 # Translators:
 msgid ""
 msgstr ""
@@ -14,57 +13,57 @@ msgstr ""
 "Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "RPM Operations Tool"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Comment"
 msgid "Servicemenus for RPM Package operations"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package information"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package contents"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package here"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package to..."
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open package source homepage"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test package installation"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Install Source RPM"
 msgstr ""
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open a shell"
 msgstr ""

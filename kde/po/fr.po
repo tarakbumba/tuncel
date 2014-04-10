@@ -1,4 +1,3 @@
-# 
 # Translators:
 # filorin <guillaume.ber17@laposte.net>, 2014
 # filorin <guillaume.ber17@laposte.net>, 2014
@@ -17,57 +16,57 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "RPM Operations Tool"
 msgstr "Outils d'opérations pour RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Comment"
 msgid "Servicemenus for RPM Package operations"
 msgstr "Servicemenus pour les opérations sur paquets RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package information"
 msgstr "Afficher les informations sur le paquet"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package contents"
 msgstr "Afficher le contenu du paquet"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package here"
 msgstr "Extraire le paquet ici"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package to..."
 msgstr "Extraire le paquet vers..."
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open package source homepage"
 msgstr "Ouvrir la page d'accueil du projet"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test package installation"
 msgstr "Tester l'installation du paquet"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
 msgstr "Tester l'écrasement de force du paquet"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Install Source RPM"
 msgstr "Installer le RPM source"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open a shell"
 msgstr "Ouvrir un terminal"

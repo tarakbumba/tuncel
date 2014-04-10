@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Dimitrios Glentadakis <dglent@free.fr>, 2014
 msgid ""
@@ -15,57 +14,57 @@ msgstr ""
 "Language: el\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "RPM Operations Tool"
 msgstr "Εργαλείο λειτουργιών RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Comment"
 msgid "Servicemenus for RPM Package operations"
 msgstr "Μενού υπηρεσιών λειτουργιών πακέτων RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package information"
 msgstr "Εμφάνιση πληροφοριών του πακέτου"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Show package contents"
 msgstr "Εμφάνιση περιεχομένων του πακέτου"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package here"
 msgstr "Εξαγωγή του πακέτου εδώ"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Extract package to..."
 msgstr "Εξαγωγή του πακέτου σε..."
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open package source homepage"
 msgstr "Άνοιγμα της ιστοσελίδας του πακέτου"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test package installation"
 msgstr "Δοκιμή εγκατάστασης του πακέτου"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
 msgstr "Δοκιμή εξαναγκαστικής εγκατάστασης του πακέτου"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Install Source RPM"
 msgstr "Εγκατάσταση του πηγαίου RPM"
 
-#: ./tuncel_kde4.desktop
+#: ./tuncel_kde3.desktop
 msgctxt "Name"
 msgid "Open a shell"
 msgstr "Άνοιγμα τερματικού"

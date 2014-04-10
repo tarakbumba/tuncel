@@ -1,4 +1,3 @@
-# 
 # Translators:
 # Dimitrios Glentadakis <dglent@free.fr>, 2014
 msgid ""
@@ -25,7 +24,7 @@ msgctxt "Name"
 msgid "Install Source RPM"
 msgstr "Εγκατάσταση του πηγαίου RPM"
 
-#: ./tuncel-installsrc.desktop
+#: ./tuncel-forceinstalltest.desktop
 msgctxt "Name"
 msgid "Default profile"
 msgstr "Προκαθορισμένο προφίλ"

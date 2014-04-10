@@ -1,12 +1,13 @@
 # 
 # Translators:
+# filip.komar <filip.komar@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: tuncel\n"
 "Report-Msgid-Bugs-To: https://github.com/tarakbumba/tuncel/issues\n"
 "POT-Creation-Date: 2014-04-06 23:30+0300\n"
-"PO-Revision-Date: 2014-04-06 14:45+0000\n"
-"Last-Translator: tarakbumba . <tarakbumba@gmail.com>\n"
+"PO-Revision-Date: 2014-04-09 12:02+0000\n"
+"Last-Translator: filip.komar <filip.komar@gmail.com>\n"
 "Language-Team: Slovenian (http://www.transifex.com/projects/p/tuncel/language/sl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,54 +18,54 @@ msgstr ""
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "RPM Operations Tool"
-msgstr ""
+msgstr "Orodje za upravljanje s paketi RPM"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Comment"
 msgid "Servicemenus for RPM Package operations"
-msgstr ""
+msgstr "Servisni meni za upravljanje s paketi RPM"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Show package information"
-msgstr ""
+msgstr "Prikaz informacij o paketu"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Show package contents"
-msgstr ""
+msgstr "Prikaz vsebine paketa"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Extract package here"
-msgstr ""
+msgstr "Izvlečenje vsebine paketa tukaj"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Extract package to..."
-msgstr ""
+msgstr "Izvlečenje vsebine paketa v ..."
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Open package source homepage"
-msgstr ""
+msgstr "Odpiranje domače strani izvorne kode paketa"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Test package installation"
-msgstr ""
+msgstr "Preverjanje namestitve paketa"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Test forcing package overwrite"
-msgstr ""
+msgstr "Preverjanje vsiljenega prepisa paketa"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Install Source RPM"
-msgstr ""
+msgstr "Namesti paket z izvorno kodo RPM"
 
 #: ./tuncel_kde4.desktop
 msgctxt "Name"
 msgid "Open a shell"
-msgstr ""
+msgstr "Odpre ukazno lupino"

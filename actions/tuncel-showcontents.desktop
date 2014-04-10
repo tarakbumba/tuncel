@@ -1,6 +1,8 @@
 [Desktop Entry]
 Type=Action
 Name=Show package contents
+Name[el]=Εμφάνιση περιεχομένων του πακέτου
+Name[es]=Mostrar contenido del paquete
 Name[fr]=Montrer le contenu du paquet
 Name[pl]=Pokaż zawartość pakietu
 Name[pt_PT]=Mostrar os conteúdos do pacote
@@ -8,21 +10,19 @@ Name[tr]=Paket içeriğini göster
 Name[uk]=Показати вміст пакунка
 Icon=view-list-symbolic
 ToolbarLabel=Displays a list of package content
+ToolbarLabel[el]=Εμφάνιση μιας λίστας με τα περιεχόμενα του πακέτου
+ToolbarLabel[es]=Mostrar el contenido del paquete en una lista
 ToolbarLabel[fr]=Affiche une liste du contenu du paquet
 ToolbarLabel[pl]=Pkazuje listę z zawartością pakietu
 ToolbarLabel[pt_PT]=Exibe a lista do conteúdo do pacote
 ToolbarLabel[tr]=Paket içeriğini listeler
 ToolbarLabel[uk]=Показати список вмісту пакунка
-ToolbarLabel[fr]=Affiche une liste du contenu du paquet
-ToolbarLabel[pl]=Pkazuje listę z zawartością pakietu
-ToolbarLabel[pt_PT]=Exibe a lista do conteúdo do pacote
-ToolbarLabel[tr]=Paket içeriğini listeler
-ToolbarLabel[uk]=Показати список вмісту пакунка
-ToolbarLabel[tr]=Paket içeriğini listeler
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 Name=Default profile
+Name[el]=Προκαθορισμένο προφίλ
+Name[es]=Perfil por defecto
 Name[fr]=Profil par défaut
 Name[pl]=Domyślny profil
 Name[pt_PT]=Perfil Predefinido

@@ -7,8 +7,8 @@ Tuncel is a fork of GPL licensed Heinemann Jürgen's rpmxdgtool.
 It provides kde3/4 service menus, nautilus-actions actions for GNOME,
 caja-actions actions for MATE, nemo-actions actions for Cinnamon.
 
-Tuncel has full translations support. If someone who talks your native
-language translates related gettext po files then tuncel talks your 
+Tuncel has full translation support. If someone who talks your native
+language, translates related gettext po files then tuncel talks your 
 language.
 
 Installation:
