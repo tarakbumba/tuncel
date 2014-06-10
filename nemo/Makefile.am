@@ -18,14 +18,14 @@
 ##   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ##
 
-if NAUTILUS_ACTIONS_SUPPORT
-nautilusdir = @NAUTILUS_ACTIONS_DIR@
-nautilus_DATA = tuncel-forceinstalltest.desktop \
-  tuncel-testinstall.desktop \
-  tuncel-installsrc.desktop   \
-  tuncel-unpack.desktop \
-  tuncel-maininfo.desktop \
-  tuncel-unpackto.desktop \
-  tuncel-showcontents.desktop\
-  tuncel-openHomepage.desktop
+if NEMO_ACTIONS_SUPPORT
+nemodir = @NEMO_ACTIONS_DIR@
+nemo_DATA = tuncel-forceinstalltest.nemo_action \
+  tuncel-testinstall.nemo_action \
+  tuncel-installsrc.nemo_action   \
+  tuncel-unpack.nemo_action \
+  tuncel-maininfo.nemo_action \
+  tuncel-unpackto.nemo_action \
+  tuncel-showcontents.nemo_action\
+  tuncel-openHomepage.nemo_action
 endif

@@ -1,0 +1,31 @@
+[Nemo Action]
+
+Name=Install Source RPM
+Name[el]=Εγκατάσταση του πηγαίου RPM
+Name[es]=Instalar RPM fuente
+Name[fr]=Installer le RPM source
+Name[pl]=Instaluj źródłowy RPM
+Name[pt_PT]=Instalar RPM Fonte
+Name[tr]=Kaynak RPM Kur
+Name[uk]=Встановити RPM з початковим кодом
+
+Comment=Installs Source RPM package into rpm/rpmbuild directory
+Comment[el]=Εγκατάσταση του πηγαίου RPM στον κατάλογο rpm/rpmbuild
+Comment[es]=Instalar el paquete RPM fuente en el directorio rpm/rpmbuild
+Comment[fr]=Installe le RPM source dans le dossier rpm/rpmbuild
+Comment[pl]=Instaluje źródłowy RPM do katalogu rpm/rpmbuild
+Comment[pt_PT]=Instala o pacote RPM Fonte numa diretoria rpm/rpmbuild
+Comment[tr]=Kaynak RPM paketini rpm/rpmbuild dizinine kurar
+Comment[uk]=Встановити пакунок RPM з початковими кодами до каталогу rpm/rpmbuild
+
+Exec=/usr/bin/tuncel installsrc %F
+
+Selection=s
+
+Mimetypes=application/x-source-rpm;
+
+Stock-Id=rpm
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

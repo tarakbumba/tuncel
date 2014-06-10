@@ -21,7 +21,8 @@ AUTOMAKE_OPTIONS = foreign 1.4
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 SUBDIRS = po \
 	kde \
-    actions
+    actions \
+    nemo
 
 bin_SCRIPTS = tuncel
 

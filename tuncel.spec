@@ -1,9 +1,7 @@
-# Mageia Distribution does not have nemo-actions packaged in repositories;
-# then we should disable Cinnamon/Nemo support.
 
 Name:		tuncel
 Summary:	Servicemenu or Actions for various desktops
-Version:	1.0
+Version:	1.4
 Release:	%mkrel 1
 
 License:	GPLv2
@@ -52,6 +50,7 @@ needed for Nautilus and Caja file managers
 Summary:    Nautilus action for RPM Packages
 Requires:   %{name}-nautilus-data = %{version}-%{release}
 Requires:   nautilus-actions
+Requires:   zenity
 
 %description -n %{name}-nautilus
 Virtual package to satisfy dependencies for Nautilus.
@@ -60,44 +59,43 @@ Virtual package to satisfy dependencies for Nautilus.
 Summary:    Caja action for RPM Packages
 Requires:   %{name}-nautilus-data = %{version}-%{release}
 Requires:   caja-actions
+Requires:   zenity
 
 %description -n %{name}-caja
 Virtual package to satisfy dependencies for Caja.
 
-#package -n {name}-nemo
-#Summary:    Nemo action for RPM Packages
-#Requires:   %{name} = %{version}-%{release}
-#Requires:   zenity
-#Requires:   nemo-actions
+%package -n %{name}-nemo
+Summary:    Nemo actions for RPM Packages
+Requires:   %{name} = %{version}-%{release}
+Requires:   zenity
+Requires:   nemo
 
-#description -n {name}-nemo
-#Nemo-Actions actions for easy RPM package operations.
+%description -n %{name}-nemo
+Nemo-Actions actions for easy RPM package operations.
 
 
 %prep
 %setup -q
 
 %build
+NOCONFIGURE=1 ./autogen.sh
 
-autoreconf -fi
-automake -a
-
-%configure  --enable-kde4 \
-            --enable-nautilus \
-            --sysconfdir=%{_sysconfdir}
+%configure  --sysconfdir=%{_sysconfdir}
 
 %make
 
 %install
 
 %makeinstall_std
+mv %{buildroot}%{_kde_services}/ServiceMenus/%{name}_kde4.desktop \
+	%{buildroot}%{_kde_services}/ServiceMenus/%{name}.desktop
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%config %{_sysconfdir}/%{name}.conf
+%doc ChangeLog README.md
+%config (noreplace) %{_sysconfdir}/%{name}.conf
 %{_bindir}/%{name}
-%{_datadir}/%{name}/
 
 %files -n %{name}-kde4
 %{_kde_services}/ServiceMenus/%{name}.desktop
@@ -105,8 +103,8 @@ automake -a
 %files -n %{name}-nautilus-data
 %{_datadir}/file-manager/actions/*.desktop
 
-#files -n %{name}-nemo
-#{_datadir}/nemo/actions/*.desktop
+%files -n %{name}-nemo
+%{_datadir}/nemo/actions/*.nemo_action
 
 %files -n %{name}-nautilus
 

@@ -1,0 +1,31 @@
+[Nemo Action]
+
+Name=Extract package to...
+Name[el]=Εξαγωγή του πακέτου σε...
+Name[es]=Extraer paquete en...
+Name[fr]=Extraire le paquet vers...
+Name[pl]=Wypakuj pakiet do...
+Name[pt_PT]=Extrair o pacote para ...
+Name[tr]=Paketi başka dizine aç...
+Name[uk]=Видобути пакунок до…
+
+Comment=Extracts package contents into user defined directory
+Comment[el]=Εξαγωγή των περιεχομένων του πακέτου σε έναν προσαρμοσμένο κατάλογο
+Comment[es]=Extraer el contenido del paquete en un directorio definido por el usuario
+Comment[fr]=Extrait le contenu du paquet dans le répertoire spécifié
+Comment[pl]=Wypakowuje zawartośc pakietu do miejsca podanego przez użytkownika
+Comment[pt_PT]=Extrai os conteúdos do pacote para uma diretoria definida pelo utilizador
+Comment[tr]=Paket içeriğini kullanıcı tanımlı dizine ayıklar
+Comment[uk]=Видобути вміст пакунка до вказаного користувачем каталогу
+
+Exec=/usr/bin/tuncel unpackto %F
+
+Selection=s
+
+Mimetypes=application/x-rpm;application/x-source-rpm;
+
+Stock-Id=tar
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

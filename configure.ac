@@ -165,6 +165,7 @@ dnl -----------------------------------------------
 AC_CONFIG_FILES([Makefile])
 AC_CONFIG_FILES([kde/Makefile])
 AC_CONFIG_FILES([actions/Makefile])
+AC_CONFIG_FILES([nemo/Makefile])
 AC_CONFIG_FILES([tuncel])
 AC_CONFIG_FILES([tuncel.conf])
 AC_CONFIG_FILES([po/Makefile],[AM_POSTPROCESS_PO_MAKEFILE])

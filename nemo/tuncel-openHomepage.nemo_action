@@ -1,0 +1,31 @@
+[Nemo Action]
+
+Name=Open package source homepage
+Name[el]=Άνοιγμα της ιστοσελίδας του πακέτου
+Name[es]=Abri la página web del paquete fuente
+Name[fr]=Ouvrir la page d'accueil du projet
+Name[pl]=Otwórz stronę domową pakietu
+Name[pt_PT]=Abrir a página principal da fonte do pacote 
+Name[tr]=Paket kaynağı ana sayfasını aç
+Name[uk]=Відкрити домашню сторінку пакунка
+
+Comment=Opens project page of application in a web browser
+Comment[el]=Άνοιγμα της ιστοσελίδας έργου της εφαρμογής στον περιηγητή ιστού 
+Comment[es]=Abrir la página del proyecto del paquete en una navegador
+Comment[fr]=Ouvre la page du projet de l'application dans un navigateur Internet
+Comment[pl]=Otwiera stronę domową aplikacji w przeglądarce www
+Comment[pt_PT]=Abre a página do projeto da aplicação num navegador da web
+Comment[tr]=Uygulama proje sayfasını bir web tarayıcısında açar
+Comment[uk]=Відкрити сторінку проекту програми у програмі для перегляду інтернету
+
+Exec=/usr/bin/tuncel openHomepage %F
+
+Selection=s
+
+Mimetypes=application/x-rpm;application/x-source-rpm;
+
+Stock-Id=web-browser
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s
