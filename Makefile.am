@@ -70,28 +70,12 @@ MAINTAINERCLEANFILES = \
 	m4/lt~obsolete.m4 \
 	`find "$(srcdir)" -type f -name Makefile.in -print`
 
-all: target UPDATE_PO GIT_CHANGELOG
+all: target UPDATE_PO
 	
 UPDATE_PO:
 	$(MAKE) -C po update-gmo
 	
-GIT_CHANGELOG:
-	@if test -d "$(srcdir)/.git"; \
-	then \
-		echo Creating ChangeLog && \
-		(GIT_DIR=$(top_srcdir)/.git \
-		  ./missing --run git log --stat -M -C --name-status  --date=short --no-color) | \
-		  fmt --split-only > ChangeLog.tmp \
-		&& mv -f ChangeLog.tmp $(top_srcdir)/ChangeLog \
-		|| ( rm -f ChangeLog.tmp ; \
-		  echo Failed to generate ChangeLog >&2 ); \
-	else \
-		echo A git clone is required to generate a ChangeLog >&2; \
-	fi
-
--include $(top_srcdir)/git.mk
-
-.PHONY: UPDATE_PO GIT_CHANGELOG
+.PHONY: UPDATE_PO
 
 
 
