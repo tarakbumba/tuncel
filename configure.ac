@@ -153,9 +153,11 @@ AC_PATH_PROGS([MD5SUM_BIN],[md5sum],[AC_MSG_ERROR(md5sum not found!)])
 AC_PATH_PROGS([TERMINAL],[konsole konsole3 konsole-3 konsole4 konsole-4 gnome-terminal mate-terminal],[AC_MSG_ERROR(A terminal emulator not found!)])
 
 dnl -----------------------------------------------
-dnl gettext and intltool
+dnl python-polib, gettext and intltool
 dnl -----------------------------------------------
 AM_PATH_PYTHON([2.5])
+
+AX_PYTHON_MODULE([polib],[python-polib])
 
 AC_CHECK_PROG(HAVE_GETTEXT, gettext.sh, yes, no)
 AC_PATH_PROG(GETTEXT, gettext.sh, no)
@@ -176,7 +178,6 @@ AC_CHECK_PROGS([ENVSUBST],
 ) dnl
 AC_SUBST(ENVSUBST)
 
-AC_SUBST(LOCALEDIR, ${localedir})
 AC_SUBST(TEXTDOMAIN,"tuncel")
 AM_PO_SUBDIRS
 
