@@ -2,31 +2,10 @@
 Type=Action
 Icon=rpm
 ToolbarLabel=Installs Source RPM package into rpm/rpmbuild directory
-ToolbarLabel[el]=Εγκατάσταση του πηγαίου RPM στον κατάλογο rpm/rpmbuild
-ToolbarLabel[es]=Instalar el paquete RPM fuente en el directorio rpm/rpmbuild
-ToolbarLabel[fr]=Installe le RPM source dans le dossier rpm/rpmbuild
-ToolbarLabel[pl]=Instaluje źródłowy RPM do katalogu rpm/rpmbuild
-ToolbarLabel[pt_PT]=Instala o pacote RPM Fonte numa diretoria rpm/rpmbuild
-ToolbarLabel[tr]=Kaynak RPM paketini rpm/rpmbuild dizinine kurar
-ToolbarLabel[uk]=Встановити пакунок RPM з початковими кодами до каталогу rpm/rpmbuild
 Name=Install Source RPM
-Name[el]=Εγκατάσταση του πηγαίου RPM
-Name[es]=Instalar RPM fuente
-Name[fr]=Installer le RPM source
-Name[pl]=Instaluj źródłowy RPM
-Name[pt_PT]=Instalar RPM Fonte
-Name[tr]=Kaynak RPM Kur
-Name[uk]=Встановити RPM з початковим кодом
 Profiles=profile-zero;
 
 [X-Action-Profile profile-zero]
 MimeTypes=application/x-source-rpm;
 Exec=/usr/bin/tuncel installsrc %f
 Name=Default profile
-Name[el]=Προκαθορισμένο προφίλ
-Name[es]=Perfil por defecto
-Name[fr]=Profil par défaut
-Name[pl]=Domyślny profil
-Name[pt_PT]=Perfil Predefinido
-Name[tr]=Varsayılan profil
-Name[uk]=Типовий профіль

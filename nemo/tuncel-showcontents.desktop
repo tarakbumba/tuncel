@@ -1,0 +1,17 @@
+[Nemo Action]
+
+Name=Show package contents
+
+Comment=Displays a list of package content
+
+Exec=/usr/bin/tuncel showcontents %F
+
+Selection=s
+
+Mimetypes=application/x-rpm;application/x-source-rpm;
+
+Stock-Id=view-list-symbolic
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

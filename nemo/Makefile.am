@@ -20,12 +20,12 @@
 
 if NEMO_ACTIONS_SUPPORT
 nemodir = @NEMO_ACTIONS_DIR@
-nemo_DATA = tuncel-forceinstalltest.nemo_action \
-  tuncel-testinstall.nemo_action \
-  tuncel-installsrc.nemo_action   \
-  tuncel-unpack.nemo_action \
-  tuncel-maininfo.nemo_action \
-  tuncel-unpackto.nemo_action \
-  tuncel-showcontents.nemo_action\
-  tuncel-openHomepage.nemo_action
+nemo_DATA = tuncel-forceinstalltest.* \
+  tuncel-testinstall.* \
+  tuncel-installsrc.*   \
+  tuncel-unpack.* \
+  tuncel-maininfo.* \
+  tuncel-unpackto.* \
+  tuncel-showcontents.*\
+  tuncel-openHomepage.*
 endif

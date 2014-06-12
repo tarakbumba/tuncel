@@ -18,21 +18,21 @@ dnl   Free Software Foundation, Inc.,
 dnl   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 dnl
 
-AC_PREREQ(2.57)
+AC_PREREQ([2.69])
 
-dnl -----------------------------------------------
-dnl Release Versioning
-dnl -----------------------------------------------
-m4_define(PKG_NAME, [tuncel])
-m4_define(PKG_MAJOR, [1])
-m4_define(PKG_MINOR, [3])
+AC_INIT([tuncel], [1.4], [https://github.com/tarakbumba/tuncel])
+
+AM_INIT_AUTOMAKE([1.9 tar-ustar dist-xz foreign no-dist-gzip])
+
+AC_CONFIG_MACRO_DIR([m4])
+AC_PREFIX_DEFAULT(/usr)
+
+test "$sysconfdir" = '${prefix}/etc' && sysconfdir=/etc
+AC_SUBST(SYSCONFDIR,${sysconfdir})
 
 dnl -----------------------------------------------
 dnl Package name and version number (user defined)
 dnl -----------------------------------------------
-AC_INIT(PKG_NAME, PKG_MAJOR.PKG_MINOR,[admin (AT) tarakbumba (DOT) com])
-AM_INIT_AUTOMAKE([foreign -Wall])
-
 PACKAGE_AUTHOR="Atilla ÖNTAŞ (tarakbumba)"
 AC_SUBST([PACKAGE_AUTHOR])
 
@@ -40,9 +40,9 @@ PACKAGE_SUMMARY="RPM Context Menu Desktop Environments"
 AC_SUBST(PACKAGE_SUMMARY)
 
 dnl -----------------------------------------------
-dnl My Error Handler
+dnl Error Handler
 dnl -----------------------------------------------
-AC_DEFUN([AC_MISSING],AC_MSG_ERROR([can not find $1 application]))
+AC_DEFUN([AC_MISSING],AC_MSG_ERROR(["can not find $1 application"]))
 
 dnl -----------------------------------------------
 dnl make set requires
@@ -64,10 +64,13 @@ AC_ARG_ENABLE([kde4],
   [ac_cv_with_kde4=yes]
 )
 
-AC_PATH_PROGS([KDEFOURCONFIG],
-  [kde4-config kde-config4 kde-config-4 kde-config],
-  [AC_MSG_WARN([kde4-config not found skipping kde4 ServiceMenu Support])]
-)
+AC_CHECK_PROG([HAVE_KDEFOURCONFIG], [kde4-config kde-config4 kde-config-4 kde-config], yes, no)
+AC_PATH_PROG([KDEFOURCONFIG], [kde4-config kde-config4 kde-config-4 kde-config], no)
+if test "x$HAVE_KDEFOURCONFIG" = "xno"; then
+    AC_MSG_WARN(kde4-config not found skipping kde4 ServiceMenu Support !)
+    ac_cv_with_kde4=no
+fi
+
 ac_cv_kde4_servicedir=
 if test -x "$KDEFOURCONFIG" ; then
   ac_cv_kde4_servicedir=`$KDEFOURCONFIG --install services`ServiceMenus
@@ -84,10 +87,12 @@ AC_ARG_WITH([kde3],
   [ac_cv_with_kde3=yes],
   [ac_cv_with_kde3=no]
 )
-AC_PATH_PROGS([KDETHREECONFIG],
-  [kde3-config kde-config3],
-  [AC_MSG_WARN([kde3-config not found skipping kde3 ServiceMenu Support])]
-)
+AC_CHECK_PROG([HAVE_KDETHREECONFIG], [kde3-config kde-config3], yes, no)
+AC_PATH_PROG([KDETHREECONFIG], [kde3-config kde-config3], no)
+if test "x$HAVE_KDETHREECONFIG" = "xno"; then
+    AC_MSG_WARN(kde3-config not found skipping kde4 ServiceMenu Support !)
+    ac_cv_with_kde3=no
+fi
 ac_cv_kde3_servicedir=
 if test -x "$KDETHREECONFIG" ; then
   ac_cv_kde3_servicedir=`$KDETHREECONFIG --prefix`/share/apps/konqueror/servicemenus
@@ -126,31 +131,52 @@ AM_CONDITIONAL(NEMO_ACTIONS_SUPPORT, test "x$ac_cv_with_nemo" = xyes)
 dnl -----------------------------------------------
 dnl Checks for required programs.
 dnl -----------------------------------------------
-AC_PATH_PROGS([KDIALOG_BIN],[kdialog kdialog3 kdialog-3 kdialog4 kdialog-4],[AC_MISSING([kdialog])])
-AC_PATH_PROGS([ZENITY_BIN],[zenity],[AC_MISSING([zenity])])
-AC_PATH_PROGS([RPM2CPIO_BIN],[rpm2cpio rpm2cpio4 rpm2cpio5],[AC_MISSING([rpm2cpio])])
-AC_PATH_PROGS([RPM_BIN],[rpm rpm4 rpm5],[AC_MISSING([rpm])])
-AC_PATH_PROGS([CPIO_BIN],[cpio cpio4 cpio5],[AC_MISSING([cpio])])
-AC_PATH_PROGS([MD5SUM_BIN],[md5sum],[AC_MISSING([md5sum])])
-AC_PATH_PROGS([TERMINAL],[konsole konsole3 konsole-3 konsole4 konsole-4 gnome-terminal mate-terminal],[AC_MISSING([terminal])])
+AC_CHECK_PROG([HAVE_KDIALOG_BIN], [kdialog kdialog3 kdialog-3 kdialog4 kdialog-4], yes, no)
+AC_PATH_PROG([KDIALOG_BIN], [kdialog kdialog3 kdialog-3 kdialog4 kdialog-4], no)
+if test "x$HAVE_KDIALOG_BIN" = "xno"; then
+    AC_MSG_WARN(kdialog not found!Kde support is disabled!)
+    ac_cv_with_kde4=no
+    ac_cv_with_kde3=no
+fi
+
+AC_CHECK_PROG([HAVE_ZENITY_BIN], [zenity], yes, no)
+AC_PATH_PROG([ZENITY_BIN], [zenity], no)
+if test "x$HAVE_ZENITY_BIN" = "xno"; then
+    AC_MSG_WARN(zenity not found! GNOME/MATE/CINNAMON support is disabled!)
+    ac_cv_with_nautilus=no
+    ac_cv_with_nemo=no
+fi
+AC_PATH_PROGS([RPM2CPIO_BIN],[rpm2cpio rpm2cpio4 rpm2cpio5],[AC_MSG_ERROR(rpm2cpio not found!)])
+AC_PATH_PROGS([RPM_BIN],[rpm rpm4 rpm5],[AC_MSG_ERROR(rpm package manager not found!)])
+AC_PATH_PROGS([CPIO_BIN],[cpio cpio4 cpio5],[AC_MSG_ERROR(cpio not found!)])
+AC_PATH_PROGS([MD5SUM_BIN],[md5sum],[AC_MSG_ERROR(md5sum not found!)])
+AC_PATH_PROGS([TERMINAL],[konsole konsole3 konsole-3 konsole4 konsole-4 gnome-terminal mate-terminal],[AC_MSG_ERROR(A terminal emulator not found!)])
 
 dnl -----------------------------------------------
-dnl gettext
+dnl gettext and intltool
 dnl -----------------------------------------------
-AC_CHECK_PROGS([GETTEXT],
-  [gettext.sh],
-  [AC_MSG_ERROR([gettext.sh from gettext not found])]
-) dnl
+AM_PATH_PYTHON([2.5])
+
+AC_CHECK_PROG(HAVE_GETTEXT, gettext.sh, yes, no)
+AC_PATH_PROG(GETTEXT, gettext.sh, no)
+if test "x$HAVE_GETTEXT" = "xno"; then
+		AC_MSG_ERROR(you need to have gettext installed !)
+fi dnl
 AC_SUBST(GETTEXT)
+
+AC_CHECK_PROG(HAVE_INTLTOOL, intltoolize, yes, no)
+AC_PATH_PROG(INTLTOOL, intltoolize, no)
+if test "x$HAVE_INTLTOOL" = "xno"; then
+		AC_MSG_WARN(you need to have intltool installed !)
+fi
 
 AC_CHECK_PROGS([ENVSUBST],
   [envsubst],
-  [AC_MSG_ERROR([envsubst from gettext not found])]
+  [AC_MSG_ERROR(["envsubst from gettext not found"])]
 ) dnl
 AC_SUBST(ENVSUBST)
 
-eval "localedir=\"${datadir}/locale\""
-AC_SUBST(localedir)
+AC_SUBST(LOCALEDIR, ${localedir})
 AC_SUBST(TEXTDOMAIN,"tuncel")
 AM_PO_SUBDIRS
 
@@ -176,16 +202,21 @@ dnl Result
 dnl -----------------------------------------------
 AC_MSG_RESULT([Configure finished
 ---------------------- summary -------------------------
+
           bindir: \$(DESTDIR)$bindir
          locales: \$(DESTDIR)$localedir
    configuration: \$(DESTDIR)$sysconfdir/tuncel.conf
-         datadir: \$(DESTDIR)$datadir/tuncel
+         datadir: \$(DESTDIR)${datadir}/tuncel
+         
 install kde3 service menu : $ac_cv_with_kde3
           kde3 service dir: \$(DESTDIR)$KDE3_SERVICE_MENU_DIR
+          
 install kde4 service menu : $ac_cv_with_kde4
           kde4 service dir: \$(DESTDIR)$KDE4_SERVICE_MENU_DIR
+          
 install nautilus/caja actions : $ac_cv_with_nautilus
           nautilus actions dir: \$(DESTDIR)$NAUTILUS_ACTIONS_DIR
+          
 install nemo actions : $ac_cv_with_nemo
           nemo actions dir: \$(DESTDIR)$NEMO_ACTIONS_DIR
 ---------------------------------------------------------])

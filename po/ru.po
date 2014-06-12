@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
+# Valentin XliN Saikov <saikov.vb@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: tuncel\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-12-26 23:02+0200\n"
-"PO-Revision-Date: 2014-04-06 14:45+0000\n"
-"Last-Translator: tarakbumba . <tarakbumba@gmail.com>\n"
+"PO-Revision-Date: 2014-04-12 20:16+0000\n"
+"Last-Translator: Valentin XliN Saikov <saikov.vb@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/tuncel/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +20,11 @@ msgstr ""
 
 #: ../tuncel.in:40
 msgid "Error: Missing tuncel configuration file"
-msgstr ""
+msgstr "Ошибка: не хватает файла настроек tuncel"
 
 #: ../tuncel.in:51
 msgid "Executable file can not be found: "
-msgstr ""
+msgstr "Не удалось найти исполняемый файл:"
 
 #: ../tuncel.in:100
 msgid ""
@@ -37,56 +38,56 @@ msgid ""
 "forceinstalltest : Force Installation Test (-Uhv)\n"
 "installsrc : Install RPM Source Package in to Build Enviroment\n"
 "Example: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
-msgstr ""
+msgstr "Команды tuncel:\nmaininfo: Показать основные данные пакета\nshowcontents: Показать содержимое пакета в окне информации\nunpack: Распаковать в текущий каталог\nunpackto: Распаковать в указанный каталог\nopenHomepage: Если существует запись %{url}, открыть домашнюю страницу пакета\ntestinstall: Проверить возможность установки (-iv)\norceinstalltest: Проверить возможность установки в принудительном режиме (-Uhv)\ninstallsrc: Установить пакет RPM с исходным кодом к среде сборки\nПример: tuncel maininfo /tmp/foo-0.0.5.i586.rpm\n"
 
 #: ../tuncel.in:118
 msgid "Name"
-msgstr ""
+msgstr "Название"
 
 #: ../tuncel.in:119
 msgid "Summary"
-msgstr ""
+msgstr "Резюме"
 
 #: ../tuncel.in:120
 msgid "Version"
-msgstr ""
+msgstr "Версия"
 
 #: ../tuncel.in:121
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: ../tuncel.in:122
 msgid "Homepage"
-msgstr ""
+msgstr "Домашняя страница"
 
 #: ../tuncel.in:123
 msgid "License"
-msgstr ""
+msgstr "Лицензия"
 
 #: ../tuncel.in:129
 msgid "no file"
-msgstr ""
+msgstr "нет файла"
 
 #: ../tuncel.in:136
 msgid "This file is not an application/x-rpm file!"
-msgstr ""
+msgstr "Этот файл не относится к типу application/x-rpm"
 
 #: ../tuncel.in:148
 msgid "Please wait..."
-msgstr ""
+msgstr "Пожалуйста подождите..."
 
 #: ../tuncel.in:181
 msgid "There was no valid URL in package!"
-msgstr ""
+msgstr "В пакете нет действительного URL адреса"
 
 #: ../tuncel.in:187 ../tuncel.in:197
 msgid "No errors have been reported. Test was successful!"
-msgstr ""
+msgstr "Ошибок не найдено. Проверка успешно пройдена."
 
 #: ../tuncel.in:202
 msgid "Source RPM package is being installed..."
-msgstr ""
+msgstr "Устанавливаем пакет RPM с исходным кодом ..."
 
 #: ../tuncel.in:205
 msgid "This package isn't a valid Source RPM package !"
-msgstr ""
+msgstr "Этот пакет не является корректным RPM пакетом с исходным кодом!"

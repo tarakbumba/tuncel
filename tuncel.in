@@ -24,12 +24,12 @@
 
 source @GETTEXT@
 export TEXTDOMAIN=@TEXTDOMAIN@
-export TEXTDOMAINDIR='@localedir@'
+export TEXTDOMAINDIR='@prefix@/share/locale'
 
 # Test and source configuration:
 RPM_XDG_CONFIG_TOOL_FILE=""
 
-for i in $HOME/.config/tuncel.conf /etc/tuncel.conf ; do
+for i in $HOME/.config/tuncel.conf @SYSCONFDIR@/tuncel.conf ; do
   if test -f "$i" ; then
     RPM_XDG_CONFIG_TOOL_FILE="$i"
     break;

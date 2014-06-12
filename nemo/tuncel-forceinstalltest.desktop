@@ -1,0 +1,17 @@
+[Nemo Action]
+
+Name=Test forcing package overwrite
+
+Comment=Checks whether forced package overwrite is successful
+
+Exec=/usr/bin/tuncel forceinstalltest %F
+
+Selection=s
+
+Mimetypes=application/x-rpm;application/x-source-rpm;
+
+Stock-Id=rpm
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

@@ -1,0 +1,17 @@
+[Nemo Action]
+
+Name=Extract package here
+
+Comment=Extracts package content into current directory
+
+Exec=/usr/bin/tuncel unpack %F
+
+Selection=s
+
+Mimetypes=application/x-rpm;application/x-source-rpm;
+
+Stock-Id=tar
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

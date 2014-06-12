@@ -1,0 +1,17 @@
+[Nemo Action]
+
+Name=Open package source homepage
+
+Comment=Opens project page of application in a web browser
+
+Exec=/usr/bin/tuncel openHomepage %F
+
+Selection=s
+
+Mimetypes=application/x-rpm;application/x-source-rpm;
+
+Stock-Id=web-browser
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

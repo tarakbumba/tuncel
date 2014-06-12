@@ -1,0 +1,17 @@
+[Nemo Action]
+
+Name=Test package installation
+
+Comment=Tests whether package installation is successful.
+
+Exec=/usr/bin/tuncel testinstall %F
+
+Selection=s
+
+Mimetypes=application/x-rpm;application/x-source-rpm;
+
+Stock-Id=rpm
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

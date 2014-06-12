@@ -1,0 +1,17 @@
+[Nemo Action]
+
+Name=Show package information
+
+Comment=Displays useful information about package
+
+Exec=/usr/bin/tuncel maininfo %F
+
+Selection=s
+
+Mimetypes=application/x-source-rpm;
+
+Stock-Id=info
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

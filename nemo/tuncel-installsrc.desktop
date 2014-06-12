@@ -1,0 +1,17 @@
+[Nemo Action]
+
+Name=Install Source RPM
+
+Comment=Installs Source RPM package into rpm/rpmbuild directory
+
+Exec=/usr/bin/tuncel installsrc %F
+
+Selection=s
+
+Mimetypes=application/x-source-rpm;
+
+Stock-Id=rpm
+
+Dependencies=/usr/bin/tuncel;/usr/bin/zenity;
+
+Selection=s

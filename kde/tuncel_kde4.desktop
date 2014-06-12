@@ -4,21 +4,7 @@ ServiceTypes=KonqPopupMenu/Plugin
 MimeType=application/x-rpm;
 Icon=application-x-rpm
 Name=RPM Operations Tool
-Name[el]=Εργαλείο λειτουργιών RPM
-Name[es]=Herramienta de operaciones RPM
-Name[fr]=Outils d'opérations pour RPM
-Name[pl]=Działania na RPM
-Name[pt_PT]=Ferramenta de Operações RPM
-Name[tr]=RPM İşlemleri Aracı
-Name[uk]=Засіб для виконання дій з RPM
 Comment=Servicemenus for RPM Package operations
-Comment[el]=Μενού υπηρεσιών λειτουργιών πακέτων RPM
-Comment[es]=Servicemenu para operaciones de paquetes RPM
-Comment[fr]=Servicemenus pour les opérations sur paquets RPM
-Comment[pl]=Menu kontekstowe dla działań na pakietach RPM
-Comment[pt_PT]=Menus de serviços para as operações do Pacote RPM
-Comment[tr]=RPM Paketi işlemleri için hizmet menüleri
-Comment[uk]=Службові меню для виконання дій з пакунками RPM
 X-KDE-Priority=TopLevel
 X-KDE-Submenu-Icon=application-x-rpm
 X-KDE-Submenu[tr]=RPM İşlemleri
@@ -26,109 +12,46 @@ Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstallte
 
 [Desktop Action maininfo]
 Name=Show package information
-Name[el]=Εμφάνιση πληροφοριών του πακέτου
-Name[es]=Mostrar información del paquete
-Name[fr]=Afficher les informations sur le paquet
-Name[pl]=Pokaż informacje o pakiecie
-Name[pt_PT]=Mostrar informação do pacote
-Name[tr]=Paket bilgilerini göster
-Name[uk]=Показати дані щодо пакунка
 Icon=application-x-rpm
 Exec=tuncel maininfo %F
 
 [Desktop Action showcontents]
 Name=Show package contents
-Name[el]=Εμφάνιση περιεχομένων του πακέτου
-Name[es]=Mostrar contenido del paquete
-Name[fr]=Afficher le contenu du paquet
-Name[pl]=Pokaż zawartość pakietu
-Name[pt_PT]=Mostrar os conteúdos do pacote
-Name[tr]=Paket içeriğini göster
-Name[uk]=Показати вміст пакунка
 Icon=application-x-rpm
 Exec=tuncel showcontents %F
 
 [Desktop Action unpack]
 Name=Extract package here
-Name[el]=Εξαγωγή του πακέτου εδώ
-Name[es]=Extraer paquete aquí
-Name[fr]=Extraire le paquet ici
-Name[pl]=Wypakuj pakiet tutaj
-Name[pt_PT]=Extrair aqui o pacote
-Name[tr]=Paketi buraya aç
-Name[uk]=Видобути пакунок сюди
 Icon=application-x-rpm
 Exec=tuncel unpack %F
 
 [Desktop Action unpackto]
 Name=Extract package to...
-Name[el]=Εξαγωγή του πακέτου σε...
-Name[es]=Extraer paquete en...
-Name[fr]=Extraire le paquet vers...
-Name[pl]=Wypakuj pakiet do...
-Name[pt_PT]=Extrair o pacote para ...
-Name[tr]=Paketi başka dizine aç...
-Name[uk]=Видобути пакунок до…
 Icon=application-x-rpm
 Exec=tuncel unpackto %F
 
 [Desktop Action openurl]
 Name=Open package source homepage
-Name[el]=Άνοιγμα της ιστοσελίδας του πακέτου
-Name[es]=Abrir la página web del paquete fuente
-Name[fr]=Ouvrir la page d'accueil du projet
-Name[pl]=Odwiedź stronę domową 
-Name[pt_PT]=Abrir a página principal da fonte do pacote
-Name[tr]=Paket kaynağı ana sayfasını aç
-Name[uk]=Відкрити домашню сторінку пакунка
 Icon=application-x-rpm
 Exec=tuncel openHomepage %F
 
 [Desktop Action testinstall]
 Name=Test package installation
-Name[el]=Δοκιμή εγκατάστασης του πακέτου
-Name[es]=Test instalación del paquete
-Name[fr]=Tester l'installation du paquet
-Name[pl]=Testuj instalację pakietu
-Name[pt_PT]=Testar a instalação do pacote
-Name[tr]=Paket kurulumunu sına
-Name[uk]=Перевірити можливість встановлення пакунка
 Icon=application-x-rpm
 Exec=tuncel testinstall %F
 
 [Desktop Action forceinstalltest]
 Name=Test forcing package overwrite
-Name[el]=Δοκιμή εξαναγκαστικής εγκατάστασης του πακέτου
-Name[es]=Test la reescritura forzosa del paquete
-Name[fr]=Tester l'écrasement de force du paquet
-Name[pl]=Testuj nadpisanie pakietu
-Name[pt_PT]=Testar o forçar da substituição do pacote
-Name[tr]=Paket üzerine yazma zorlamasını sına
-Name[uk]=Перевірити можливість примусового встановлення пакунка
 Icon=application-x-rpm
 Exec=tuncel forceinstalltest %F
 
 [Desktop Action install]
 Name=Install Source RPM
-Name[el]=Εγκατάσταση του πηγαίου RPM
-Name[es]=Instalar RPM fuente
-Name[fr]=Installer le RPM source
-Name[pl]=Instaluj źródłowy RPM
-Name[pt_PT]=Instalar RPM Fonte
-Name[tr]=Kaynak RPM Kurulumu
-Name[uk]=Встановити RPM з початковим кодом
 Icon=application-x-rpm
 Exec=tuncel installsrc %F
 
 [Desktop Action admin]
 Name=Open a shell
-Name[el]=Άνοιγμα τερματικού
-Name[es]=Abrir una consola
-Name[fr]=Ouvrir un terminal
-Name[pl]=Otwórz terminal
-Name[pt_PT]=Abrir uma 'shell'
-Name[tr]=Bir kabuk aç
-Name[uk]=Відкрити вікно командної оболонки
 Icon=application-x-rpm
 Exec=tuncel terminal %d
 

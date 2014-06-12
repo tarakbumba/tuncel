@@ -19,6 +19,23 @@
 ##
 AUTOMAKE_OPTIONS = foreign 1.4
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
+#### Taken from the autoconf scripts Makefile.am ####
+edit = sed \
+	-e 's|@localedir[@]|$(localedir)|g' \
+	-e 's|@sysconfdir[@]|$(sysconfdir)|g' \
+	-e 's|@localstatedir[@]|$(localstatedir)|g' \
+	-e 's|@pkgdatadir[@]|$(pkgdatadir)|g' \
+	-e 's|@prefix[@]|$(prefix)|g'
+
+.PHONY: SCRIPT
+
+SCRIPT: 
+	./desktop_translations.sh all
+	
+prerequisites: SCRIPT
+
+target: prerequisites 
+
 SUBDIRS = po \
 	kde \
     actions \
@@ -30,6 +47,7 @@ cfgdir = $(sysconfdir)
 cfg_DATA = tuncel.conf
 
 docdir = $(datadir)/doc/tuncel
+
 EXTRA_DIST = 			\
 	COPYING \
 	INSTALL \
@@ -52,24 +70,30 @@ MAINTAINERCLEANFILES = \
 	m4/lt~obsolete.m4 \
 	`find "$(srcdir)" -type f -name Makefile.in -print`
 
-dist-hook:
+all: target UPDATE_PO GIT_CHANGELOG
+	
+UPDATE_PO:
+	$(MAKE) -C po update-gmo
+	
+GIT_CHANGELOG:
 	@if test -d "$(srcdir)/.git"; \
 	then \
 		echo Creating ChangeLog && \
 		(GIT_DIR=$(top_srcdir)/.git \
 		  ./missing --run git log --stat -M -C --name-status  --date=short --no-color) | \
 		  fmt --split-only > ChangeLog.tmp \
-		&& mv -f ChangeLog.tmp $(top_distdir)/ChangeLog \
+		&& mv -f ChangeLog.tmp $(top_srcdir)/ChangeLog \
 		|| ( rm -f ChangeLog.tmp ; \
 		  echo Failed to generate ChangeLog >&2 ); \
 	else \
 		echo A git clone is required to generate a ChangeLog >&2; \
 	fi
 
-all:
-	$(MAKE) -C po update-gmo
-
 -include $(top_srcdir)/git.mk
+
+.PHONY: UPDATE_PO GIT_CHANGELOG
+
+
 
 ##eof
 
