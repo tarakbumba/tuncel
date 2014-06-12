@@ -21,9 +21,11 @@ Also you should previously install these dependencies first:
 - coreutils
 - gettext-devel
 - rpm-devel
-- kdelibs (for kde4 support)
-- kdialog (for kde4 support)
+- kdelibs (for kde support)
+- kdialog (for kde support)
 - zenity (for GNOME/MATE/NEMO support)
+- intltool
+- python-polib
 
 
 Basically you should first create configuration and make
