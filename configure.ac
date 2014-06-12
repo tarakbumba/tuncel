@@ -20,7 +20,7 @@ dnl
 
 AC_PREREQ([2.69])
 
-AC_INIT([tuncel], [1.4], [https://github.com/tarakbumba/tuncel])
+AC_INIT([tuncel], [1.5], [https://github.com/tarakbumba/tuncel])
 
 AM_INIT_AUTOMAKE([1.9 tar-ustar dist-xz foreign no-dist-gzip])
 
