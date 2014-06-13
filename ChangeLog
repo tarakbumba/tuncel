@@ -1,6 +1,10 @@
+2014-06-13 21:33:44 +0300 tarakbumba 
+
+	* Bump version to 1.6 (HEAD, master)
+
 2014-06-13 21:32:49 +0300 tarakbumba 
 
-	* Fix openHomepage option which was not work with https URLs (HEAD, master)
+	* Fix openHomepage option which was not work with https URLs
 
 2014-06-12 23:23:14 +0300 tarakbumba 
 
