@@ -1,10 +1,14 @@
+2014-06-13 21:32:49 +0300 tarakbumba 
+
+	* Fix openHomepage option which was not work with https URLs (HEAD, master)
+
 2014-06-12 23:23:14 +0300 tarakbumba 
 
-	* - Update Readme.md (HEAD, master)
+	* - Update Readme.md (origin/master, origin/HEAD)
 
 2014-06-12 23:20:28 +0300 tarakbumba 
 
-	* Remove generating ChangeLog from Makefile. Instead use post-commit hook from git (origin/master, origin/HEAD)
+	* Remove generating ChangeLog from Makefile. Instead use post-commit hook from git
 
 2014-06-12 22:47:10 +0300 tarakbumba 
 

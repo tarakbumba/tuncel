@@ -175,7 +175,7 @@ case "$1" in
   ;;
   openHomepage)
     URI="$($RPM_BIN -qp --queryformat '%{url}' $2)"
-    if [ -n "$(echo $URI | grep 'p://')" ] ; then
+    if [ -n "$(echo $URI | grep 'p://')" ] || [ -n "$(echo $URI | grep 'ps://')" ]; then
       xdg-open "$URI"
     else
       $DIALOG_INFOBOX "$(gettext "There was no valid URL in package!")"
