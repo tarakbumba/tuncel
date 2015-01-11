@@ -51,7 +51,6 @@ Depending your compilation choice, these should be installed on your system befo
 
 - nautilus-actions (for GNOME/Nautilus support)
 - caja-actions (for MATE/Caja support)
-- nemo-actions (for Cinnamon/Nemo support)
 - kdelibs (KDE4 support)
 - zenity (GNOME/MATE/CINNAMON support)
 - kdialog (KDE4 support)
