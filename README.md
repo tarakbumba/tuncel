@@ -4,8 +4,9 @@ Tuncel
 Tuncel is a fork of GPL licensed Heinemann Jürgen's rpmxdgtool.
 (http://gitweb.hjcms.de/cgi-bin/index.cgi/rpmxdgtool/)
 
-It provides kde3/4 service menus, nautilus-actions actions for GNOME,
-caja-actions actions for MATE, nemo-actions actions for Cinnamon.
+It provides KDE4, PLASMA and TRINITY service menus,
+nautilus-actions actions for GNOME,caja-actions actions for MATE,
+nemo-actions actions for Cinnamon.
 
 Tuncel has full translation support. If someone who talks your native
 language, translates related gettext po files then tuncel talks your 
@@ -21,8 +22,8 @@ Also you should previously install these dependencies first:
 - coreutils
 - gettext-devel
 - rpm-devel
-- kdelibs (for kde support)
-- kdialog (for kde support)
+- kdelibs (for KDE4 support)
+- kdialog (for KDE4/PLASMA/TRINITY support)
 - zenity (for GNOME/MATE/NEMO support)
 - intltool
 - python-polib
@@ -38,7 +39,7 @@ in tuncel's root directory.
 
 After that, if all dependencies met; simply configure, make and make install should work.
 
-If all dependencies met, kde4, nautilus, caja and nemo support will be installed.
+If all dependencies met, kde4/plasma/trinity, nautilus, caja and nemo support will be installed.
 
 If you do not want to install one of these features just supply configure script with
 appropriate option. E.g.:
@@ -53,7 +54,7 @@ Depending your compilation choice, these should be installed on your system befo
 - caja-actions (for MATE/Caja support)
 - kdelibs (KDE4 support)
 - zenity (GNOME/MATE/CINNAMON support)
-- kdialog (KDE4 support)
+- kdialog (KDE4/PLASMA/TRINITY support)
 - rpm2cpio
 - gettext (i18n support)
 - rpm (of course!)
