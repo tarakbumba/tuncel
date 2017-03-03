@@ -1,0 +1,58 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/x-rpm;
+Icon=application-x-rpm
+Name=RPM Operations Tool
+Comment=Servicemenus for RPM Package operations
+X-KDE-Priority=TopLevel
+X-KDE-Submenu-Icon=application-x-rpm
+X-KDE-Submenu[tr]=RPM İşlemleri
+Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstalltest;install;admin;
+
+[Desktop Action maininfo]
+Name=Show package information
+Icon=application-x-rpm
+Exec=tuncel maininfo %F
+
+[Desktop Action showcontents]
+Name=Show package contents
+Icon=application-x-rpm
+Exec=tuncel showcontents %F
+
+[Desktop Action unpack]
+Name=Extract package here
+Icon=application-x-rpm
+Exec=tuncel unpack %F
+
+[Desktop Action unpackto]
+Name=Extract package to...
+Icon=application-x-rpm
+Exec=tuncel unpackto %F
+
+[Desktop Action openurl]
+Name=Open package source homepage
+Icon=application-x-rpm
+Exec=tuncel openHomepage %F
+
+[Desktop Action testinstall]
+Name=Test package installation
+Icon=application-x-rpm
+Exec=tuncel testinstall %F
+
+[Desktop Action forceinstalltest]
+Name=Test forcing package overwrite
+Icon=application-x-rpm
+Exec=tuncel forceinstalltest %F
+
+[Desktop Action install]
+Name=Install Source RPM
+Icon=application-x-rpm
+Exec=tuncel installsrc %F
+
+[Desktop Action admin]
+Name=Open a shell
+Icon=application-x-rpm
+Exec=tuncel terminal %d
+
+##eof

@@ -23,7 +23,12 @@ xdg4dir = @KDE4_SERVICE_MENU_DIR@
 xdg4_DATA = tuncel_kde4.desktop
 endif
 
-if KDE3_SERVICE_SUPPORT
-xdg3dir = @KDE3_SERVICE_MENU_DIR@
-xdg3_DATA = tuncel_kde3.desktop
+if PLASMA_SERVICE_SUPPORT
+xdg5dir = @PLASMA_SERVICE_MENU_DIR@
+xdg5_DATA = tuncel_plasma.desktop
+endif
+
+if TRINITY_SERVICE_SUPPORT
+xdg6dir = @TRINITY_SERVICE_MENU_DIR@
+xdg6_DATA = tuncel_trinity.desktop
 endif

@@ -79,26 +79,45 @@ AC_SUBST([KDE4_SERVICE_MENU_DIR],"$ac_cv_kde4_servicedir")
 AM_CONDITIONAL(KDE4_SERVICE_SUPPORT, test "x$ac_cv_with_kde4" = xyes)
 
 dnl -----------------------------------------------
-dnl KDE 3 Support
+dnl Trinity Support
 dnl -----------------------------------------------
-AC_ARG_WITH([kde3],
-  [AS_HELP_STRING([--enable-kde3=@<:@yes/no@:>@],
-  [Enable kde3 @<:@default=no@:>@])],
-  [ac_cv_with_kde3=yes],
-  [ac_cv_with_kde3=no]
+AC_ARG_ENABLE([trinity],
+  [AS_HELP_STRING([--enable-trinity=@<:@yes/no@:>@],
+  [Enable trinity @<:@default=yes@:>@])],
+  [ac_cv_with_trinity=no],
+  [ac_cv_with_trinity=yes]
 )
-AC_CHECK_PROG([HAVE_KDETHREECONFIG], [kde3-config kde-config3], yes, no)
-AC_PATH_PROG([KDETHREECONFIG], [kde3-config kde-config3], no)
-if test "x$HAVE_KDETHREECONFIG" = "xno"; then
-    AC_MSG_WARN(kde3-config not found skipping kde4 ServiceMenu Support !)
-    ac_cv_with_kde3=no
+
+AC_CHECK_PROG([HAVE_TRINITYCONFIG], [tde-config], yes, no)
+AC_PATH_PROG([TRINITYCONFIG], [tde-config], no)
+if test "x$HAVE_TRINITYCONFIG" = "xno"; then
+    AC_MSG_WARN(tde-config not found skipping Trinitiy ServiceMenu Support !)
+    ac_cv_with_trinity=no
 fi
-ac_cv_kde3_servicedir=
-if test -x "$KDETHREECONFIG" ; then
-  ac_cv_kde3_servicedir=`$KDETHREECONFIG --prefix`/share/apps/konqueror/servicemenus
+
+ac_cv_trinity_servicedir=
+if test -x "$TRINITYCONFIG" ; then
+  ac_cv_trinity_servicedir=`$TRINITYCONFIG --install services`ServiceMenus
 fi
-AC_SUBST([KDE3_SERVICE_MENU_DIR],"$ac_cv_kde3_servicedir")
-AM_CONDITIONAL(KDE3_SERVICE_SUPPORT, test "x$ac_cv_with_kde3" = xyes)
+AC_SUBST([TRINITY_SERVICE_MENU_DIR],"$ac_cv_trinity_servicedir")
+AM_CONDITIONAL(TRINITY_SERVICE_SUPPORT, test "x$ac_cv_with_trinity" = xyes)
+
+dnl -----------------------------------------------
+dnl Plasma Support
+dnl -----------------------------------------------
+AC_ARG_WITH([plasma],
+  [AS_HELP_STRING([--enable-plasma=@<:@yes/no@:>@],
+  [Enable plasma @<:@default=no@:>@])],
+  [ac_cv_with_plasma=yes],
+  [ac_cv_with_plasma=no]
+)
+AC_CHECK_PROG([HAVE_PLASMACONFIG], [plasma-config kde-config3], yes, no)
+AC_PATH_PROG([PLASMACONFIG], [plasma-config kde-config3], no)
+
+  ac_cv_plasma_servicedir=${datadir}/kservices5/ServiceMenus/
+
+AC_SUBST([PLASMA_SERVICE_MENU_DIR],"$ac_cv_plasma_servicedir")
+AM_CONDITIONAL(PLASMA_SERVICE_SUPPORT, test "x$ac_cv_with_plasma" = xyes)
 
 dnl -----------------------------------------------
 dnl Nautilus/Caja Support
@@ -134,9 +153,10 @@ dnl -----------------------------------------------
 AC_CHECK_PROG([HAVE_KDIALOG_BIN], [kdialog kdialog3 kdialog-3 kdialog4 kdialog-4], yes, no)
 AC_PATH_PROG([KDIALOG_BIN], [kdialog kdialog3 kdialog-3 kdialog4 kdialog-4], no)
 if test "x$HAVE_KDIALOG_BIN" = "xno"; then
-    AC_MSG_WARN(kdialog not found!Kde support is disabled!)
+    AC_MSG_WARN(kdialog not found!Kde and Trinity support is disabled!)
     ac_cv_with_kde4=no
-    ac_cv_with_kde3=no
+    ac_cv_with_plasma=no
+    ac_cv_with_trinity=no
 fi
 
 AC_CHECK_PROG([HAVE_ZENITY_BIN], [zenity], yes, no)
@@ -209,11 +229,14 @@ AC_MSG_RESULT([Configure finished
    configuration: \$(DESTDIR)$sysconfdir/tuncel.conf
          datadir: \$(DESTDIR)${datadir}/tuncel
          
-install kde3 service menu : $ac_cv_with_kde3
-          kde3 service dir: \$(DESTDIR)$KDE3_SERVICE_MENU_DIR
+install plasma service menu : $ac_cv_with_plasma
+          plasma service dir: \$(DESTDIR)$PLASMA_SERVICE_MENU_DIR
           
 install kde4 service menu : $ac_cv_with_kde4
           kde4 service dir: \$(DESTDIR)$KDE4_SERVICE_MENU_DIR
+          
+install trinity service menu : $ac_cv_with_trinity
+          trinity service dir: \$(DESTDIR)$TRINITY_SERVICE_MENU_DIR
           
 install nautilus/caja actions : $ac_cv_with_nautilus
           nautilus actions dir: \$(DESTDIR)$NAUTILUS_ACTIONS_DIR

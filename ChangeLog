@@ -1,3 +1,9 @@
+2017-03-03 21:33:44 +0300 tarakbumba
+
+	* Drop KDE3  support
+	* Added Plasma Desktop support
+	* Added Trinity Desktop support
+
 2014-06-13 21:33:44 +0300 tarakbumba 
 
 	* Bump version to 1.6 (HEAD, master)
