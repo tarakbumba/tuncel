@@ -18,14 +18,14 @@
 ##   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ##
 
-if NAUTILUS_ACTIONS_SUPPORT
+if NAUTILUS
 nautilusdir = @NAUTILUS_ACTIONS_DIR@
 nautilus_DATA = tuncel-forceinstalltest.desktop \
   tuncel-testinstall.desktop \
-  tuncel-installsrc.desktop   \
+  tuncel-installsrc.desktop \
   tuncel-unpack.desktop \
   tuncel-maininfo.desktop \
   tuncel-unpackto.desktop \
-  tuncel-showcontents.desktop\
+  tuncel-showcontents.desktop \
   tuncel-openHomepage.desktop
 endif

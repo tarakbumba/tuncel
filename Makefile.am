@@ -37,9 +37,9 @@ prerequisites: SCRIPT
 target: prerequisites 
 
 SUBDIRS = po \
-	kde \
+	nemo \
     actions \
-    nemo
+    kde
 
 bin_SCRIPTS = tuncel
 

@@ -1,24 +1,51 @@
+%define trinity 0
+%{?_without_trinity: %global trinity 0}
+%{?_with_trinity: %global trinity 1}
+%define _tde_services /opt/trinity/share/apps/konqueror/servicemenus
+%define plasma 1
+%{?_without_plasma: %global plasma 0}
+%{?_with_plasma: %global plasma 1}
+%define kde4 0
+%{?_without_kde4: %global kde4 0}
+%{?_with_kde4: %global kde4 1}
+%define gtk 1
+%{?_without_gtk: %global gtk 0}
+%{?_with_gtk: %global gtk 1}
 
 Name:		tuncel
 Summary:	Servicemenu or Actions for various desktops
-Version:	1.4
+Version:	2.0
 Release:	%mkrel 1
 
 License:	GPLv2
 Group:		Development/Other
-Source0:	https://github.com/tarakbumba/%{name}/archive/%{name}-%{version}.tar.gz
+Source0:	https://github.com/tarakbumba/%{name}/archive/%{name}-%{version}.tar.xz
 URL:		https://github.com/tarakbumba/tuncel
 
+%if %{kde4}
 BuildRequires:	kdelibs4-core
-BuildRequires:	gettext-devel
 BuildRequires:  kde4-macros
+%endif
+%if %{plasma}
+BuildRequires:  kf5-macros
+%endif
+%if %{trinity}
+BuildRequires:	trinity-tdelibs
+%endif
+%if %{gtk}
 BuildRequires:  zenity
+%endif
+%if %{kde4} && %{plasma}
 BuildRequires:  kdialog
+%endif
+BuildRequires:	gettext-devel
+BuildRequires:  python-polib
+BuildRequires:  intltool
 
 BuildArch:      noarch
 
 %description
-KDE3/4, Nautilus, Caja and Nemo service menus for RPM
+KDE4/Plasma Dolphin, Trinity Konqueror, Nautilus, Caja and Nemo service menus for RPM
 
    1. Show RPM Main Info
    2. Show Package Content
@@ -29,6 +56,7 @@ KDE3/4, Nautilus, Caja and Nemo service menus for RPM
    7. Force Upgrade Test Install
    8. Install Source package in Local RPM Build Enviroment
 
+%if %{kde4}
 %package -n %{name}-kde4
 Summary:    KDE4 Service Menu for RPM Packages
 Requires:   %{name} = %{version}-%{release}
@@ -36,7 +64,29 @@ Requires:   kdialog
 
 %description -n %{name}-kde4
 KDE4 service menu for easy RPM package operations.
+%endif
 
+%if %{plasma}
+%package -n %{name}-plasma
+Summary:    Plasma Service Menu for RPM Packages
+Requires:   %{name} = %{version}-%{release}
+Requires:   kdialog
+
+%description -n %{name}-plasma
+KDE4 service menu for easy RPM package operations.
+%endif
+
+%if %{trinity}
+%package -n %{name}-trinity
+Summary:    Trinity Desktop Service Menu for RPM Packages
+Requires:   %{name} = %{version}-%{release}
+Requires:   kdialog
+
+%description -n %{name}-trinity
+Trinity service menu for easy RPM package operations.
+%endif
+
+%if %{gtk}
 %package -n %{name}-nautilus-data
 Summary:    Required files for Nautilus/Caja
 Requires:   %{name} = %{version}-%{release}
@@ -72,23 +122,49 @@ Requires:   nemo
 
 %description -n %{name}-nemo
 Nemo-Actions actions for easy RPM package operations.
-
+%endif
 
 %prep
-%setup -q
+%autosetup
 
 %build
 NOCONFIGURE=1 ./autogen.sh
 
-%configure  --sysconfdir=%{_sysconfdir}
+%configure2_5x  --sysconfdir=%{_sysconfdir} \
+%if %{kde4}
+            --enable-kde4 \
+%endif
+%if %{trinity}
+            --enable-trinity \
+%endif
+%if %{gtk}
+            --enable-nautilus \
+            --enable-nemo \
+%endif
+%if %{plasma}
+            --enable-plasma
+%endif
+                 
 
-%make
+%make_build
 
 %install
 
-%makeinstall_std
+%make_install
+%if %{kde4}
 mv %{buildroot}%{_kde_services}/ServiceMenus/%{name}_kde4.desktop \
 	%{buildroot}%{_kde_services}/ServiceMenus/%{name}.desktop
+%endif
+
+%if %{plasma}
+mv %{buildroot}%{_kf5_services}/ServiceMenus/%{name}_plasma.desktop \
+	%{buildroot}%{_kf5_services}/ServiceMenus/%{name}.desktop
+%endif
+
+%if %{trinity}
+mv %{buildroot}%{_tde_services}/%{name}_trinity.desktop \
+	%{buildroot}%{_tde_services}/ServiceMenus/%{name}.desktop
+%endif
 
 %find_lang %{name}
 
@@ -97,9 +173,17 @@ mv %{buildroot}%{_kde_services}/ServiceMenus/%{name}_kde4.desktop \
 %config (noreplace) %{_sysconfdir}/%{name}.conf
 %{_bindir}/%{name}
 
+%if %{kde4}
 %files -n %{name}-kde4
 %{_kde_services}/ServiceMenus/%{name}.desktop
+%endif
 
+%if %{plasma}
+%files -n %{name}-plasma
+%{_kf5_services}/ServiceMenus/%{name}.desktop
+%endif
+
+%if %{gtk}
 %files -n %{name}-nautilus-data
 %{_datadir}/file-manager/actions/*.desktop
 
@@ -109,4 +193,5 @@ mv %{buildroot}%{_kde_services}/ServiceMenus/%{name}_kde4.desktop \
 %files -n %{name}-nautilus
 
 %files -n %{name}-caja
+%endif
 

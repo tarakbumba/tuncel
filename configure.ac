@@ -18,11 +18,11 @@ dnl   Free Software Foundation, Inc.,
 dnl   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 dnl
 
-AC_PREREQ([2.69])
+AC_INIT([tuncel], [2.0],
+	[https://github.com/tarakbumba/tuncel/issues],
+	[https://github.com/tarakbumba/tuncel])
 
-AC_INIT([tuncel], [1.6], [https://github.com/tarakbumba/tuncel])
-
-AM_INIT_AUTOMAKE([1.9 tar-ustar dist-xz foreign no-dist-gzip])
+AM_INIT_AUTOMAKE(1.10 dist-xz no-dist-gzip check-news)
 
 AC_CONFIG_MACRO_DIR([m4])
 AC_PREFIX_DEFAULT(/usr)
@@ -58,94 +58,102 @@ dnl -----------------------------------------------
 dnl KDE 4 Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([kde4],
-  [AS_HELP_STRING([--enable-kde4=@<:@yes/no@:>@],
-  [Enable kde4 @<:@default=yes@:>@])],
-  [ac_cv_with_kde4=no],
-  [ac_cv_with_kde4=yes]
-)
+[  --enable-kde4    Enable KDE4 Support],
+[case "${enableval}" in
+yes) kde4=true ;;
+no)  kde4=false ;;
+*) AC_MSG_ERROR([bad value ${enableval} for --enable-kde4]) ;;
+esac],[kde4=false])
 
 AC_CHECK_PROG([HAVE_KDEFOURCONFIG], [kde4-config kde-config4 kde-config-4 kde-config], yes, no)
 AC_PATH_PROG([KDEFOURCONFIG], [kde4-config kde-config4 kde-config-4 kde-config], no)
 if test "x$HAVE_KDEFOURCONFIG" = "xno"; then
     AC_MSG_WARN(kde4-config not found skipping kde4 ServiceMenu Support !)
-    ac_cv_with_kde4=no
+    kde4=false
 fi
 
-ac_cv_kde4_servicedir=
+AC_MSG_CHECKING([for kde4 servicemenu directory])
 if test -x "$KDEFOURCONFIG" ; then
-  ac_cv_kde4_servicedir=`$KDEFOURCONFIG --install services`ServiceMenus
+  KDE4_SERVICE_MENU_DIR=`$KDEFOURCONFIG --install services`ServiceMenus
 fi
-AC_SUBST([KDE4_SERVICE_MENU_DIR],"$ac_cv_kde4_servicedir")
-AM_CONDITIONAL(KDE4_SERVICE_SUPPORT, test "x$ac_cv_with_kde4" = xyes)
+AC_MSG_RESULT([${KDE4_SERVICE_MENU_DIR}])
+AC_SUBST(KDE4_SERVICE_MENU_DIR)
+AM_CONDITIONAL(KDE4, test x$kde4 = xtrue)
 
 dnl -----------------------------------------------
 dnl Trinity Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([trinity],
-  [AS_HELP_STRING([--enable-trinity=@<:@yes/no@:>@],
-  [Enable trinity @<:@default=yes@:>@])],
-  [ac_cv_with_trinity=no],
-  [ac_cv_with_trinity=yes]
-)
+[  --enable-tde   Enable TDE Support],
+[case "${enableval}" in
+yes) tde=true ;;
+no)  tde=false ;;
+*) AC_MSG_ERROR([bad value ${enableval} for --enable-tde]) ;;
+esac],[tde=false])
 
 AC_CHECK_PROG([HAVE_TRINITYCONFIG], [tde-config], yes, no)
 AC_PATH_PROG([TRINITYCONFIG], [tde-config], no)
 if test "x$HAVE_TRINITYCONFIG" = "xno"; then
-    AC_MSG_WARN(tde-config not found skipping Trinitiy ServiceMenu Support !)
-    ac_cv_with_trinity=no
+    AC_MSG_WARN(tde-config not found skipping Trinity ServiceMenu Support !)
+    tde=false
 fi
 
-ac_cv_trinity_servicedir=
+AC_MSG_CHECKING([for tde servicemenu directory])
 if test -x "$TRINITYCONFIG" ; then
-  ac_cv_trinity_servicedir=`$TRINITYCONFIG --install services`ServiceMenus
+  TRINITY_SERVICE_MENU_DIR=`$TRINITYCONFIG --prefix`/share/apps/konqueror/servicemenus
 fi
-AC_SUBST([TRINITY_SERVICE_MENU_DIR],"$ac_cv_trinity_servicedir")
-AM_CONDITIONAL(TRINITY_SERVICE_SUPPORT, test "x$ac_cv_with_trinity" = xyes)
+
+AC_MSG_RESULT([${TRINITY_SERVICE_MENU_DIR}])
+AC_SUBST(TRINITY_SERVICE_MENU_DIR)
+AM_CONDITIONAL(TDE, test "x$tde" = xtrue)
 
 dnl -----------------------------------------------
 dnl Plasma Support
 dnl -----------------------------------------------
-AC_ARG_WITH([plasma],
-  [AS_HELP_STRING([--enable-plasma=@<:@yes/no@:>@],
-  [Enable plasma @<:@default=no@:>@])],
-  [ac_cv_with_plasma=yes],
-  [ac_cv_with_plasma=no]
-)
-AC_CHECK_PROG([HAVE_PLASMACONFIG], [plasma-config kde-config3], yes, no)
-AC_PATH_PROG([PLASMACONFIG], [plasma-config kde-config3], no)
+AC_ARG_ENABLE([plasma],
+[  --enable-plasma   Enable PLASMA KF5 Support],
+[case "${enableval}" in
+yes) plasma=true ;;
+no)  plasma=false ;;
+*) AC_MSG_ERROR([bad value ${enableval} for --enable-plasma]) ;;
+esac],[plasma=false])
 
-  ac_cv_plasma_servicedir=${datadir}/kservices5/ServiceMenus/
+  PLASMA_SERVICE_MENU_DIR=${datadir}/kservices5/ServiceMenus/
 
-AC_SUBST([PLASMA_SERVICE_MENU_DIR],"$ac_cv_plasma_servicedir")
-AM_CONDITIONAL(PLASMA_SERVICE_SUPPORT, test "x$ac_cv_with_plasma" = xyes)
+AC_SUBST(PLASMA_SERVICE_MENU_DIR)
+AM_CONDITIONAL(PLASMA, test "x$plasma" = xtrue)
 
 dnl -----------------------------------------------
 dnl Nautilus/Caja Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([nautilus],
-  [AS_HELP_STRING([--enable-nautilus=@<:@yes/no@:>@],
-  [Enable nautilus @<:@default=yes@:>@])],
-  [ac_cv_with_nautilus=no],
-  [ac_cv_with_nautilus=yes]
-)
-ac_cv_nautilus_actionsdir=${datadir}/file-manager/actions/
+[  --enable-nautilus   Enable NAUTILUS/CAJA Support],
+[case "${enableval}" in
+yes) nautilus=true ;;
+no)  nautilus=false ;;
+*) AC_MSG_ERROR([bad value ${enableval} for --enable-nautilus]) ;;
+esac],[nautilus=false])
 
-AC_SUBST([NAUTILUS_ACTIONS_DIR],"$ac_cv_nautilus_actionsdir")
-AM_CONDITIONAL(NAUTILUS_ACTIONS_SUPPORT, test "x$ac_cv_with_nautilus" = xyes)
+  NAUTILUS_ACTIONS_DIR=${datadir}/file-manager/actions/
+
+AC_SUBST(NAUTILUS_ACTIONS_DIR)
+AM_CONDITIONAL(NAUTILUS, test "x$nautilus" = xtrue)
 
 dnl -----------------------------------------------
 dnl Nemo Support
 dnl -----------------------------------------------
 AC_ARG_ENABLE([nemo],
-  [AS_HELP_STRING([--enable-nemo=@<:@yes/no@:>@],
-  [Enable nemo @<:@default=yes@:>@])],
-  [ac_cv_with_nemo=no],
-  [ac_cv_with_nemo=yes]
-)
-ac_cv_nemo_actionsdir=${datadir}/nemo/actions/
+[  --enable-nemo   Enable NEMO Support],
+[case "${enableval}" in
+yes) nemo=true ;;
+no)  nemo=false ;;
+*) AC_MSG_ERROR([bad value ${enableval} for --enable-nemo]) ;;
+esac],[nemo=false])
 
-AC_SUBST([NEMO_ACTIONS_DIR],"$ac_cv_nemo_actionsdir")
-AM_CONDITIONAL(NEMO_ACTIONS_SUPPORT, test "x$ac_cv_with_nemo" = xyes)
+  NEMO_ACTIONS_DIR=${datadir}/nemo/actions/
+
+AC_SUBST(NEMO_ACTIONS_DIR)
+AM_CONDITIONAL(NEMO, test "x$nemo" = xtrue)
 
 dnl -----------------------------------------------
 dnl Checks for required programs.
@@ -153,18 +161,18 @@ dnl -----------------------------------------------
 AC_CHECK_PROG([HAVE_KDIALOG_BIN], [kdialog kdialog3 kdialog-3 kdialog4 kdialog-4], yes, no)
 AC_PATH_PROG([KDIALOG_BIN], [kdialog kdialog3 kdialog-3 kdialog4 kdialog-4], no)
 if test "x$HAVE_KDIALOG_BIN" = "xno"; then
-    AC_MSG_WARN(kdialog not found!Kde and Trinity support is disabled!)
-    ac_cv_with_kde4=no
-    ac_cv_with_plasma=no
-    ac_cv_with_trinity=no
+    AC_MSG_WARN(kdialog not found!Kde/Plasma and Trinity support is disabled!)
+    kde4=false
+    plasma=false
+    tde=false
 fi
 
 AC_CHECK_PROG([HAVE_ZENITY_BIN], [zenity], yes, no)
 AC_PATH_PROG([ZENITY_BIN], [zenity], no)
 if test "x$HAVE_ZENITY_BIN" = "xno"; then
     AC_MSG_WARN(zenity not found! GNOME/MATE/CINNAMON support is disabled!)
-    ac_cv_with_nautilus=no
-    ac_cv_with_nemo=no
+    nautilus=false
+    nemo=false
 fi
 AC_PATH_PROGS([RPM2CPIO_BIN],[rpm2cpio rpm2cpio4 rpm2cpio5],[AC_MSG_ERROR(rpm2cpio not found!)])
 AC_PATH_PROGS([RPM_BIN],[rpm rpm4 rpm5],[AC_MSG_ERROR(rpm package manager not found!)])
@@ -175,7 +183,7 @@ AC_PATH_PROGS([TERMINAL],[konsole konsole3 konsole-3 konsole4 konsole-4 gnome-te
 dnl -----------------------------------------------
 dnl python-polib, gettext and intltool
 dnl -----------------------------------------------
-AM_PATH_PYTHON([2.5])
+AM_PATH_PYTHON([2.7])
 
 AX_PYTHON_MODULE([polib],[python-polib])
 
@@ -224,25 +232,25 @@ dnl -----------------------------------------------
 AC_MSG_RESULT([Configure finished
 ---------------------- summary -------------------------
 
-          bindir: \$(DESTDIR)$bindir
-         locales: \$(DESTDIR)$localedir
-   configuration: \$(DESTDIR)$sysconfdir/tuncel.conf
-         datadir: \$(DESTDIR)${datadir}/tuncel
+          bindir: $bindir
+         locales: $localedir
+   configuration: $sysconfdir/tuncel.conf
+         datadir: ${datadir}/tuncel
          
-install plasma service menu : $ac_cv_with_plasma
-          plasma service dir: \$(DESTDIR)$PLASMA_SERVICE_MENU_DIR
+install plasma service menu : $plasma
+          plasma service dir: $PLASMA_SERVICE_MENU_DIR
           
-install kde4 service menu : $ac_cv_with_kde4
-          kde4 service dir: \$(DESTDIR)$KDE4_SERVICE_MENU_DIR
+install kde4 service menu : $kde4
+          kde4 service dir: $KDE4_SERVICE_MENU_DIR
           
-install trinity service menu : $ac_cv_with_trinity
-          trinity service dir: \$(DESTDIR)$TRINITY_SERVICE_MENU_DIR
+install trinity service menu : $tde
+          trinity service dir: $TRINITY_SERVICE_MENU_DIR
           
-install nautilus/caja actions : $ac_cv_with_nautilus
-          nautilus actions dir: \$(DESTDIR)$NAUTILUS_ACTIONS_DIR
+install nautilus/caja actions : $nautilus
+          nautilus actions dir: $NAUTILUS_ACTIONS_DIR
           
-install nemo actions : $ac_cv_with_nemo
-          nemo actions dir: \$(DESTDIR)$NEMO_ACTIONS_DIR
+install nemo actions : $nemo
+          nemo actions dir: $NEMO_ACTIONS_DIR
 ---------------------------------------------------------])
 
 echo

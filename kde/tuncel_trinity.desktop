@@ -7,9 +7,9 @@ Comment=Servicemenus for RPM Package operations
 X-DBUS-ServiceType=Unique;
 X-DCOP-ServiceType=Unique;
 OnlyShowIn=KDE;
-X-KDE-Priority=TopLevel
-X-KDE-Submenu-Icon=rpm
-X-KDE-Submenu[tr]=RPM İşlemleri
+X-TDE-Priority=TopLevel
+X-TDE-Submenu-Icon=rpm
+X-TDE-Submenu[tr]=RPM İşlemleri
 Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstalltest;install;admin;
 
 [Desktop Action maininfo]

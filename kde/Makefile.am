@@ -18,17 +18,17 @@
 ##   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ##
 
-if KDE4_SERVICE_SUPPORT
+if KDE4
 xdg4dir = @KDE4_SERVICE_MENU_DIR@
 xdg4_DATA = tuncel_kde4.desktop
 endif
 
-if PLASMA_SERVICE_SUPPORT
+if PLASMA
 xdg5dir = @PLASMA_SERVICE_MENU_DIR@
 xdg5_DATA = tuncel_plasma.desktop
 endif
 
-if TRINITY_SERVICE_SUPPORT
+if TDE
 xdg6dir = @TRINITY_SERVICE_MENU_DIR@
 xdg6_DATA = tuncel_trinity.desktop
 endif

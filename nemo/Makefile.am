@@ -18,9 +18,9 @@
 ##   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 ##
 
-if NEMO_ACTIONS_SUPPORT
-nemodir = @NEMO_ACTIONS_DIR@
-nemo_DATA = tuncel-forceinstalltest.* \
+if NEMO
+xdg1dir = @NEMO_ACTIONS_DIR@
+xdg1_DATA = tuncel-forceinstalltest.* \
   tuncel-testinstall.* \
   tuncel-installsrc.*   \
   tuncel-unpack.* \
