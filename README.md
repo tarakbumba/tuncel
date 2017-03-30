@@ -23,6 +23,7 @@ Also you should previously install these dependencies first:
 - gettext-devel
 - rpm-devel
 - kdelibs (for KDE4 support)
+- trinity-tdelibs (Trinitiy support)
 - kdialog (for KDE4/PLASMA/TRINITY support)
 - zenity (for GNOME/MATE/NEMO support)
 - intltool
