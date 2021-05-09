@@ -8,6 +8,7 @@ X-DBUS-ServiceType=Unique;
 X-DCOP-ServiceType=Unique;
 OnlyShowIn=KDE;
 X-TDE-Priority=TopLevel
+X-KDE-Submenu=RPM Operations
 X-TDE-Submenu-Icon=rpm
 X-TDE-Submenu[tr]=RPM İşlemleri
 Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstalltest;install;admin;

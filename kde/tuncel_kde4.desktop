@@ -6,6 +6,7 @@ Icon=application-x-rpm
 Name=RPM Operations Tool
 Comment=Servicemenus for RPM Package operations
 X-KDE-Priority=TopLevel
+X-KDE-Submenu=RPM Operations
 X-KDE-Submenu-Icon=application-x-rpm
 X-KDE-Submenu[tr]=RPM İşlemleri
 Actions=maininfo;showcontents;unpack;unpackto;openurl;testinstall;forceinstalltest;install;admin;
